@@ -1,0 +1,7 @@
+// THIS CLASS WAS GENERATED AUTOMATICALLY
+// DON'T CHANGE IT MANUALLY AS ALL CHANGES WILL BE OVERWRITTEN
+
+public static class DoorAudio
+{
+    public static readonly string DOOR_OPEN = "f0e7952855fbf9e4ba883f27c118837c";
+}

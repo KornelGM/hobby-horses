@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee9e3e2bf98550f44a160a963743de7e, type: 3}
+  m_Name: Key Input To Icon
+  m_EditorClassIdentifier: 
+  _inputIconKeys:
+  - InteractionType: 0
+    ActionId: 4
+  - InteractionType: 1
+    ActionId: 5
+  - InteractionType: 2
+    ActionId: 18
+  - InteractionType: 3
+    ActionId: 39
+  - InteractionType: 4
+    ActionId: 4
+  - InteractionType: 5
+    ActionId: 5
+  - InteractionType: 6
+    ActionId: 18
+  - InteractionType: 7
+    ActionId: 39

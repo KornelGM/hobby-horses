@@ -1,0 +1,214 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0b0c553be8edd4682e9180fdd13e37, type: 3}
+  m_Name: I2Languages
+  m_EditorClassIdentifier: 
+  mSource:
+    UserAgreesToHaveItOnTheScene: 0
+    UserAgreesToHaveItInsideThePluginsFolder: 0
+    GoogleLiveSyncIsUptoDate: 1
+    mTerms:
+    - Term: Test
+      TermType: 0
+      Description: 
+      Languages:
+      - Test eng
+      - Test pl
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Menu/Menu/Resume
+      TermType: 0
+      Description: 
+      Languages:
+      - Resume
+      - "Wzn\xF3w"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Menu/Menu/Save
+      TermType: 0
+      Description: 
+      Languages:
+      - Save
+      - Zapisz
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Menu/Menu/Load
+      TermType: 0
+      Description: 
+      Languages:
+      - Load
+      - Wczytaj
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Menu/Menu/Settings
+      TermType: 0
+      Description: 
+      Languages:
+      - Settings
+      - Ustawienia
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Menu/Menu/QuitToMenu
+      TermType: 0
+      Description: 
+      Languages:
+      - Quit to Main Menu
+      - "Wyjd\u017A do Menu G\u0142\xF3wnego"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Menu/Menu/QuitGame
+      TermType: 0
+      Description: 
+      Languages:
+      - Quit to Desktop
+      - "Wyjd\u017A do Pulpitu"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Pop
+      TermType: 0
+      Description: 
+      Languages:
+      - Pop
+      - Pop
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/No interaction
+      TermType: 0
+      Description: 
+      Languages:
+      - No interaction
+      - Brak Interakcji
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Pickup
+      TermType: 0
+      Description: 
+      Languages:
+      - Pick up
+      - "Podnie\u015B"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Open
+      TermType: 0
+      Description: 
+      Languages:
+      - Open
+      - "Otw\xF3rz"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Close
+      TermType: 0
+      Description: 
+      Languages:
+      - Close
+      - Zamknij
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Drop
+      TermType: 0
+      Description: 
+      Languages:
+      - Drop
+      - "Upu\u015B\u0107"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Throw
+      TermType: 0
+      Description: 
+      Languages:
+      - Throw
+      - "Rzu\u0107"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Item
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Item '
+      - Przedmiot
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Pour
+      TermType: 0
+      Description: 
+      Languages:
+      - Pour
+      - Wsyp
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Fill up
+      TermType: 0
+      Description: 
+      Languages:
+      - Fill up
+      - "Nape\u0142nij"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Use
+      TermType: 0
+      Description: 
+      Languages:
+      - Use
+      - "U\u017Cyj"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Missions/Drop item
+      TermType: 0
+      Description: 
+      Languages:
+      - Drop item
+      - "Upu\u015B\u0107 przedmiot"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Missions/Make a Chocolate Bar
+      TermType: 0
+      Description: 
+      Languages:
+      - Make a Chocolate Bar
+      - "Zr\xF3b tabliczk\u0119 czekolady"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/1
+      TermType: 0
+      Description: 
+      Languages:
+      - "Brak czego\u015B tam"
+      - "Brak czego\u015B tam"
+      Flags: 0000
+      Languages_Touch: []
+    CaseInsensitiveTerms: 0
+    OnMissingTranslation: 1
+    mTerm_AppName: 
+    mLanguages:
+    - Name: English
+      Code: en
+      Flags: 0
+    - Name: Polski
+      Code: 
+      Flags: 0
+    IgnoreDeviceLanguage: 0
+    _AllowUnloadingLanguages: 0
+    Google_WebServiceURL: https://script.google.com/macros/s/AKfycbwm_HXhy_Fd-FqXaQimeJzaV8YviViPgwtUKXF-oGuiKwegGwPCR85rXjD3DrCEkzn1SQ/exec
+    Google_SpreadsheetKey: 1uvUQuWNYXc4uXKzbARXWfr3b1VEAmgx7VM2XODXgWqc
+    Google_SpreadsheetName: I2Loc Shop Simulator Localization
+    Google_LastUpdatedVersion: 1693398889854
+    Google_Password: Zbaszynek
+    GoogleUpdateFrequency: 3
+    GoogleInEditorCheckFrequency: 2
+    GoogleUpdateSynchronization: 1
+    GoogleUpdateDelay: 0
+    Assets: []
+    Spreadsheet_LocalFileName: 
+    Spreadsheet_LocalCSVSeparator: ','
+    Spreadsheet_LocalCSVEncoding: utf-8
+    Spreadsheet_SpecializationAsRows: 1
+    Spreadsheet_SortRows: 1

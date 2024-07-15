@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c8bf99e31701e4999a4b54aae6ae9f, type: 3}
+  m_Name: TEMPERING MASTER
+  m_EditorClassIdentifier: 
+  _steamCommunicator: {fileID: 11400000, guid: 0adb9bc83ba606645a461fd6ebb8e862, type: 2}
+  _steamName: TEMPERING_MASTER
+  <ActionStat>k__BackingField: {fileID: 11400000, guid: 6c4de199c22be9c40a44018723909913, type: 2}
+  _itemData: {fileID: 11400000, guid: 08ccf1a6a48b1ee45a087ad9258a8cb7, type: 2}

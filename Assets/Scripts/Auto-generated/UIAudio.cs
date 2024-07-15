@@ -1,0 +1,8 @@
+// THIS CLASS WAS GENERATED AUTOMATICALLY
+// DON'T CHANGE IT MANUALLY AS ALL CHANGES WILL BE OVERWRITTEN
+
+public static class UIAudio
+{
+    public static readonly string UI_HOVER_BUTTON_HOVER_AUDIO_EVENT = "b4effa767efcdd54ea0adbacf446aa41";
+    public static readonly string UI_OPEN_TABLET_AUDIO_EVENT = "37069445580335f4993ae14523ce5f7a";
+}

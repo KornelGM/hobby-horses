@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6de4385bb026d94e895270d2bd38626, type: 3}
+  m_Name: Machine Wheels Moving Single Sounds_SFX_Working_Variant
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 70927bd918e998942a4f8de128010daf, type: 3}
+    - {fileID: 8300000, guid: 54fbcb11d6f0eb742bfe49527486f699, type: 3}
+    - {fileID: 8300000, guid: 735f9071bd200824797c5da7777e5e1e, type: 3}
+    - {fileID: 8300000, guid: 87bb2d4d4d7f49442aff9c57a0687a9b, type: 3}
+    - {fileID: 8300000, guid: e8b31f9f4b23f374eac9914900c77d67, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: <Entries>k__BackingField
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UnityEngine.AudioClip,
+        UnityEngine.AudioModule]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 70927bd918e998942a4f8de128010daf
+    - Name: $v
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 54fbcb11d6f0eb742bfe49527486f699
+    - Name: $v
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 735f9071bd200824797c5da7777e5e1e
+    - Name: $v
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 87bb2d4d4d7f49442aff9c57a0687a9b
+    - Name: $v
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: e8b31f9f4b23f374eac9914900c77d67
+    - Name: $v
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  <EntryList>k__BackingField:
+  - {fileID: 8300000, guid: e8b31f9f4b23f374eac9914900c77d67, type: 3}
+  - {fileID: 8300000, guid: 87bb2d4d4d7f49442aff9c57a0687a9b, type: 3}
+  - {fileID: 8300000, guid: 735f9071bd200824797c5da7777e5e1e, type: 3}
+  - {fileID: 8300000, guid: 54fbcb11d6f0eb742bfe49527486f699, type: 3}
+  - {fileID: 8300000, guid: 70927bd918e998942a4f8de128010daf, type: 3}
+  <GuidsList>k__BackingField:
+  - e8b31f9f4b23f374eac9914900c77d67
+  - 87bb2d4d4d7f49442aff9c57a0687a9b
+  - 735f9071bd200824797c5da7777e5e1e
+  - 54fbcb11d6f0eb742bfe49527486f699
+  - 70927bd918e998942a4f8de128010daf
+  <Guid>k__BackingField: 8f3bdb397f4d2dd45a3a02e5f7025401
+  AudioMixerGroup: {fileID: 7449984016925907064, guid: 981b44ef1704e844aa24b39abf156e20, type: 2}
+  ignoreListenerPause: 0
+  loop: 0
+  priority: 128
+  volume: 0.6
+  pitch: 1
+  stereoPan: 0
+  spatialBlend: 1
+  reverbZoneMix: 1
+  dopplerLevel: 1
+  spread: 0
+  rolloffMode: 0
+  minDistance: 1
+  maxDistance: 5
+  keyFrames:
+  - time: 0
+    value: 1
+    inTangent: 0
+    outTangent: 0
+    inWeight: 0
+    outWeight: 0
+    weightedMode: 0
+  - time: 1
+    value: 0
+    inTangent: 0
+    outTangent: 0
+    inWeight: 0
+    outWeight: 0
+    weightedMode: 0
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

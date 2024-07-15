@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 3827a5586f14fec4980fe4b9b0196efe
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _loadingCanvas: {instanceID: 0}
+  - _customSaveLoadInfo: {fileID: 11400000, guid: 7c1859e0122feef4ea55da1045f8affb, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

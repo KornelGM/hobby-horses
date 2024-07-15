@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 731550dbd6b4482d94a86957b42d4243, type: 3}
+  m_Name: Mouse Right Button Key Binding Setting
+  m_EditorClassIdentifier: 
+  <DisplayedName>k__BackingField:
+    mTerm: Menu/Controls/MouseRightButton
+    mRTL_IgnoreArabicFix: 0
+    mRTL_MaxLineLength: 0
+    mRTL_ConvertNumbers: 0
+    m_DontLocalizeParameters: 0
+  <FallbackDisplayedName>k__BackingField: Mouse Right Button
+  <ActionId>k__BackingField: 5
+  <ControllerType>k__BackingField: 2
+  <IsAxis>k__BackingField: 0
+  <AxisRange>k__BackingField: 1

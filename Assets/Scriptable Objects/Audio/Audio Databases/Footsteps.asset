@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9cc3463bcaaa44098fbeb9855d566c, type: 3}
+  m_Name: Footsteps
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: cce22fd0d01815147a8c23573f8cccca, type: 2}
+    - {fileID: 11400000, guid: 2efb09078fb63f9408985b56b012a633, type: 2}
+    - {fileID: 11400000, guid: 50a545d08a07bfd48bcfc69bc88b3eb6, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: <Entries>k__BackingField
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[AudioEvent,
+        ChocolateManufacture]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: cce22fd0d01815147a8c23573f8cccca
+    - Name: $v
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 2efb09078fb63f9408985b56b012a633
+    - Name: $v
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 50a545d08a07bfd48bcfc69bc88b3eb6
+    - Name: $v
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  <EntryList>k__BackingField:
+  - {fileID: 11400000, guid: 50a545d08a07bfd48bcfc69bc88b3eb6, type: 2}
+  - {fileID: 11400000, guid: 2efb09078fb63f9408985b56b012a633, type: 2}
+  - {fileID: 11400000, guid: cce22fd0d01815147a8c23573f8cccca, type: 2}
+  <GuidsList>k__BackingField:
+  - 50a545d08a07bfd48bcfc69bc88b3eb6
+  - 2efb09078fb63f9408985b56b012a633
+  - cce22fd0d01815147a8c23573f8cccca
+  <Guid>k__BackingField: 3e356bd452e8b564e9a94976c05cb999

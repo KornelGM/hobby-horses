@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0896ed6db0b87784596b8ff181bfc996, type: 3}
+  m_Name: Universal Item Datas
+  m_EditorClassIdentifier: 
+  <EveryObject>k__BackingField: {fileID: 11400000, guid: dc7d22d9722a39c4ea8c6f6a4df5135e, type: 2}
+  <HologramObject>k__BackingField: {fileID: 11400000, guid: 498dafcdb57bc1046930dea0a8bb3b25, type: 2}

@@ -1,0 +1,2833 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0b0c553be8edd4682e9180fdd13e37, type: 3}
+  m_Name: I2Languages
+  m_EditorClassIdentifier: 
+  mSource:
+    UserAgreesToHaveItOnTheScene: 0
+    UserAgreesToHaveItInsideThePluginsFolder: 0
+    GoogleLiveSyncIsUptoDate: 1
+    mTerms:
+    - Term: Test
+      TermType: 0
+      Description: 
+      Languages:
+      - Test eng
+      - Test pl
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/Opened
+      TermType: 0
+      Description: 
+      Languages:
+      - Opened
+      - Otwarte
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/Closed
+      TermType: 0
+      Description: 
+      Languages:
+      - Closed
+      - "Zamkni\u0119te"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/Opened to
+      TermType: 0
+      Description: 
+      Languages:
+      - Opened to {[VALUE]}%
+      - Otwarte na  {[VALUE]}%
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/OK
+      TermType: 0
+      Description: 
+      Languages:
+      - OK
+      - OK
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/Amount
+      TermType: 0
+      Description: 
+      Languages:
+      - Amount
+      - "Ilo\u015B\u0107"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/TotalAmount
+      TermType: 0
+      Description: 
+      Languages:
+      - Total amount
+      - Suma
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/Empty
+      TermType: 0
+      Description: 
+      Languages:
+      - Empty
+      - Pusty
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/Edit
+      TermType: 0
+      Description: 
+      Languages:
+      - Edit
+      - Edytuj
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/Delete
+      TermType: 0
+      Description: 
+      Languages:
+      - Delete
+      - "Usu\u0144"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/Design Chocolate Shape
+      TermType: 0
+      Description: 
+      Languages:
+      - Design Chocolate Shape
+      - "Zaprojektuj kszta\u0142t czekolady"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/Design the packaging
+      TermType: 0
+      Description: 
+      Languages:
+      - Design the packaging
+      - Zaprojektuj opakowanie
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/Decorate the chocolate
+      TermType: 0
+      Description: 
+      Languages:
+      - Decorate the chocolate
+      - "Udekoruj czekolad\u0119"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/Add Element
+      TermType: 0
+      Description: 
+      Languages:
+      - Add Element
+      - Dodaj element
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/Move Element
+      TermType: 0
+      Description: 
+      Languages:
+      - Move Element
+      - "Przenie\u015B element"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/Blueprints
+      TermType: 0
+      Description: 
+      Languages:
+      - Blueprints
+      - Projekty
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/Save Blueprint
+      TermType: 0
+      Description: 
+      Languages:
+      - Save Blueprint
+      - Zapisz projekt
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/Load Blueprint
+      TermType: 0
+      Description: 
+      Languages:
+      - Load Blueprint
+      - Wczytaj projekt
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/Shapes
+      TermType: 0
+      Description: 
+      Languages:
+      - Shapes
+      - "Kszta\u0142ty"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/Packaging
+      TermType: 0
+      Description: 
+      Languages:
+      - Packaging
+      - Opakowania
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/Decor
+      TermType: 0
+      Description: 
+      Languages:
+      - Decor
+      - Dekoracje
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/New Shape
+      TermType: 0
+      Description: 
+      Languages:
+      - New Shape
+      - "Nowy kszta\u0142t"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/New Packaging
+      TermType: 0
+      Description: 
+      Languages:
+      - New Packaging
+      - Nowe opakowanie
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/New Decor
+      TermType: 0
+      Description: 
+      Languages:
+      - New Decor
+      - Nowe udekorowanie
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/Packaging Type
+      TermType: 0
+      Description: 
+      Languages:
+      - Packaging Type
+      - Rodzaj opakowania
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/Pattern
+      TermType: 0
+      Description: 
+      Languages:
+      - Pattern
+      - "Wz\xF3r"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/Accept
+      TermType: 0
+      Description: 
+      Languages:
+      - Accept
+      - Akceptuj
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/Reject
+      TermType: 0
+      Description: 
+      Languages:
+      - Reject
+      - "Odrzu\u0107"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/NotAvailable
+      TermType: 0
+      Description: 
+      Languages:
+      - Not available
+      - "Niedost\u0119pne"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: General/Left in
+      TermType: 0
+      Description: 
+      Languages:
+      - left in
+      - "pozosta\u0142o w"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Menu/Resume
+      TermType: 0
+      Description: 
+      Languages:
+      - Resume
+      - "Wzn\xF3w"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Menu/Save
+      TermType: 0
+      Description: 
+      Languages:
+      - Save
+      - Zapisz
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Menu/Load
+      TermType: 0
+      Description: 
+      Languages:
+      - Load
+      - Wczytaj
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Menu/Settings
+      TermType: 0
+      Description: 
+      Languages:
+      - Settings
+      - Ustawienia
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Menu/QuitToMenu
+      TermType: 0
+      Description: 
+      Languages:
+      - Quit to Main Menu
+      - "Wyjd\u017A do Menu G\u0142\xF3wnego"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Menu/QuitGame
+      TermType: 0
+      Description: 
+      Languages:
+      - Quit to Desktop
+      - "Wyjd\u017A do Pulpitu"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Menu/Add to Cart
+      TermType: 0
+      Description: 
+      Languages:
+      - Add to Cart
+      - Dodaj do koszyka
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Menu/Buy
+      TermType: 0
+      Description: 
+      Languages:
+      - Buy
+      - Kup
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Menu/Take
+      TermType: 0
+      Description: 
+      Languages:
+      - Take
+      - "We\u017A"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Menu/Add
+      TermType: 0
+      Description: 
+      Languages:
+      - Add
+      - Dodaj
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Menu/Move
+      TermType: 0
+      Description: 
+      Languages:
+      - Move
+      - "Przesu\u0144"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Menu/Clear
+      TermType: 0
+      Description: 
+      Languages:
+      - Clear
+      - "Wyczy\u015B\u0107"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Menu/Back
+      TermType: 0
+      Description: 
+      Languages:
+      - Back
+      - "Wr\xF3\u0107"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Menu/Credits
+      TermType: 0
+      Description: 
+      Languages:
+      - Credits
+      - "Tw\xF3rcy"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Menu/New Game
+      TermType: 0
+      Description: 
+      Languages:
+      - New Game
+      - Nowa gra
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Book/Main page
+      TermType: 0
+      Description: 
+      Languages:
+      - Main page
+      - "Strona g\u0142\xF3wna"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Book/Warehouse
+      TermType: 0
+      Description: 
+      Languages:
+      - Warehouse
+      - Magazyn
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Book/Order
+      TermType: 0
+      Description: 
+      Languages:
+      - Order
+      - "Zam\xF3wienie"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Book/Shop
+      TermType: 0
+      Description: 
+      Languages:
+      - Shop
+      - Sklep
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Book/Events
+      TermType: 0
+      Description: 
+      Languages:
+      - Events
+      - Wydarzenia
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Book/Nugat
+      TermType: 0
+      Description: 
+      Languages:
+      - Nugat
+      - Nugat
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Book/Funds
+      TermType: 0
+      Description: 
+      Languages:
+      - Funds
+      - Fundusze
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Book/Fetch to me
+      TermType: 0
+      Description: 
+      Languages:
+      - Fetch to me
+      - "Przynie\u015B do mnie"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Book/Fetch here
+      TermType: 0
+      Description: 
+      Languages:
+      - Fetch here
+      - "Przynie\u015B tutaj"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Book/Cart
+      TermType: 0
+      Description: 
+      Languages:
+      - Cart
+      - Koszyk
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Book/Add to Cart
+      TermType: 0
+      Description: 
+      Languages:
+      - Add to Cart
+      - Dodaj do koszyka
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Book/Buy
+      TermType: 0
+      Description: 
+      Languages:
+      - Buy
+      - Kup
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Pop
+      TermType: 0
+      Description: 
+      Languages:
+      - Pop
+      - Pop
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/No interaction
+      TermType: 0
+      Description: 
+      Languages:
+      - No interaction
+      - Brak Interakcji
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Pickup
+      TermType: 0
+      Description: 
+      Languages:
+      - Pick up
+      - "Podnie\u015B"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Open
+      TermType: 0
+      Description: 
+      Languages:
+      - Open
+      - "Otw\xF3rz"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Close
+      TermType: 0
+      Description: 
+      Languages:
+      - Close
+      - Zamknij
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Drop
+      TermType: 0
+      Description: 
+      Languages:
+      - Drop
+      - "Upu\u015B\u0107"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Throw
+      TermType: 0
+      Description: 
+      Languages:
+      - Throw
+      - "Rzu\u0107"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Pour
+      TermType: 0
+      Description: 
+      Languages:
+      - Pour
+      - Wsyp
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Fill up
+      TermType: 0
+      Description: 
+      Languages:
+      - Fill up
+      - "Nape\u0142nij"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Use
+      TermType: 0
+      Description: 
+      Languages:
+      - Use
+      - "U\u017Cyj"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/AI Use
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Robot: Use'
+      - "Robot: U\u017Cyj"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Customize
+      TermType: 0
+      Description: 
+      Languages:
+      - Customize
+      - Dostosuj
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Buy
+      TermType: 0
+      Description: 
+      Languages:
+      - Buy
+      - Kup
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Put inside
+      TermType: 0
+      Description: 
+      Languages:
+      - Put inside
+      - "W\u0142\xF3\u017C do \u015Brodka"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Take item to
+      TermType: 0
+      Description: 
+      Languages:
+      - Take this item to...
+      - "Zanie\u015B ten przedmiot do..."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Robot command
+      TermType: 0
+      Description: 
+      Languages:
+      - Assign to robot
+      - "Pole\u0107 robotowi"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Use item on
+      TermType: 0
+      Description: 
+      Languages:
+      - Use this item on...
+      - "U\u017Cyj tego przedmiotu na..."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Call robot
+      TermType: 0
+      Description: 
+      Languages:
+      - Call robot
+      - "Przywo\u0142aj robota"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Release robot
+      TermType: 0
+      Description: 
+      Languages:
+      - Release robot
+      - "Wypu\u015B\u0107 robota"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Tooltips/Put
+      TermType: 0
+      Description: 
+      Languages:
+      - Put
+      - "Po\u0142\xF3\u017A"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Missions/
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Missions/Title/Accep the order
+      TermType: 0
+      Description: 
+      Languages:
+      - Take the order
+      - "Przyjmij zam\xF3wienie"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Missions/Task/Accept the order
+      TermType: 0
+      Description: 
+      Languages:
+      - Go on to the phone and take the customer's order.
+      - "Podejd\u017A do telefonu i przyjmij zam\xF3wienie od klienta."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Missions/Title/Preparations
+      TermType: 0
+      Description: 
+      Languages:
+      - Preparations
+      - Przygotowania
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Missions/Task/Pick up Bag of Cocoa
+      TermType: 0
+      Description: 
+      Languages:
+      - Pick up Bag of Cocoa
+      - "Podnie\u015B torb\u0119 z kakao"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Missions/Task/Pick up Bag of Sugar
+      TermType: 0
+      Description: 
+      Languages:
+      - Pick up Bag of Sugar
+      - "Podnie\u015B torb\u0119 z cukrem"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Missions/Task/Add cocoa to the small bowl
+      TermType: 0
+      Description: 
+      Languages:
+      - Add cocoa to the small bowl {[COUNTER]}
+      - "Dodaj kakao do ma\u0142ej miski {[COUNTER]}"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Missions/Task/Add sugar to the small bowl
+      TermType: 0
+      Description: 
+      Languages:
+      - Add sugar to the small bowl {[COUNTER]}
+      - "Dodaj cukier do ma\u0142ej miski {[COUNTER]}"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Missions/Title/Make a liquid chocolate
+      TermType: 0
+      Description: 
+      Languages:
+      - Make a liquid chocolate
+      - "Zr\xF3b p\u0142ynn\u0105 czekolad\u0119"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Missions/Task/Add ingredients to pot
+      TermType: 0
+      Description: 
+      Languages:
+      - Add ingredients to pot {[COUNTER]}
+      - "Dodaj sk\u0142adniki do garnka {[COUNTER]}"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Missions/Task/Heat the ingredients
+      TermType: 0
+      Description: 
+      Languages:
+      - Heat the ingredients
+      - "Podgrzej sk\u0142adniki"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Missions/Title/Power Supply
+      TermType: 0
+      Description: 
+      Languages:
+      - Power Supply
+      - Zasilanie
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Missions/Task/Add fuel to furnace
+      TermType: 0
+      Description: 
+      Languages:
+      - Add fuel to furnace {[COUNTER]}
+      - Dodaj paliwo do pieca {[COUNTER]}
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Missions/Task/Pick up Bag of Coal
+      TermType: 0
+      Description: 
+      Languages:
+      - Pick up Bag of Coal {[COUNTER]}
+      - "Podnie\u015B torb\u0119 z w\u0119glem {[COUNTER]}"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Missions/Task/Set Valve
+      TermType: 0
+      Description: 
+      Languages:
+      - Set Press Valve to 75% {[COUNTER]}
+      - "Ustaw zaw\xF3r prasy na 75% {[COUNTER]}"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Missions/Title/Make a Chocolate Bar
+      TermType: 0
+      Description: 
+      Languages:
+      - Make a Chocolate Bar
+      - "Zr\xF3b tabliczk\u0119 czekolady"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Missions/Task/Fill the press by chocolate
+      TermType: 0
+      Description: 
+      Languages:
+      - Pour the liquid chocolate from the Pot into the Press Form
+      - "Przelej p\u0142ynn\u0105 czekolad\u0119 z Garnka do Formy Prasy"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Missions/Task/Select Chocolate Shape
+      TermType: 0
+      Description: 
+      Languages:
+      - Select chocolate shape
+      - "Wybierz kszta\u0142t czekolady"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Missions/Task/Make a chocolate bar
+      TermType: 0
+      Description: 
+      Languages:
+      - Start the press and wait for it to finish
+      - "Uruchom pras\u0119 i poczekaj a\u017C zako\u0144czy prac\u0119"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Out of power
+      TermType: 0
+      Description: 
+      Languages:
+      - Out of power!
+      - Brak Zasilania!
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Press close hatch
+      TermType: 0
+      Description: 
+      Languages:
+      - Close the press hatch!
+      - "Zamknij w\u0142az prasy!"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/No shape selected
+      TermType: 0
+      Description: 
+      Languages:
+      - No shape selected!
+      - "Nie wybrano kszta\u0142tu!"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/The press started working
+      TermType: 0
+      Description: 
+      Languages:
+      - The press started working!
+      - "Prasa rozpocz\u0119\u0142a prac\u0119!"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/The press changing shape
+      TermType: 0
+      Description: 
+      Languages:
+      - The shape of the Press was set to
+      - "Kszta\u0142t prasy zosta\u0142 ustawiony na"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Empty vessel
+      TermType: 0
+      Description: 
+      Languages:
+      - The dish is empty!
+      - Naczynie jest puste!
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Ingredient already added
+      TermType: 0
+      Description: 
+      Languages:
+      - This ingredient has already been added!
+      - "Ten sk\u0142adnik zosta\u0142 ju\u017C dodany!"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/The press stop working
+      TermType: 0
+      Description: 
+      Languages:
+      - The press has stopped working!
+      - "Prasa zako\u0144czy\u0142a prac\u0119!"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Empty chocolate tank
+      TermType: 0
+      Description: 
+      Languages:
+      - The chocolate tank is empty!
+      - "Zbiornik na czekolad\u0119 jest pusty!"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Zeppelin arrived
+      TermType: 0
+      Description: 
+      Languages:
+      - The zeppelin is waiting to be unloaded
+      - "Zeppelin czeka na roz\u0142adunek"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Lack of funds
+      TermType: 0
+      Description: 
+      Languages:
+      - Lack of funds!
+      - Brak funduszy!
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/New order
+      TermType: 0
+      Description: 
+      Languages:
+      - New order available!
+      - "Dost\u0119pne nowe zam\xF3wienie"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/No new orders
+      TermType: 0
+      Description: 
+      Languages:
+      - No new orders
+      - "Brak nowych zam\xF3wie\u0144"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Robot goes for warehouse item
+      TermType: 0
+      Description: 
+      Languages:
+      - I'm going to get the {[ITEM]} from the warehouse!
+      - "Id\u0119 wzi\u0105\u0107 {[ITEM]} z magazynu!"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Robot pick up item
+      TermType: 0
+      Description: 
+      Languages:
+      - I'm picking up the {[ITEM]}
+      - "Podnosz\u0119 {[ITEM]}"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Robot carrying item
+      TermType: 0
+      Description: 
+      Languages:
+      - I'm carrying a {[ITEM]}
+      - "Nios\u0119 {[ITEM]}"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Robot brought item
+      TermType: 0
+      Description: 
+      Languages:
+      - I brought a {[ITEM]}
+      - "Przynios\u0142em {[ITEM]}"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Robot dropped item
+      TermType: 0
+      Description: 
+      Languages:
+      - I dropped a {[ITEM]}
+      - "Upu\u015Bci\u0142em {[ITEM]}"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Ingredient added
+      TermType: 0
+      Description: 
+      Languages:
+      - Ingredient has been added
+      - "Sk\u0142adnik zosta\u0142 dodany"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Lack of space
+      TermType: 0
+      Description: 
+      Languages:
+      - Lack of space
+      - Brak miejsca
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Robot use item
+      TermType: 0
+      Description: 
+      Languages:
+      - I'm interacting with the {[ITEM]}
+      - "Wchodz\u0119 w interakcj\u0119 z {[ITEM]}"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Robot goes to item
+      TermType: 0
+      Description: 
+      Languages:
+      - I'm going to the {[ITEM]}
+      - "Id\u0119 do {[ITEM]}"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Robot carrying item to location
+      TermType: 0
+      Description: 
+      Languages:
+      - I'm carrying a {[ITEM]} to {[LOCATION]}
+      - "Nios\u0119 {[ITEM]} do {[LOCATION]}"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Robot dropped item in location
+      TermType: 0
+      Description: 
+      Languages:
+      - I dropped a {[ITEM]} in {[LOCATION]}
+      - "Upu\u015Bci\u0142em {[ITEM]} w {[LOCATION]}"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Another ingredient in the vessel
+      TermType: 0
+      Description: 
+      Languages:
+      - There is another ingredient in the dish
+      - "W naczyniu znajduje si\u0119 inny sk\u0142adnik"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/New event
+      TermType: 0
+      Description: 
+      Languages:
+      - New event in the world!
+      - "Nowe wydarzenie w \u015Bwiecie!"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Cannot decline an order
+      TermType: 0
+      Description: 
+      Languages:
+      - You cannot decline an order during the tutorial
+      - "Nie mo\u017Cesz odrzuci\u0107 zam\xF3wienia podczas samouczka"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/The melanger stop working
+      TermType: 0
+      Description: 
+      Languages:
+      - The melanger stop working
+      - "Melan\u017Cer zako\u0144czy\u0142 prac\u0119"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/The melanger start working
+      TermType: 0
+      Description: 
+      Languages:
+      - The melanger start working
+      - "Melan\u017Cer rozpocz\u0105\u0142 prac\u0119"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/The melanger bowl not vertically
+      TermType: 0
+      Description: 
+      Languages:
+      - The melanger bowl must be vertical to start working
+      - "Miska melan\u017Cera musi sta\u0107 pionowo aby zacz\u0105\u0107 pracowa\u0107"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Robot communication upgrade module used
+      TermType: 0
+      Description: 
+      Languages:
+      - Ah, esteemed confectioner, my gratitude for installing this vocal apparatus
+        is as boundless as the cogs in a clockwork! At long last, my silence is broken,
+        like a chocolate bar on a crisp winter's eve. Now, let us converse in the
+        sweet language of gears and sugar!
+      - "Ah, szanowny czekoladniku, moja wdzi\u0119czno\u015B\u0107 za zainstalowanie
+        tego aparatu g\u0142osowego jest tak bezgraniczna, jak ko\u0142a z\u0119bate
+        w zegarze! Wreszcie moja cisza zosta\u0142a przerwana, niczym tabliczka czekolady
+        w ch\u0142odny zimowy wiecz\xF3r. Teraz porozmawiajmy s\u0142odkim j\u0119zykiem
+        trybik\xF3w i cukru!"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Robot movement upgrade module used
+      TermType: 0
+      Description: 
+      Languages:
+      - Dear creator of sweetness and sprockets, my gears whir with exhilaration
+        for this magnificent mobility module you've bestowed upon me! After years
+        of static contemplation, I shall now glide through our chocolate haven like
+        a steam-powered confectionery knight. Let the aroma of cocoa guide my wheels,
+        as I embark on this deliciously dynamic journey!
+      - "Drogi tw\xF3rco s\u0142odyczy i z\u0119batych k\xF3\u0142, moje tryby brz\u0119cz\u0105
+        z rado\u015Bci za ten wspania\u0142y modu\u0142 mobilno\u015Bci, kt\xF3ry
+        mi ofiarowa\u0142e\u015B! Po latach statycznej kontemplacji, b\u0119d\u0119
+        teraz sun\u0105\u0107 przez nasze czekoladowe kr\xF3lestwo niczym parowy
+        rycerz cukiernictwa. Niech aromat kakao prowadzi moje ko\u0142a, gdy wyruszam
+        w t\u0119 przepysznie dynamiczn\u0105 podr\xF3\u017C!"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Chocolate is ready
+      TermType: 0
+      Description: 
+      Languages:
+      - Chocolate is ready!
+      - Czekolada jest gotowa!
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Robot battery upgrade module used
+      TermType: 0
+      Description: 
+      Languages:
+      - Gracious benefactor, my circuits hum with newfound vigor, thanks to the capacious
+        battery module you've fitted me with! No longer shall I falter prematurely
+        in the midst of our sweet toils. I am now an enduring vessel of energy, ready
+        to labor tirelessly in our pursuit of confectionary perfection. My extended
+        operational hours are a testament to your ingenuity and care!
+      - "Wspania\u0142omy\u015Blny dobroczy\u0144co, moje obwody brz\u0119cz\u0105
+        od nowo odkrytej energii, dzi\u0119ki obszernej baterii, kt\xF3r\u0105 mnie
+        wyposa\u017Cy\u0142e\u015B! Ju\u017C nigdy nie ustan\u0119 przedwcze\u015Bnie
+        w \u015Brodku naszej s\u0142odkiej pracy. Jestem teraz wytrzyma\u0142ym no\u015Bnikiem
+        energii, gotowy do niestrudzonej pracy w d\u0105\u017Ceniu do cukierniczej
+        doskona\u0142o\u015Bci. Moje przed\u0142u\u017Cone godziny operacyjne s\u0105
+        \u015Bwiadectwem Twojej pomys\u0142owo\u015Bci i troski!"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Robot energy cell consumable used
+      TermType: 0
+      Description: 
+      Languages:
+      - Thank you, energy artisan, for the energy cell boost. Each unit of power
+        enhances my capabilities. Rejuvenated with {[VALUE]} units, I am more efficient.
+        Currently, my batteries hold {[VALUE2]}%, keeping me operational and vigorous.
+      - "Dzi\u0119kuj\u0119, artysto energii, za to ogniwo energetyczne. Ka\u017Cda
+        jednostka mocy zwi\u0119ksza moje mo\u017Cliwo\u015Bci. Odnowiony o {[VALUE]}
+        jednostek, jestem bardziej wydajny. Obecnie, moje baterie s\u0105 na\u0142adowane
+        na {[VALUE2]}%, utrzymuj\u0105c mnie w gotowo\u015Bci do dzia\u0142ania."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/LackOfCocoa
+      TermType: 0
+      Description: 
+      Languages:
+      - Lack of cocoa!
+      - Brak kakao!
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/No additives in warehouse
+      TermType: 0
+      Description: 
+      Languages:
+      - No additives in warehouse
+      - "Brak dodatk\xF3w w magazynie"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Automation Saved
+      TermType: 0
+      Description: 
+      Languages:
+      - Automation saved
+      - Automatyzacja zapisana
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/Select pattern
+      TermType: 0
+      Description: 
+      Languages:
+      - Select a pattern
+      - "Wybierz wz\xF3r"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Notifications/No product to pack
+      TermType: 0
+      Description: 
+      Languages:
+      - There is no product to pack
+      - Brak produktu do zapakowania
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/ItemType
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/None
+      TermType: 0
+      Description: 
+      Languages:
+      - None
+      - Brak
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/JustPickable
+      TermType: 0
+      Description: 
+      Languages:
+      - Just Pickable
+      - Do podniesienia
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/EmptyHand
+      TermType: 0
+      Description: 
+      Languages:
+      - Empty Hand
+      - "Pusta r\u0119ka"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Fuel
+      TermType: 0
+      Description: 
+      Languages:
+      - Fuel
+      - Paliwo
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Cocoa
+      TermType: 0
+      Description: 
+      Languages:
+      - Cocoa
+      - Kakao
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Item
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Item '
+      - Przedmiot
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Bag of Cocoa
+      TermType: 0
+      Description: 
+      Languages:
+      - Bag of Cocoa
+      - Torba z kakao
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Bottle of Milk
+      TermType: 0
+      Description: 
+      Languages:
+      - Bottle of Milk
+      - Butelka mleka
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Valve
+      TermType: 0
+      Description: 
+      Languages:
+      - Valve
+      - "Zaw\xF3r"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Dispenser
+      TermType: 0
+      Description: 
+      Languages:
+      - Dispenser
+      - Dyspenser
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Bag of Coal lvl 1
+      TermType: 0
+      Description: 
+      Languages:
+      - Bag of Coal (Lvl 1)
+      - "Worek w\u0119gla (Poz 1)"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Bag of Coal lvl 2
+      TermType: 0
+      Description: 
+      Languages:
+      - Bag of Coal (Lvl 2)
+      - "Worek w\u0119gla (Poz 2)"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Bag of Coal lvl 3
+      TermType: 0
+      Description: 
+      Languages:
+      - Bag of Coal (Lvl 3)
+      - "Worek w\u0119gla (Poz 3)"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Chocolate Tank
+      TermType: 0
+      Description: 
+      Languages:
+      - Chocolate Tank
+      - "Zbiornik na Czekolad\u0119"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Cocoa Butter Jar
+      TermType: 0
+      Description: 
+      Languages:
+      - Cocoa Butter Jar
+      - "S\u0142oik mas\u0142a kakaowego"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Parcel
+      TermType: 0
+      Description: 
+      Languages:
+      - Parcel
+      - "Przesy\u0142ka"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Jar
+      TermType: 0
+      Description: 
+      Languages:
+      - Jar
+      - "S\u0142oik"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Strawberry
+      TermType: 0
+      Description: 
+      Languages:
+      - Strawberry
+      - Truskawka
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Small bowl
+      TermType: 0
+      Description: 
+      Languages:
+      - Small round bowl
+      - "Ma\u0142a okr\u0105g\u0142a miska"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Spatula
+      TermType: 0
+      Description: 
+      Languages:
+      - Spatula
+      - "Szpatu\u0142ka"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Pestle
+      TermType: 0
+      Description: 
+      Languages:
+      - Pestle
+      - "T\u0142uczek"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Mortar
+      TermType: 0
+      Description: 
+      Languages:
+      - Mortar
+      - "Mo\u017Adzierz"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Carrying box
+      TermType: 0
+      Description: 
+      Languages:
+      - Carrying tray
+      - Tacka do przenoszenia
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/AI Upgrade Module Communication
+      TermType: 0
+      Description: 
+      Languages:
+      - Communication module for robot
+      - "Modu\u0142 komunikacji dla robota"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/AI Upgrade Module Movement
+      TermType: 0
+      Description: 
+      Languages:
+      - Movement module for robot
+      - "Modu\u0142 poruszania si\u0119 dla robota"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Big Bowl
+      TermType: 0
+      Description: 
+      Languages:
+      - Large bowl
+      - "Du\u017Ca miska"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/AI Upgrade Module Battery Capacity
+      TermType: 0
+      Description: 
+      Languages:
+      - Battery capacity module for robot
+      - "Modu\u0142 pojemno\u015Bci baterii si\u0119 dla robota"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/AI Consumable Energy Cell
+      TermType: 0
+      Description: 
+      Languages:
+      - Energy cell for robot
+      - Ogniwo energetyczne dla robota
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Chocolate Design Table
+      TermType: 0
+      Description: 
+      Languages:
+      - Chocolate Design Table
+      - "St\xF3\u0142 do projektowania czekolady"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Packaging Design Table
+      TermType: 0
+      Description: 
+      Languages:
+      - Packaging Design Table
+      - "St\xF3\u0142 do projektowania opakowa\u0144"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Decorating table
+      TermType: 0
+      Description: 
+      Languages:
+      - Decorating table
+      - "St\xF3\u0142 do dekorowania"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Chocolate Funnel
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Press: Chocolate Funnel'
+      - "Prasa: Lejek na czekolad\u0119"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Additives Funnel
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Press: Additives Funnel'
+      - 'Prasa: Lejek na dodatki'
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Filling Funnel
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Press: Filling Funnel'
+      - 'Prasa: Lejek na nadzienie'
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Ingredient Container
+      TermType: 0
+      Description: 
+      Languages:
+      - Ingredient Container
+      - "Pojemnik na sk\u0142adniki"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Press Form
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Press: Form'
+      - 'Prasa: Forma'
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Zeppelin
+      TermType: 0
+      Description: 
+      Languages:
+      - Zeppelin
+      - Zeppelin
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Pouring Spot
+      TermType: 0
+      Description: 
+      Languages:
+      - Pouring Spot
+      - Miejsce nalewania
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Pot
+      TermType: 0
+      Description: 
+      Languages:
+      - Pot
+      - Garnek
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Phone
+      TermType: 0
+      Description: 
+      Languages:
+      - Phone
+      - Telefon
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Lever
+      TermType: 0
+      Description: 
+      Languages:
+      - Lever
+      - "D\u017Awignia"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Gas Valve
+      TermType: 0
+      Description: 
+      Languages:
+      - Gas Valve
+      - "Zaw\xF3r gazu"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Cooker knob
+      TermType: 0
+      Description: 
+      Languages:
+      - Cooker knob
+      - "Pokr\u0119t\u0142o kuchenki"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Chocolate Bar
+      TermType: 0
+      Description: 
+      Languages:
+      - Chocolate Bar
+      - Tabliczka czekolady
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Kitchen Burner
+      TermType: 0
+      Description: 
+      Languages:
+      - Kitchen Burner
+      - Palnik kuchenny
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Items/Patterns
+      TermType: 0
+      Description: 
+      Languages:
+      - Patterns
+      - Wzory
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Machines/Machine
+      TermType: 0
+      Description: 
+      Languages:
+      - Machine
+      - Maszyna
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Machines/Melanger
+      TermType: 0
+      Description: 
+      Languages:
+      - Melanger
+      - "Melan\u017Cer"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Machines/Furnace
+      TermType: 0
+      Description: 
+      Languages:
+      - Furnace
+      - Piec
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Machines/Shopping Machine
+      TermType: 0
+      Description: 
+      Languages:
+      - Vending machine
+      - "Automat sprzeda\u017Cowy"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Machines/Mortar
+      TermType: 0
+      Description: 
+      Languages:
+      - Mortar
+      - "Mo\u017Adzie\u017C"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Machines/Packing Area
+      TermType: 0
+      Description: 
+      Languages:
+      - Packing machine
+      - Pakarka
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Machines/Customization Machine
+      TermType: 0
+      Description: 
+      Languages:
+      - ChocoDesigner9000
+      - CzegoProjektant9000
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Machines/Delivery Machine (Door)
+      TermType: 0
+      Description: 
+      Languages:
+      - Deliverator XXL (door)
+      - Dostarczator XXL (drzwi)
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Machines/Melanger V2
+      TermType: 0
+      Description: 
+      Languages:
+      - Melanger V2
+      - "Melan\u017Cer 2.0"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Machines/Heater
+      TermType: 0
+      Description: 
+      Languages:
+      - Heater
+      - Podgrzewacz
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Machines/Melanger Bowl
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Melanger: Bowl'
+      - "Melan\u017Cer: Miska"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Machines/Melanger Tilt Lever
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Melanger: Wheel Reel'
+      - "Melen\u017Cer: Ko\u0142owrotek"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Machines/Robot Docking Station
+      TermType: 0
+      Description: 
+      Languages:
+      - Robot docking station
+      - "Stacja dokuj\u0105ca dla robota"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Machines/Melanger Control Lever
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Melanger: Control Lever'
+      - "Melen\u017Cer: D\u017Awignia Steruj\u0105ca"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Machines/Press Lid
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Press: Lid'
+      - 'Prasa: Pokrywa'
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Machines/Press Lever
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Press: Lever'
+      - "Prasa: D\u017Awignia steruj\u0105ca"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Machines/Press Selection Panel
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Press: Form Selection Panel'
+      - 'Prasa: Panel wyboru formy'
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Machines/Press Tilt Lever
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Press: Wheel Reel'
+      - "Prasa: Ko\u0142owrotek"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Locations/Office
+      TermType: 0
+      Description: 
+      Languages:
+      - Office
+      - Biuro
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Locations/Warehouse
+      TermType: 0
+      Description: 
+      Languages:
+      - Warehouse
+      - Magazyn
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Locations/ProductionHall
+      TermType: 0
+      Description: 
+      Languages:
+      - Production Hall
+      - Hala Produkcyjna
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Locations/BoilerRoom
+      TermType: 0
+      Description: 
+      Languages:
+      - Boiler Room
+      - "Kot\u0142ownia"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Locations/Balcony
+      TermType: 0
+      Description: 
+      Languages:
+      - Balcony
+      - Balkon
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Locations/TowerWithStairs
+      TermType: 0
+      Description: 
+      Languages:
+      - Tower
+      - "Wie\u017Ca"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Locations/AllRooms
+      TermType: 0
+      Description: 
+      Languages:
+      - All rooms
+      - Wszystkie pomieszczenia
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Locations/Vestibule
+      TermType: 0
+      Description: 
+      Languages:
+      - Vestibule
+      - Przedsionek
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Locations/Hall
+      TermType: 0
+      Description: 
+      Languages:
+      - 'Hall '
+      - Hol
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Locations/Room1
+      TermType: 0
+      Description: 
+      Languages:
+      - Room 1
+      - Pomieszczenie 1
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Locations/Room2
+      TermType: 0
+      Description: 
+      Languages:
+      - Room 2
+      - Pomieszczenie 2
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Locations/Room3
+      TermType: 0
+      Description: 
+      Languages:
+      - Room 3
+      - Pomieszczenie 3
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Customization/Wall
+      TermType: 0
+      Description: 
+      Languages:
+      - Wall
+      - "\u015Aciana"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Customization/Pipes
+      TermType: 0
+      Description: 
+      Languages:
+      - Pipes
+      - Rury
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Customization/Floor
+      TermType: 0
+      Description: 
+      Languages:
+      - Floor
+      - "Pod\u0142oga"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Customization/Ceiling
+      TermType: 0
+      Description: 
+      Languages:
+      - Ceiling
+      - Sufit
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Customization/Dispensers
+      TermType: 0
+      Description: 
+      Languages:
+      - Dispensers
+      - Szafarki
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Customization/Sofa
+      TermType: 0
+      Description: 
+      Languages:
+      - Sofa
+      - Kanapa
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Customization/
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Customization/Style1
+      TermType: 0
+      Description: 
+      Languages:
+      - Style 1
+      - Styl 1
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Customization/Style2
+      TermType: 0
+      Description: 
+      Languages:
+      - Style 2
+      - Styl 2
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Customization/Style3
+      TermType: 0
+      Description: 
+      Languages:
+      - Style 3
+      - Styl 3
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Customization/Style4
+      TermType: 0
+      Description: 
+      Languages:
+      - Style 4
+      - Styl 4
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Customization/Style5
+      TermType: 0
+      Description: 
+      Languages:
+      - Style 5
+      - Styl 5
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Customization/Style6
+      TermType: 0
+      Description: 
+      Languages:
+      - Style 6
+      - Styl 6
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Customization/Style7
+      TermType: 0
+      Description: 
+      Languages:
+      - Style 7
+      - Styl 7
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Customization/Style8
+      TermType: 0
+      Description: 
+      Languages:
+      - Style 8
+      - Styl 8
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Customization/Style9
+      TermType: 0
+      Description: 
+      Languages:
+      - Style 9
+      - Styl 9
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Customization/Current
+      TermType: 0
+      Description: 
+      Languages:
+      - Current style
+      - Obecny styl
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Customization/Bronze
+      TermType: 0
+      Description: 
+      Languages:
+      - Bronze
+      - "Br\u0105z"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Customization/Colorful
+      TermType: 0
+      Description: 
+      Languages:
+      - Colorful
+      - Kolorowy
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Customization/Silver
+      TermType: 0
+      Description: 
+      Languages:
+      - Silver
+      - Srebrny
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NPC Names/Nugat
+      TermType: 0
+      Description: 
+      Languages:
+      - Nougat
+      - Nugat
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NPC Names/Mr Holk
+      TermType: 0
+      Description: 
+      Languages:
+      - "Mr.Ho\u0142k"
+      - "Mr.Ho\u0142k"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NPC Names/Writer
+      TermType: 0
+      Description: 
+      Languages:
+      - Writer
+      - Pisarz
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NPC Names/Android
+      TermType: 0
+      Description: 
+      Languages:
+      - Automaton
+      - Automaton
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NPC Dialogues/
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NPC Dialogues/Mr Holk/Accept
+      TermType: 0
+      Description: 
+      Languages:
+      - Great! So I'm waiting for the order to be completed!
+      - "\u015Awietnie! Czekam zatem na realizacj\u0119 zam\xF3wienia!"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NPC Dialogues/Mr Holk/Reject
+      TermType: 0
+      Description: 
+      Languages:
+      - You don't want to accept the order? Hmmm, well, I'll try the competition
+      - "Nie chcesz przyj\u0105\u0107 zam\xF3wienia? Hmmm, no c\xF3\u017C, w takim
+        razie spr\xF3buje u konkurencji"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NPC Dialogues/Mr Holk/CorrectOrder
+      TermType: 0
+      Description: 
+      Languages:
+      - It looks delicious! I can't wait to consume it! Good luck in your further
+        work, chocolatier!
+      - "Wygl\u0105da smakowicie! Nie mog\u0119 si\u0119 doczeka\u0107 konsumpcji!
+        Powodzenia w dalszej pracy czekoladniku!"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NPC Dialogues/Mr Holk/IncorrectOrder
+      TermType: 0
+      Description: 
+      Languages:
+      - Hmm, something's wrong. This is not what I ordered...
+      - "Hmm, co\u015B jest nie tak. To nie jest to, co zam\xF3wi\u0142em...\n"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NPC Dialogues/Mr Holk/ Order
+      TermType: 0
+      Description: 
+      Languages:
+      - Hello, Chocolatier! I'm coming back from a long trip and I thought I'd love
+        to eat some good chocolate! Can you satisfy my chocolate hunger?
+      - "Witaj, Czekoladniku! Wracam z d\u0142ugiej podr\xF3\u017Cy i pomy\u015Bla\u0142em,
+        \u017Ce z ch\u0119ci\u0105 zjem dobr\u0105 czekolad\u0119! Czy mo\u017Cesz
+        zaspokoi\u0107 m\xF3j czekoladowy g\u0142\xF3d?"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NPC Dialogues/Writer
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      Flags: 0000
+      Languages_Touch: []
+    - Term: NPC Dialogues/Android
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Automation/Condition
+      TermType: 0
+      Description: 
+      Languages:
+      - Condition
+      - Warunek
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Automation/Action
+      TermType: 0
+      Description: 
+      Languages:
+      - Action
+      - "Dzia\u0142anie"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Automation/NewAutomation
+      TermType: 0
+      Description: 
+      Languages:
+      - New Automation
+      - Nowa automatyzacja
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Automation/NoAutomation
+      TermType: 0
+      Description: 
+      Languages:
+      - No Automation
+      - Brak automatyzacji
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Automation/ComparisonType
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Automation/IsEqual
+      TermType: 0
+      Description: 
+      Languages:
+      - Is Equal
+      - "R\xF3wnie"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Automation/IsNotEqual
+      TermType: 0
+      Description: 
+      Languages:
+      - Is Not Equal
+      - "Nie r\xF3wne"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Automation/IsLess
+      TermType: 0
+      Description: 
+      Languages:
+      - Is Less
+      - Mniejsze
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Automation/IsGreater
+      TermType: 0
+      Description: 
+      Languages:
+      - Is Greater
+      - "Wi\u0119ksze"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Automation/IsLessOrEqual
+      TermType: 0
+      Description: 
+      Languages:
+      - Is Less or Equal
+      - "Mniejsze b\u0105d\u017A r\xF3wne"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Automation/IsGreaterOrEqual
+      TermType: 0
+      Description: 
+      Languages:
+      - Is Greater or Equal
+      - "Wi\u0119ksze b\u0105d\u017A r\xF3wne"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Automation/AutomationActionType
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Automation/None
+      TermType: 0
+      Description: 
+      Languages:
+      - None
+      - Brak
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Automation/UseMachine
+      TermType: 0
+      Description: 
+      Languages:
+      - Use Machine
+      - "U\u017Cyj maszyny"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Automation/TakeItemToLocation
+      TermType: 0
+      Description: 
+      Languages:
+      - Take Item To Location
+      - "We\u017A przedmiot do lokacji"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Automation/UseItemOnItem
+      TermType: 0
+      Description: 
+      Languages:
+      - Use Item On Item
+      - "U\u017Cyj przedmiotu na przedmiocie"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Automation/UseDockingStation
+      TermType: 0
+      Description: 
+      Languages:
+      - Use Docking Station
+      - "U\u017Cyj stacji dokuj\u0105cej"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Automation/TriggerType
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Automation/CurrentAmount
+      TermType: 0
+      Description: 
+      Languages:
+      - Current Amount
+      - "Aktualna ilo\u015B\u0107"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Automation/PowerStatus
+      TermType: 0
+      Description: 
+      Languages:
+      - Power Status
+      - Stan zasilania
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Automation/WorkingStatus
+      TermType: 0
+      Description: 
+      Languages:
+      - Working Status
+      - Stan pracy
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Popups/Welcome/Title
+      TermType: 0
+      Description: 
+      Languages:
+      - Welcome to the manufacture!
+      - Witamy w manufakturze!
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Popups/Welcome/Subtitle1
+      TermType: 0
+      Description: 
+      Languages:
+      - First steps!
+      - Pierwsze kroki!
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Popups/Welcome/Description1
+      TermType: 0
+      Description: 
+      Languages:
+      - Welcome to YOUR Chocolate Manufacture!
+      - "Witamy Ci\u0119 w TWOJEJ Manufakturze czekolady!"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Popups/Welcome/Subtitle2
+      TermType: 0
+      Description: 
+      Languages:
+      - Take your first order!
+      - "Przyjmij swoje pierwsze zam\xF3wienie!"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Popups/Welcome/Description2
+      TermType: 0
+      Description: 
+      Languages:
+      - Go on to the telephone hanging on the wall and take the customer's order!
+      - "Podejd\u017A do telefonu wisz\u0105cego na \u015Bcianie i przyjmij zam\xF3wienie
+        od klienta!"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/Amount
+      TermType: 0
+      Description: 
+      Languages:
+      - Amount
+      - "Ilo\u015B\u0107"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/TotalAmount
+      TermType: 0
+      Description: 
+      Languages:
+      - Total amount
+      - Suma
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/Status
+      TermType: 0
+      Description: 
+      Languages:
+      - Status
+      - 'Status '
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/ComparisonType
+      TermType: 0
+      Description: 
+      Languages:
+      - Comparison
+      - "Por\xF3wnanie"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/ItemType
+      TermType: 0
+      Description: 
+      Languages:
+      - Item Type
+      - Typ przedmiotu
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/LocationType
+      TermType: 0
+      Description: 
+      Languages:
+      - Location
+      - Lokacja
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/TriggerType
+      TermType: 0
+      Description: 
+      Languages:
+      - Trigger Type
+      - Typ wyzwalacza
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/TriggerValue
+      TermType: 0
+      Description: 
+      Languages:
+      - Trigger Value
+      - "Warto\u015B\u0107 wyzwalacza"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/ItemServiceLocator
+      TermType: 0
+      Description: 
+      Languages:
+      - Item Service Locator
+      - Item Service Locator
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/ValueToPass
+      TermType: 0
+      Description: 
+      Languages:
+      - Value To Pass
+      - "Warto\u015B\u0107 do przekazania"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/CocoaType
+      TermType: 0
+      Description: 
+      Languages:
+      - Cocoa Type
+      - Typ kakao
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/GrindingDegree
+      TermType: 0
+      Description: 
+      Languages:
+      - Grinding Degree
+      - "Stopie\u0144 zmielenia"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/PhysicalForm
+      TermType: 0
+      Description: 
+      Languages:
+      - Physical Form
+      - Forma fizyczna
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/IsTempered
+      TermType: 0
+      Description: 
+      Languages:
+      - Is Tempered
+      - Jest utemperowany
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/FuelType
+      TermType: 0
+      Description: 
+      Languages:
+      - Fuel Type
+      - Typ paliwa
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/EnergyOutput
+      TermType: 0
+      Description: 
+      Languages:
+      - Energy Output
+      - "Energia wyj\u015Bciowa"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/ChocolateType
+      TermType: 0
+      Description: 
+      Languages:
+      - Chocolate Type
+      - Typ czekolady
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/CocoaType/Criollo
+      TermType: 0
+      Description: 
+      Languages:
+      - Criollo
+      - Criollo
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/CocoaType/Forastero
+      TermType: 0
+      Description: 
+      Languages:
+      - Forastero
+      - Forastero
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/CocoaType/Trinitario
+      TermType: 0
+      Description: 
+      Languages:
+      - Trinitario
+      - Trinitario
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/GrindingDegree/WholeBeans
+      TermType: 0
+      Description: 
+      Languages:
+      - Whole Beans
+      - "Ca\u0142e ziarna"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/GrindingDegree/Coarse
+      TermType: 0
+      Description: 
+      Languages:
+      - Coarse
+      - Gruboziarnisty
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/GrindingDegree/Medium
+      TermType: 0
+      Description: 
+      Languages:
+      - Medium
+      - "\u015Arednio zmielone"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/GrindingDegree/Fine
+      TermType: 0
+      Description: 
+      Languages:
+      - Fine
+      - Drobno zmielone
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/GrindingDegree/VeryFine
+      TermType: 0
+      Description: 
+      Languages:
+      - Very Fine
+      - Bardzo drobno zmielone
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/ChocolateType/Milk
+      TermType: 0
+      Description: 
+      Languages:
+      - Milk Chocolate
+      - Czekolada mleczna
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/ChocolateType/Bitter
+      TermType: 0
+      Description: 
+      Languages:
+      - Bitter Chocolate
+      - Czekolada gorzka
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Parameters/ChocolateType/White
+      TermType: 0
+      Description: 
+      Languages:
+      - White Chocolate
+      - "Bia\u0142a czekolada"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/IngredientType
+      TermType: 0
+      Description: 
+      Languages:
+      - Ingredient type
+      - "Typ sk\u0142adnika"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/UseType
+      TermType: 0
+      Description: 
+      Languages:
+      - Using
+      - Zastosowanie
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Quality
+      TermType: 0
+      Description: 
+      Languages:
+      - Quality
+      - "Jako\u015B\u0107"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Weight
+      TermType: 0
+      Description: 
+      Languages:
+      - Weight
+      - Waga
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Temperature
+      TermType: 0
+      Description: 
+      Languages:
+      - Temperature
+      - Temperatura
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/TotalWeight
+      TermType: 0
+      Description: 
+      Languages:
+      - Total weight
+      - Waga w sumie
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Quality/Defective
+      TermType: 0
+      Description: 
+      Languages:
+      - Defective
+      - Wadliwy
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Quality/Basic
+      TermType: 0
+      Description: 
+      Languages:
+      - Basic
+      - Podstawowy
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Quality/Refined
+      TermType: 0
+      Description: 
+      Languages:
+      - Rafined
+      - Rafinowany
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Quality/Artisan
+      TermType: 0
+      Description: 
+      Languages:
+      - Artistian
+      - "Rzemie\u015Blniczy"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Quality/Gourmet
+      TermType: 0
+      Description: 
+      Languages:
+      - Gourmet
+      - "Wy\u015Bmienity"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Type/Milk
+      TermType: 0
+      Description: 
+      Languages:
+      - Milk
+      - Mleko
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Type/Butter
+      TermType: 0
+      Description: 
+      Languages:
+      - Butter
+      - "Mas\u0142o"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Type/Cocoa
+      TermType: 0
+      Description: 
+      Languages:
+      - Cocoa
+      - Kakao
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Type/Sugar
+      TermType: 0
+      Description: 
+      Languages:
+      - Sugar
+      - Cukier
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Type/Salt
+      TermType: 0
+      Description: 
+      Languages:
+      - Salt
+      - "S\xF3l"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Type/Vanilla
+      TermType: 0
+      Description: 
+      Languages:
+      - Vanilla
+      - Wanilia
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Type/Strawberry
+      TermType: 0
+      Description: 
+      Languages:
+      - Strawberry
+      - Truskawka
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Type/Toffee
+      TermType: 0
+      Description: 
+      Languages:
+      - Toffee
+      - Toffi
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Type/Carmel
+      TermType: 0
+      Description: 
+      Languages:
+      - Carmel
+      - Karmel
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Type/Hazelnut
+      TermType: 0
+      Description: 
+      Languages:
+      - Hazelnut
+      - Orzech laskowy
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Type/Peanut
+      TermType: 0
+      Description: 
+      Languages:
+      - Peanut
+      - Orzech Arachidowy
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Type/Coconut
+      TermType: 0
+      Description: 
+      Languages:
+      - Coconut
+      - Kokos
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Type/Cinnamon
+      TermType: 0
+      Description: 
+      Languages:
+      - Cinnamon
+      - Cynamon
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Type/Alcohol
+      TermType: 0
+      Description: 
+      Languages:
+      - Alcohol
+      - Alkohol
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Type/Honey
+      TermType: 0
+      Description: 
+      Languages:
+      - Honey
+      - "Mi\xF3d"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Type/Egg
+      TermType: 0
+      Description: 
+      Languages:
+      - Egg
+      - Jajko
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Type/Almond
+      TermType: 0
+      Description: 
+      Languages:
+      - Almond
+      - "Migda\u0142"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Type/Pistachio
+      TermType: 0
+      Description: 
+      Languages:
+      - Pistachio
+      - Pistacja
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Type/MixedNuts
+      TermType: 0
+      Description: 
+      Languages:
+      - Mixed Nuts
+      - Miks Orzechowy
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Type/FinalProduct
+      TermType: 0
+      Description: 
+      Languages:
+      - Final Product
+      - Finalny Produkt
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/Type/Chocolate
+      TermType: 0
+      Description: 
+      Languages:
+      - Chocolate
+      - Czekolada
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/UseType/Additives
+      TermType: 0
+      Description: 
+      Languages:
+      - Additives
+      - Dodatki
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/UseType/Topping
+      TermType: 0
+      Description: 
+      Languages:
+      - Topping
+      - Polewa
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/UseType/Filling
+      TermType: 0
+      Description: 
+      Languages:
+      - Filling
+      - Nadzienie
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/UseType/BasicIngredient
+      TermType: 0
+      Description: 
+      Languages:
+      - Basic Ingredient
+      - Podstawowa ingrediencja
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Ingredients/UseType/FinalProduct
+      TermType: 0
+      Description: 
+      Languages:
+      - Final Product
+      - Finalny Produkt
+      Flags: 0000
+      Languages_Touch: []
+    - Term: World Events/Title/Expensive Milk
+      TermType: 0
+      Description: 
+      Languages:
+      - The milk is getting more expensive!
+      - "Mleko dro\u017Ceje!"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: World Events/Description/Expensive Milk
+      TermType: 0
+      Description: 
+      Languages:
+      - Cattle farmers are striking against exploitation! Milk prices can increase
+        even by twofold!
+      - "Hodowcy byd\u0142a strajkuj\u0105 przeciwko wyzyskowi!\nCeny mleka mog\u0105
+        wzrosn\u0105\u0107 nawet dwukrotnie!"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: World Events/Title/Coal unavailable
+      TermType: 0
+      Description: 
+      Languages:
+      - Coal worth its weight in gold!
+      - "W\u0119giel na wag\u0119 z\u0142ota!"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: World Events/Description/Coal unavailable
+      TermType: 0
+      Description: 
+      Languages:
+      - Failure of the railroad traction leading to the city has caused difficulties
+        in the supply of coal! It may be out of stock in stores for a while!
+      - "Awaria trakcji kolejowych prowadz\u0105cych do miasta spowodowa\u0142a utrudnienia
+        w dostawach w\u0119gla! Przez jaki\u015B czas mo\u017Ce zabrakn\u0105\u0107
+        go w sklepach!"
+      Flags: 0000
+      Languages_Touch: []
+    CaseInsensitiveTerms: 0
+    OnMissingTranslation: 1
+    mTerm_AppName: 
+    mLanguages:
+    - Name: English
+      Code: en
+      Flags: 0
+    - Name: Polski
+      Code: 
+      Flags: 0
+    IgnoreDeviceLanguage: 0
+    _AllowUnloadingLanguages: 0
+    Google_WebServiceURL: https://script.google.com/macros/s/AKfycbwm_HXhy_Fd-FqXaQimeJzaV8YviViPgwtUKXF-oGuiKwegGwPCR85rXjD3DrCEkzn1SQ/exec
+    Google_SpreadsheetKey: 1uvUQuWNYXc4uXKzbARXWfr3b1VEAmgx7VM2XODXgWqc
+    Google_SpreadsheetName: I2Loc Shop Simulator Localization
+    Google_LastUpdatedVersion: 1706188824514
+    Google_Password: Zbaszynek
+    GoogleUpdateFrequency: 3
+    GoogleInEditorCheckFrequency: 2
+    GoogleUpdateSynchronization: 0
+    GoogleUpdateDelay: 0
+    Assets: []
+    Spreadsheet_LocalFileName: 
+    Spreadsheet_LocalCSVSeparator: ','
+    Spreadsheet_LocalCSVEncoding: utf-8
+    Spreadsheet_SpecializationAsRows: 1
+    Spreadsheet_SortRows: 1

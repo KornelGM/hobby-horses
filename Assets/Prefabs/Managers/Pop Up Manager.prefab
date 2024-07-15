@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1438023660439870174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5785755906716339213}
+  - component: {fileID: -7170843516465026900}
+  m_Layer: 0
+  m_Name: Pop Up Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5785755906716339213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438023660439870174}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-7170843516465026900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438023660439870174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aa054613475414f856410b500b63bd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _popUps:
+  - {fileID: 7571763820866215126, guid: 2ecb6131949347541bb5cdaba62de91b, type: 3}
+  - {fileID: 7571763820866215126, guid: d9414d93efb2a4548a696300fea7a46e, type: 3}
+  - {fileID: 7571763820866215126, guid: 19f905857a905b542b62506d37361fd3, type: 3}
+  - {fileID: 7571763820866215126, guid: 6d09b759b85af8142a5d3d8acd1398f1, type: 3}
+  - {fileID: 7571763820866215126, guid: fdf2be77d00fbeb4ba36b0d792310398, type: 3}
+  - {fileID: 7571763820866215126, guid: 1622d7d6eb78ac04596c82081d1bf8ba, type: 3}
+  - {fileID: 7571763820866215126, guid: 967a354e668065a48866425994e05ae0, type: 3}
+  - {fileID: 7571763820866215126, guid: a2390cb5e77778d428561cd4874a5847, type: 3}
+  - {fileID: 7571763820866215126, guid: 60a59cd375b6be84c9af3999ad9028d9, type: 3}
+  - {fileID: 7571763820866215126, guid: 4915483610effe9428555c1f850a2f0c, type: 3}
+  - {fileID: 7571763820866215126, guid: 8af23788be9f9fd45ab8d6bb8dfef32e, type: 3}
+  - {fileID: 7571763820866215126, guid: d56a8497ee58ed948959703e2310644f, type: 3}
+  - {fileID: 7571763820866215126, guid: b2873e1b2ee22b94eafa2b1122fb5c26, type: 3}
+  - {fileID: 7571763820866215126, guid: 979a4664c990249438aa0fdcca50f37d, type: 3}
+  - {fileID: 7571763820866215126, guid: 4777544f7e6a1b64e98f31c5b6d6404d, type: 3}
+  - {fileID: 7571763820866215126, guid: c50986b6a9d52ca4ea5a066f41891741, type: 3}
+  - {fileID: 7571763820866215126, guid: 7da1eac34808c2642a9e479d7abaacb0, type: 3}
+  - {fileID: 7571763820866215126, guid: 3320e29834b2059429e94b47be314471, type: 3}
+  - {fileID: 7571763820866215126, guid: 7b0f0f977b74cfd449d0c2b3b3d8dfe6, type: 3}
+  - {fileID: 7571763820866215126, guid: a1453171de26d644dbbeb3b4ab3d8041, type: 3}
+  _moreInfoPopUpPrefab: {fileID: 7571763820866215126, guid: fd0537876bbd4e643ac420377bc33bb9, type: 3}

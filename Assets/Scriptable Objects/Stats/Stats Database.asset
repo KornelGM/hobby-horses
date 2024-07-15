@@ -1,0 +1,391 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25666bff1f69d07478c1225e60158cc2, type: 3}
+  m_Name: Stats Database
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 0dc1c2f08867bed4682f4873dbf59200, type: 2}
+    - {fileID: 11400000, guid: 75b49a80a3a362e46ac810a3a435f82c, type: 2}
+    - {fileID: 11400000, guid: ad5dc1df9b9abf643a06efd2f04079d9, type: 2}
+    - {fileID: 11400000, guid: 3bb5637306055e84da8bee0b2ca3c9a0, type: 2}
+    - {fileID: 11400000, guid: 637ac9c23f8cd1e469dd7df97b0a9137, type: 2}
+    - {fileID: 11400000, guid: fdf823c3c4c4a5d49915a01bb8c907e0, type: 2}
+    - {fileID: 11400000, guid: d27569fc7c088974f9f106834f93bfd9, type: 2}
+    - {fileID: 11400000, guid: 6fd5c6b6712e9724a88bb2aa5f29bd0b, type: 2}
+    - {fileID: 11400000, guid: cd9e9374e157d91498d3b8795affa13a, type: 2}
+    - {fileID: 11400000, guid: afb06d49428d0bd44aab0aa31f91a62d, type: 2}
+    - {fileID: 11400000, guid: fd12bdb3cd1ab55409eb83e036a4f21a, type: 2}
+    - {fileID: 11400000, guid: a8b2b5e67335c1540a9ed1b70ece2631, type: 2}
+    - {fileID: 11400000, guid: 34c017f6567be6240849c37912939ae6, type: 2}
+    - {fileID: 11400000, guid: 3b77a93885ab8e240ac1573cddae597b, type: 2}
+    - {fileID: 11400000, guid: 3380ff646086f8b498545262c387bce2, type: 2}
+    - {fileID: 11400000, guid: da4c72f59b943f04782444bee044aa0f, type: 2}
+    - {fileID: 11400000, guid: 111674e09b0d47845a853fafbdc553e1, type: 2}
+    - {fileID: 11400000, guid: 5ae7244ae3774aa4f8a236486a9a7946, type: 2}
+    - {fileID: 11400000, guid: 4bee83501fe579a48ad70d0c563e471e, type: 2}
+    - {fileID: 11400000, guid: bd3d506479d6ed84db57b33013d6d7fa, type: 2}
+    - {fileID: 11400000, guid: 1609bd8cdbdab96439feb4c20fa6f08b, type: 2}
+    - {fileID: 11400000, guid: c2ebfc6c382ce61409e53c7d32b75dad, type: 2}
+    - {fileID: 11400000, guid: b52437981b5426842b12562ca2e807df, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: <Entries>k__BackingField
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ActionStat,
+        ChocolateManufacture]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 23
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 0dc1c2f08867bed4682f4873dbf59200
+    - Name: $v
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 75b49a80a3a362e46ac810a3a435f82c
+    - Name: $v
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: ad5dc1df9b9abf643a06efd2f04079d9
+    - Name: $v
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 3bb5637306055e84da8bee0b2ca3c9a0
+    - Name: $v
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 637ac9c23f8cd1e469dd7df97b0a9137
+    - Name: $v
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: fdf823c3c4c4a5d49915a01bb8c907e0
+    - Name: $v
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: d27569fc7c088974f9f106834f93bfd9
+    - Name: $v
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 6fd5c6b6712e9724a88bb2aa5f29bd0b
+    - Name: $v
+      Entry: 10
+      Data: 7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: cd9e9374e157d91498d3b8795affa13a
+    - Name: $v
+      Entry: 10
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: afb06d49428d0bd44aab0aa31f91a62d
+    - Name: $v
+      Entry: 10
+      Data: 9
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: fd12bdb3cd1ab55409eb83e036a4f21a
+    - Name: $v
+      Entry: 10
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: a8b2b5e67335c1540a9ed1b70ece2631
+    - Name: $v
+      Entry: 10
+      Data: 11
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 34c017f6567be6240849c37912939ae6
+    - Name: $v
+      Entry: 10
+      Data: 12
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 3b77a93885ab8e240ac1573cddae597b
+    - Name: $v
+      Entry: 10
+      Data: 13
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 3380ff646086f8b498545262c387bce2
+    - Name: $v
+      Entry: 10
+      Data: 14
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: da4c72f59b943f04782444bee044aa0f
+    - Name: $v
+      Entry: 10
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 111674e09b0d47845a853fafbdc553e1
+    - Name: $v
+      Entry: 10
+      Data: 16
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 5ae7244ae3774aa4f8a236486a9a7946
+    - Name: $v
+      Entry: 10
+      Data: 17
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 4bee83501fe579a48ad70d0c563e471e
+    - Name: $v
+      Entry: 10
+      Data: 18
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: bd3d506479d6ed84db57b33013d6d7fa
+    - Name: $v
+      Entry: 10
+      Data: 19
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 1609bd8cdbdab96439feb4c20fa6f08b
+    - Name: $v
+      Entry: 10
+      Data: 20
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: c2ebfc6c382ce61409e53c7d32b75dad
+    - Name: $v
+      Entry: 10
+      Data: 21
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: b52437981b5426842b12562ca2e807df
+    - Name: $v
+      Entry: 10
+      Data: 22
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  <EntryList>k__BackingField:
+  - {fileID: 11400000, guid: b52437981b5426842b12562ca2e807df, type: 2}
+  - {fileID: 11400000, guid: c2ebfc6c382ce61409e53c7d32b75dad, type: 2}
+  - {fileID: 11400000, guid: 1609bd8cdbdab96439feb4c20fa6f08b, type: 2}
+  - {fileID: 11400000, guid: bd3d506479d6ed84db57b33013d6d7fa, type: 2}
+  - {fileID: 11400000, guid: 4bee83501fe579a48ad70d0c563e471e, type: 2}
+  - {fileID: 11400000, guid: 5ae7244ae3774aa4f8a236486a9a7946, type: 2}
+  - {fileID: 11400000, guid: 111674e09b0d47845a853fafbdc553e1, type: 2}
+  - {fileID: 11400000, guid: da4c72f59b943f04782444bee044aa0f, type: 2}
+  - {fileID: 11400000, guid: 3380ff646086f8b498545262c387bce2, type: 2}
+  - {fileID: 11400000, guid: 3b77a93885ab8e240ac1573cddae597b, type: 2}
+  - {fileID: 11400000, guid: 34c017f6567be6240849c37912939ae6, type: 2}
+  - {fileID: 11400000, guid: a8b2b5e67335c1540a9ed1b70ece2631, type: 2}
+  - {fileID: 11400000, guid: fd12bdb3cd1ab55409eb83e036a4f21a, type: 2}
+  - {fileID: 11400000, guid: afb06d49428d0bd44aab0aa31f91a62d, type: 2}
+  - {fileID: 11400000, guid: cd9e9374e157d91498d3b8795affa13a, type: 2}
+  - {fileID: 11400000, guid: 6fd5c6b6712e9724a88bb2aa5f29bd0b, type: 2}
+  - {fileID: 11400000, guid: d27569fc7c088974f9f106834f93bfd9, type: 2}
+  - {fileID: 11400000, guid: fdf823c3c4c4a5d49915a01bb8c907e0, type: 2}
+  - {fileID: 11400000, guid: 637ac9c23f8cd1e469dd7df97b0a9137, type: 2}
+  - {fileID: 11400000, guid: 3bb5637306055e84da8bee0b2ca3c9a0, type: 2}
+  - {fileID: 11400000, guid: ad5dc1df9b9abf643a06efd2f04079d9, type: 2}
+  - {fileID: 11400000, guid: 75b49a80a3a362e46ac810a3a435f82c, type: 2}
+  - {fileID: 11400000, guid: 0dc1c2f08867bed4682f4873dbf59200, type: 2}
+  <GuidsList>k__BackingField:
+  - b52437981b5426842b12562ca2e807df
+  - c2ebfc6c382ce61409e53c7d32b75dad
+  - 1609bd8cdbdab96439feb4c20fa6f08b
+  - bd3d506479d6ed84db57b33013d6d7fa
+  - 4bee83501fe579a48ad70d0c563e471e
+  - 5ae7244ae3774aa4f8a236486a9a7946
+  - 111674e09b0d47845a853fafbdc553e1
+  - da4c72f59b943f04782444bee044aa0f
+  - 3380ff646086f8b498545262c387bce2
+  - 3b77a93885ab8e240ac1573cddae597b
+  - 34c017f6567be6240849c37912939ae6
+  - a8b2b5e67335c1540a9ed1b70ece2631
+  - fd12bdb3cd1ab55409eb83e036a4f21a
+  - afb06d49428d0bd44aab0aa31f91a62d
+  - cd9e9374e157d91498d3b8795affa13a
+  - 6fd5c6b6712e9724a88bb2aa5f29bd0b
+  - d27569fc7c088974f9f106834f93bfd9
+  - fdf823c3c4c4a5d49915a01bb8c907e0
+  - 637ac9c23f8cd1e469dd7df97b0a9137
+  - 3bb5637306055e84da8bee0b2ca3c9a0
+  - ad5dc1df9b9abf643a06efd2f04079d9
+  - 75b49a80a3a362e46ac810a3a435f82c
+  - 0dc1c2f08867bed4682f4873dbf59200
+  <Guid>k__BackingField: bce8010865d29a645bc31be47b9353dd

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bcc4bd5d1dc735448c593027841448a, type: 3}
+  m_Name: Robot Behaviour Tree
+  m_EditorClassIdentifier: 
+  _rootNode: {fileID: 11400000, guid: f99835bdf3ffef54ba5f301e4d300e7f, type: 2}
+  _richAI: {fileID: 0}
+  _minInteractionDistance: 0.1
+  _robotNpcInfo: {fileID: 11400000, guid: 7fa7936d3f0046d4fbb0226c4c39bca8, type: 2}

@@ -1,0 +1,16 @@
+{
+    "name": "DOTween.Modules",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b0411b0ac741cf94680bbea2d64d998f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

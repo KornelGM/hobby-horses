@@ -1,0 +1,162 @@
+﻿using System;
+using UnityEngine;
+
+public class PlayerPausingManager : MonoBehaviour, IServiceLocatorComponent, IManager, IStartable
+{
+    public ServiceLocator MyServiceLocator { get; set; }
+
+    public event Action<bool> OnPause;
+
+    [SerializeField] private PauseMenuUI pauseMenuUIPrefab;
+
+    [ServiceLocatorComponent] private PlayerManager _playerManager;
+    [ServiceLocatorComponent] private WindowManager _windowManager;
+    [ServiceLocatorComponent] private ModalWindowManager _modalWindowManager;
+    [ServiceLocatorComponent] private TimePausingManager _timePausingManager;
+
+    private PlayerStateMachine _stateMachine;
+    private PlayerInputReader _playerInputReader;
+    private PlayerInputBlocker _playerInputBlocker;
+    private InteractableSelector _playerInteractableSelector;
+    private PauseMenuUI _createdPauseMenuUI;
+    private IVirtualController _virtualController;
+
+    private State inputPauseState => new PlayerInputPauseState(_playerInputBlocker.InputManager);
+
+    public void CustomStart()
+    {
+        if(_playerManager.LocalPlayer.TryGetServiceLocatorComponent(out _virtualController))
+        {
+            _virtualController.OnPausePerformed += TryPauseGame;
+            _virtualController.OnUnpausePerformed += TryPauseGame;
+        }
+        _playerManager.LocalPlayer.TryGetServiceLocatorComponent(out _stateMachine);
+    }
+
+    private void TryPauseGame()
+    {
+        if (_windowManager.TopPriorityWindow() == null || _windowManager.TopPriorityWindow().Priority == 0)
+        {
+            PauseGame();
+        }
+        else
+        {
+            _windowManager.TryToCloseTopWindow();
+        }
+    }
+
+    private void Update()
+    {
+        //Reading input for testing purposes only
+        //if (_stateMachine != null)
+        //{
+        //    PlayerInputGameplayState playerInputGameplayState =
+        //        _stateMachine.PlayerController.PlayerInputStateMachine.CurrentState as PlayerInputGameplayState;
+
+        //    if (playerInputGameplayState == null) return;
+        //}
+
+        //if (Input.GetKeyDown(KeyCode.J))
+        //{
+        //    if (_playerInputBlocker == null)
+        //    {
+        //        _playerManager.LocalPlayer.TryGetServiceLocatorComponent(out _playerInputBlocker);
+        //    }
+
+        //    if (_playerInputReader == null)
+        //    {
+        //        _playerManager.LocalPlayer.TryGetServiceLocatorComponent(out _playerInputReader);
+        //    }
+
+        //    InputBlockerSettings blockerSettings = new InputBlockerSettings(this, inputPauseState, OpenWindow);
+
+        //    _playerInputBlocker.Block(blockerSettings);
+        //}
+
+        //void OpenWindow()
+        //{
+        //    _modalWindowManager.CreateModalWindowConfirm(OnCloseModal,
+        //        "Test Modal Window",
+        //        "Modal window's description. Confirm to continue");
+        //}
+    }
+
+    public void UnpauseGame()
+    {
+        if (_playerInputBlocker == null) return;
+
+        if (_playerInteractableSelector != null)
+        {
+            _playerInteractableSelector.Unblock(this);
+        }
+
+        if (_stateMachine != null)
+        {
+            _stateMachine.SwitchState(new PlayerMoveState(_stateMachine));
+        }
+
+        _windowManager.SetMainCanvasOrder();
+
+        _playerInputBlocker.TryUnblock(this);
+    }
+
+    private void PauseGame()
+    {
+        if (_playerInputBlocker == null)
+        {
+            _playerManager.LocalPlayer.TryGetServiceLocatorComponent(out _playerInputBlocker);
+        }
+
+        if (_playerInputReader == null)
+        {
+            _playerManager.LocalPlayer.TryGetServiceLocatorComponent(out _playerInputReader);
+        }
+
+        if (_playerInteractableSelector == null)
+        {
+            _playerManager.LocalPlayer.TryGetServiceLocatorComponent(out _playerInteractableSelector);
+        }
+
+        if (((IBlocker)_playerInputBlocker).IsBlocked)
+        {
+            return;
+        }
+
+        if (_playerInteractableSelector != null)
+        {
+            _playerInteractableSelector.Block(this);
+        }
+
+        _windowManager.SetMainCanvasOrder(110);
+
+        OnPause?.Invoke(true);
+
+        InputBlockerSettings blockerSettings = new InputBlockerSettings(this,
+            new PlayerInputPauseState(_playerInputBlocker.InputManager),
+            PauseBegin,
+            PauseEnd);
+
+        _playerInputBlocker.Block(blockerSettings);
+    }
+
+    private void PauseBegin()
+    {
+        _createdPauseMenuUI = _windowManager.CreateWindow(pauseMenuUIPrefab, WindowManager.PauseMenuBasePriority)
+            .GetComponent<PauseMenuUI>();
+        _createdPauseMenuUI.PausingManager = this;
+        _timePausingManager.Pause();
+    }
+
+    private void PauseEnd()
+    {
+        OnPause?.Invoke(false);
+        _windowManager.DeleteWindow(_createdPauseMenuUI);
+        _timePausingManager.Unpause();
+    }
+
+    private void OnCloseModal()
+    {
+        _playerInputBlocker.TryUnblock(this);
+    }
+
+}

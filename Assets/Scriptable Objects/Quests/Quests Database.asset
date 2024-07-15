@@ -1,0 +1,646 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2f584caece6c6445844e1fba59bd028, type: 3}
+  m_Name: Quests Database
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: a43a042891e61014d9d0a53668805ab0, type: 2}
+    - {fileID: 11400000, guid: a8961ad963e704240a0082c2260d1e57, type: 2}
+    - {fileID: 11400000, guid: e4717ae951ca4fe44a8bedec99b2515b, type: 2}
+    - {fileID: 11400000, guid: 4938db04556ca384c93c3ec0c27dcdda, type: 2}
+    - {fileID: 11400000, guid: 34199e815b2a7bf4f9b504cb4e2f732a, type: 2}
+    - {fileID: 11400000, guid: 2c490e3872dd4434eb2005ae94b7ef38, type: 2}
+    - {fileID: 11400000, guid: bcb16eeea7c9ff74695468fe501bb377, type: 2}
+    - {fileID: 11400000, guid: 51baf3476a2f1db4680e509827370220, type: 2}
+    - {fileID: 11400000, guid: 5bb2b2c49f5ce6844b92e67254565225, type: 2}
+    - {fileID: 11400000, guid: 6367365256e262944a74e7cee92fde9c, type: 2}
+    - {fileID: 11400000, guid: a06a97c5118ce9942a0a18be3e43bcf1, type: 2}
+    - {fileID: 11400000, guid: 07955122ab3162c4982d990608575d59, type: 2}
+    - {fileID: 11400000, guid: 82128a87c3eecd84a97ab4e3eb761979, type: 2}
+    - {fileID: 11400000, guid: 5182f1399ffafe64ea1276adf0fef990, type: 2}
+    - {fileID: 11400000, guid: 63a2c9e370c43d846b9130cd90b474eb, type: 2}
+    - {fileID: 11400000, guid: 9f786681090b9c443b08b148f05f912f, type: 2}
+    - {fileID: 11400000, guid: a65f9a849e1f16242a40809672eb662c, type: 2}
+    - {fileID: 11400000, guid: 95269af3928b73345abd702887a7b279, type: 2}
+    - {fileID: 11400000, guid: 9adf64d97d3e79f4fa710537abca9c94, type: 2}
+    - {fileID: 11400000, guid: ab1053cadc10edc44bae165945bd12d8, type: 2}
+    - {fileID: 11400000, guid: bf432dc9395541c41816ad85285e25cc, type: 2}
+    - {fileID: 11400000, guid: 9f1b99a09cf56024ea55fe869d454f49, type: 2}
+    - {fileID: 11400000, guid: 854a1e336981cc24bbee0263229c91a1, type: 2}
+    - {fileID: 11400000, guid: caf02e3456b8b08419789b990b50a8e7, type: 2}
+    - {fileID: 11400000, guid: 456d4236d9d7ac243986d85c8e8d70d3, type: 2}
+    - {fileID: 11400000, guid: 3aa05bd4f659797429c7d15fc7fddfb9, type: 2}
+    - {fileID: 11400000, guid: 1d58e1eb6a48f1944b42ba93471036e3, type: 2}
+    - {fileID: 11400000, guid: 1ec8ed82b93489849a2f8eb5b2a2790b, type: 2}
+    - {fileID: 11400000, guid: 1a9e4c5531de63f4da3f4819c41bf686, type: 2}
+    - {fileID: 11400000, guid: c4581ea2f6121de4f85c4e84afa011a8, type: 2}
+    - {fileID: 11400000, guid: 7e631c58474b3f64d8ebe7d78bb27998, type: 2}
+    - {fileID: 11400000, guid: 819643e761237f240a00ba39f48044ef, type: 2}
+    - {fileID: 11400000, guid: dcde8d18d36aeb840923700eeddf25c0, type: 2}
+    - {fileID: 11400000, guid: 9e0ea573905b2e942b38b276f560a021, type: 2}
+    - {fileID: 11400000, guid: 6f4c8ec7578285d499ad53ee617b66e4, type: 2}
+    - {fileID: 11400000, guid: 3ec13b6cac28a3746a000a8b1622deb0, type: 2}
+    - {fileID: 11400000, guid: 96d92068fff7d1441b0817a207f0a1d5, type: 2}
+    - {fileID: 11400000, guid: c3456acb8499d3a45bd5650113c04e2a, type: 2}
+    - {fileID: 11400000, guid: 3706c44c1f68c0c439108f89dc9e1cbf, type: 2}
+    - {fileID: 11400000, guid: 9a623486ac1db3a45b1015a929879a1a, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: <Entries>k__BackingField
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[Quest,
+        ChocolateManufacture]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 40
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: a43a042891e61014d9d0a53668805ab0
+    - Name: $v
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: a8961ad963e704240a0082c2260d1e57
+    - Name: $v
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: e4717ae951ca4fe44a8bedec99b2515b
+    - Name: $v
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 4938db04556ca384c93c3ec0c27dcdda
+    - Name: $v
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 34199e815b2a7bf4f9b504cb4e2f732a
+    - Name: $v
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 2c490e3872dd4434eb2005ae94b7ef38
+    - Name: $v
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: bcb16eeea7c9ff74695468fe501bb377
+    - Name: $v
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 51baf3476a2f1db4680e509827370220
+    - Name: $v
+      Entry: 10
+      Data: 7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 5bb2b2c49f5ce6844b92e67254565225
+    - Name: $v
+      Entry: 10
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 6367365256e262944a74e7cee92fde9c
+    - Name: $v
+      Entry: 10
+      Data: 9
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: a06a97c5118ce9942a0a18be3e43bcf1
+    - Name: $v
+      Entry: 10
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 07955122ab3162c4982d990608575d59
+    - Name: $v
+      Entry: 10
+      Data: 11
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 82128a87c3eecd84a97ab4e3eb761979
+    - Name: $v
+      Entry: 10
+      Data: 12
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 5182f1399ffafe64ea1276adf0fef990
+    - Name: $v
+      Entry: 10
+      Data: 13
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 63a2c9e370c43d846b9130cd90b474eb
+    - Name: $v
+      Entry: 10
+      Data: 14
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 9f786681090b9c443b08b148f05f912f
+    - Name: $v
+      Entry: 10
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: a65f9a849e1f16242a40809672eb662c
+    - Name: $v
+      Entry: 10
+      Data: 16
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 95269af3928b73345abd702887a7b279
+    - Name: $v
+      Entry: 10
+      Data: 17
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 9adf64d97d3e79f4fa710537abca9c94
+    - Name: $v
+      Entry: 10
+      Data: 18
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: ab1053cadc10edc44bae165945bd12d8
+    - Name: $v
+      Entry: 10
+      Data: 19
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: bf432dc9395541c41816ad85285e25cc
+    - Name: $v
+      Entry: 10
+      Data: 20
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 9f1b99a09cf56024ea55fe869d454f49
+    - Name: $v
+      Entry: 10
+      Data: 21
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 854a1e336981cc24bbee0263229c91a1
+    - Name: $v
+      Entry: 10
+      Data: 22
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: caf02e3456b8b08419789b990b50a8e7
+    - Name: $v
+      Entry: 10
+      Data: 23
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 456d4236d9d7ac243986d85c8e8d70d3
+    - Name: $v
+      Entry: 10
+      Data: 24
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 3aa05bd4f659797429c7d15fc7fddfb9
+    - Name: $v
+      Entry: 10
+      Data: 25
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 1d58e1eb6a48f1944b42ba93471036e3
+    - Name: $v
+      Entry: 10
+      Data: 26
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 1ec8ed82b93489849a2f8eb5b2a2790b
+    - Name: $v
+      Entry: 10
+      Data: 27
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 1a9e4c5531de63f4da3f4819c41bf686
+    - Name: $v
+      Entry: 10
+      Data: 28
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: c4581ea2f6121de4f85c4e84afa011a8
+    - Name: $v
+      Entry: 10
+      Data: 29
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 7e631c58474b3f64d8ebe7d78bb27998
+    - Name: $v
+      Entry: 10
+      Data: 30
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 819643e761237f240a00ba39f48044ef
+    - Name: $v
+      Entry: 10
+      Data: 31
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: dcde8d18d36aeb840923700eeddf25c0
+    - Name: $v
+      Entry: 10
+      Data: 32
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 9e0ea573905b2e942b38b276f560a021
+    - Name: $v
+      Entry: 10
+      Data: 33
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 6f4c8ec7578285d499ad53ee617b66e4
+    - Name: $v
+      Entry: 10
+      Data: 34
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 3ec13b6cac28a3746a000a8b1622deb0
+    - Name: $v
+      Entry: 10
+      Data: 35
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 96d92068fff7d1441b0817a207f0a1d5
+    - Name: $v
+      Entry: 10
+      Data: 36
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: c3456acb8499d3a45bd5650113c04e2a
+    - Name: $v
+      Entry: 10
+      Data: 37
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 3706c44c1f68c0c439108f89dc9e1cbf
+    - Name: $v
+      Entry: 10
+      Data: 38
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 9a623486ac1db3a45b1015a929879a1a
+    - Name: $v
+      Entry: 10
+      Data: 39
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  <EntryList>k__BackingField:
+  - {fileID: 11400000, guid: 9a623486ac1db3a45b1015a929879a1a, type: 2}
+  - {fileID: 11400000, guid: 3706c44c1f68c0c439108f89dc9e1cbf, type: 2}
+  - {fileID: 11400000, guid: c3456acb8499d3a45bd5650113c04e2a, type: 2}
+  - {fileID: 11400000, guid: 96d92068fff7d1441b0817a207f0a1d5, type: 2}
+  - {fileID: 11400000, guid: 3ec13b6cac28a3746a000a8b1622deb0, type: 2}
+  - {fileID: 11400000, guid: 6f4c8ec7578285d499ad53ee617b66e4, type: 2}
+  - {fileID: 11400000, guid: 9e0ea573905b2e942b38b276f560a021, type: 2}
+  - {fileID: 11400000, guid: dcde8d18d36aeb840923700eeddf25c0, type: 2}
+  - {fileID: 11400000, guid: 819643e761237f240a00ba39f48044ef, type: 2}
+  - {fileID: 11400000, guid: 7e631c58474b3f64d8ebe7d78bb27998, type: 2}
+  - {fileID: 11400000, guid: c4581ea2f6121de4f85c4e84afa011a8, type: 2}
+  - {fileID: 11400000, guid: 1a9e4c5531de63f4da3f4819c41bf686, type: 2}
+  - {fileID: 11400000, guid: 1ec8ed82b93489849a2f8eb5b2a2790b, type: 2}
+  - {fileID: 11400000, guid: 1d58e1eb6a48f1944b42ba93471036e3, type: 2}
+  - {fileID: 11400000, guid: 3aa05bd4f659797429c7d15fc7fddfb9, type: 2}
+  - {fileID: 11400000, guid: 456d4236d9d7ac243986d85c8e8d70d3, type: 2}
+  - {fileID: 11400000, guid: caf02e3456b8b08419789b990b50a8e7, type: 2}
+  - {fileID: 11400000, guid: 854a1e336981cc24bbee0263229c91a1, type: 2}
+  - {fileID: 11400000, guid: 9f1b99a09cf56024ea55fe869d454f49, type: 2}
+  - {fileID: 11400000, guid: bf432dc9395541c41816ad85285e25cc, type: 2}
+  - {fileID: 11400000, guid: ab1053cadc10edc44bae165945bd12d8, type: 2}
+  - {fileID: 11400000, guid: 9adf64d97d3e79f4fa710537abca9c94, type: 2}
+  - {fileID: 11400000, guid: 95269af3928b73345abd702887a7b279, type: 2}
+  - {fileID: 11400000, guid: a65f9a849e1f16242a40809672eb662c, type: 2}
+  - {fileID: 11400000, guid: 9f786681090b9c443b08b148f05f912f, type: 2}
+  - {fileID: 11400000, guid: 63a2c9e370c43d846b9130cd90b474eb, type: 2}
+  - {fileID: 11400000, guid: 5182f1399ffafe64ea1276adf0fef990, type: 2}
+  - {fileID: 11400000, guid: 82128a87c3eecd84a97ab4e3eb761979, type: 2}
+  - {fileID: 11400000, guid: 07955122ab3162c4982d990608575d59, type: 2}
+  - {fileID: 11400000, guid: a06a97c5118ce9942a0a18be3e43bcf1, type: 2}
+  - {fileID: 11400000, guid: 6367365256e262944a74e7cee92fde9c, type: 2}
+  - {fileID: 11400000, guid: 5bb2b2c49f5ce6844b92e67254565225, type: 2}
+  - {fileID: 11400000, guid: 51baf3476a2f1db4680e509827370220, type: 2}
+  - {fileID: 11400000, guid: bcb16eeea7c9ff74695468fe501bb377, type: 2}
+  - {fileID: 11400000, guid: 2c490e3872dd4434eb2005ae94b7ef38, type: 2}
+  - {fileID: 11400000, guid: 34199e815b2a7bf4f9b504cb4e2f732a, type: 2}
+  - {fileID: 11400000, guid: 4938db04556ca384c93c3ec0c27dcdda, type: 2}
+  - {fileID: 11400000, guid: e4717ae951ca4fe44a8bedec99b2515b, type: 2}
+  - {fileID: 11400000, guid: a8961ad963e704240a0082c2260d1e57, type: 2}
+  - {fileID: 11400000, guid: a43a042891e61014d9d0a53668805ab0, type: 2}
+  <GuidsList>k__BackingField:
+  - 9a623486ac1db3a45b1015a929879a1a
+  - 3706c44c1f68c0c439108f89dc9e1cbf
+  - c3456acb8499d3a45bd5650113c04e2a
+  - 96d92068fff7d1441b0817a207f0a1d5
+  - 3ec13b6cac28a3746a000a8b1622deb0
+  - 6f4c8ec7578285d499ad53ee617b66e4
+  - 9e0ea573905b2e942b38b276f560a021
+  - dcde8d18d36aeb840923700eeddf25c0
+  - 819643e761237f240a00ba39f48044ef
+  - 7e631c58474b3f64d8ebe7d78bb27998
+  - c4581ea2f6121de4f85c4e84afa011a8
+  - 1a9e4c5531de63f4da3f4819c41bf686
+  - 1ec8ed82b93489849a2f8eb5b2a2790b
+  - 1d58e1eb6a48f1944b42ba93471036e3
+  - 3aa05bd4f659797429c7d15fc7fddfb9
+  - 456d4236d9d7ac243986d85c8e8d70d3
+  - caf02e3456b8b08419789b990b50a8e7
+  - 854a1e336981cc24bbee0263229c91a1
+  - 9f1b99a09cf56024ea55fe869d454f49
+  - bf432dc9395541c41816ad85285e25cc
+  - ab1053cadc10edc44bae165945bd12d8
+  - 9adf64d97d3e79f4fa710537abca9c94
+  - 95269af3928b73345abd702887a7b279
+  - a65f9a849e1f16242a40809672eb662c
+  - 9f786681090b9c443b08b148f05f912f
+  - 63a2c9e370c43d846b9130cd90b474eb
+  - 5182f1399ffafe64ea1276adf0fef990
+  - 82128a87c3eecd84a97ab4e3eb761979
+  - 07955122ab3162c4982d990608575d59
+  - a06a97c5118ce9942a0a18be3e43bcf1
+  - 6367365256e262944a74e7cee92fde9c
+  - 5bb2b2c49f5ce6844b92e67254565225
+  - 51baf3476a2f1db4680e509827370220
+  - bcb16eeea7c9ff74695468fe501bb377
+  - 2c490e3872dd4434eb2005ae94b7ef38
+  - 34199e815b2a7bf4f9b504cb4e2f732a
+  - 4938db04556ca384c93c3ec0c27dcdda
+  - e4717ae951ca4fe44a8bedec99b2515b
+  - a8961ad963e704240a0082c2260d1e57
+  - a43a042891e61014d9d0a53668805ab0
+  <Guid>k__BackingField: bdb7f3bc4c1bcce4185b1cfad76f181f

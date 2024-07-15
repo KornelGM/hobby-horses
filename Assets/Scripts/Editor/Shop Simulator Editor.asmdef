@@ -1,0 +1,33 @@
+{
+    "name": "Shop Simulator Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:3eae0364be2026648bf74846acb8a731",
+        "GUID:78bd2ddd6e276394a9615c203e574844",
+        "GUID:d32659aa69f0c2f48b6898c7ebe91ea3",
+        "GUID:f9129e8fa1618484b8e1eb0f9a42f2e4",
+        "GUID:efa45043feb7e4147a305b73b5cea642",
+        "GUID:4307f53044263cf4b835bd812fc161a4",
+        "GUID:30817c1a0e6d646d99c048fc403f5979",
+        "GUID:bd78bb22ae3a60443a865fb2d7dfdafa",
+        "GUID:68bd7fdb68ef2684e982e8a9825b18a5",
+        "GUID:4c25c05f410a3a447a75c3b0909152ef",
+        "GUID:457756d89b35d2941b3e7b37b4ece6f1",
+        "GUID:df380645f10b7bc4b97d4f5eb6303d95",
+        "GUID:86031dd864682894fb71b06abf186470",
+        "GUID:79e0ed347dc88104788472f2ca8f64e6",
+        "GUID:b7aff47438828b84bba1e614d0d8d843"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 895897d22d927dc479b0f130df8a690f, type: 3}
+  m_Name: Achievement DB
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: <Entries>k__BackingField
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[Achievement,
+        ChocolateManufacture]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  <EntryList>k__BackingField:
+  - {fileID: 11400000, guid: aad77a7259f97de42b842faa7c4f6dbc, type: 2}
+  - {fileID: 11400000, guid: 274fb6dc2c2f8744db30eafa762b2757, type: 2}
+  - {fileID: 11400000, guid: ec91db3893e014647a70cc429ad15ddd, type: 2}
+  - {fileID: 11400000, guid: 5f1ecea2c340bc2429eaf7b395b7b9d5, type: 2}
+  - {fileID: 11400000, guid: 3315f19983e5f6945b93d373b6e83485, type: 2}
+  - {fileID: 11400000, guid: 9a5f98e444894c9498d4ee8a54fef6be, type: 2}
+  - {fileID: 11400000, guid: 96d546cbd77a6d342b6fb5ca59aa10d3, type: 2}
+  - {fileID: 11400000, guid: 3137f2ba1b2087a4286dd753c442312c, type: 2}
+  - {fileID: 11400000, guid: 4028c0a07360cc344937b181220f9f6a, type: 2}
+  - {fileID: 11400000, guid: dd4b516b92948d2498c878a9f2fe147f, type: 2}
+  - {fileID: 11400000, guid: f5861a997c09e954b95df720b2c8cd4f, type: 2}
+  - {fileID: 11400000, guid: cb0cf485facdc2041b84a289e2454f22, type: 2}
+  - {fileID: 11400000, guid: 6c9802db850b10d4fbe543f14346400a, type: 2}
+  - {fileID: 11400000, guid: c474ad12e511ed349aeccf29438484bc, type: 2}
+  - {fileID: 11400000, guid: 0f7ae23158bc07648a9e3ef6a73440fa, type: 2}
+  - {fileID: 11400000, guid: c577b3cc43f8e1c4ebd50042a3f65e8c, type: 2}
+  - {fileID: 11400000, guid: 9f3e68e9da80e5748aa1ca468045ae2b, type: 2}
+  - {fileID: 11400000, guid: ff80a042ead32094d94e46cc969d2774, type: 2}
+  - {fileID: 11400000, guid: ff1d8b9bbdc882e479095bd203de3b00, type: 2}
+  <GuidsList>k__BackingField: []
+  <Guid>k__BackingField: 

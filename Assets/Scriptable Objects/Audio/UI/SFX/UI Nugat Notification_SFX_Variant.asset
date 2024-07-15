@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6de4385bb026d94e895270d2bd38626, type: 3}
+  m_Name: UI Nugat Notification_SFX_Variant
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 3c303d7929bea984393dcb197fe04b3a, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: <Entries>k__BackingField
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UnityEngine.AudioClip,
+        UnityEngine.AudioModule]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 3c303d7929bea984393dcb197fe04b3a
+    - Name: $v
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  <EntryList>k__BackingField:
+  - {fileID: 8300000, guid: 3c303d7929bea984393dcb197fe04b3a, type: 3}
+  <GuidsList>k__BackingField:
+  - 3c303d7929bea984393dcb197fe04b3a
+  <Guid>k__BackingField: 6982ecd21ff764c48a70e688db9b2273
+  AudioMixerGroup: {fileID: 7449984016925907064, guid: 981b44ef1704e844aa24b39abf156e20, type: 2}
+  ignoreListenerPause: 0
+  loop: 0
+  priority: 128
+  volume: 0.7
+  pitch: 1
+  stereoPan: 0
+  spatialBlend: 0
+  reverbZoneMix: 1
+  dopplerLevel: 1
+  spread: 0
+  rolloffMode: 0
+  minDistance: 1
+  maxDistance: 10
+  keyFrames:
+  - time: 0
+    value: 1
+    inTangent: 0
+    outTangent: 0
+    inWeight: 0
+    outWeight: 0
+    weightedMode: 0
+  - time: 1
+    value: 0
+    inTangent: 0
+    outTangent: 0
+    inWeight: 0
+    outWeight: 0
+    weightedMode: 0
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
