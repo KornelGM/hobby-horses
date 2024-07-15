@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 8493.864, g: 6692.673, b: 6339.1963, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -305,7 +305,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1818177623729603411, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 60.79
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1818177623729603411, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
       propertyPath: m_SizeDelta.y
@@ -313,7 +313,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1818177623729603411, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 150
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1818177623729603411, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -377,23 +377,23 @@ PrefabInstance:
       objectReference: {fileID: 4578319335701164391, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
     - target: {fileID: 4683237479096440609, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.967
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4683237479096440609, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.024
+      value: 1.665
       objectReference: {fileID: 0}
     - target: {fileID: 4683237479096440609, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.82
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4683237479096440609, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9647873
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4683237479096440609, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.26303118
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4683237479096440609, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
       propertyPath: m_LocalRotation.y
@@ -406,7 +406,7 @@ PrefabInstance:
     - target: {fileID: 4720058804015491503, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
       propertyPath: _main
       value: 
-      objectReference: {fileID: 851669257}
+      objectReference: {fileID: 0}
     - target: {fileID: 4765937370710894130, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
       propertyPath: m_ComponentOwner
       value: 
@@ -493,7 +493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6148789227864789875, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100.66
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6148789227864789875, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
       propertyPath: m_SizeDelta.y
@@ -501,7 +501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6148789227864789875, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 150
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6148789227864789875, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1113,19 +1113,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8573292777008789160, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
       propertyPath: field of view
-      value: 40
+      value: 60.000004
       objectReference: {fileID: 0}
     - target: {fileID: 8573292777008789160, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
       propertyPath: far clip plane
-      value: 5000
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 8573292777008789160, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
       propertyPath: near clip plane
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 8573292777008789160, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
       propertyPath: orthographic size
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8598137774236246594, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1194,17 +1194,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1738646009}
   m_SourcePrefab: {fileID: 100100000, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
---- !u!114 &851669257 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4720058804015491503, guid: ddfc36c45e8a2124a9f613a2fa5ed9ad, type: 3}
-  m_PrefabInstance: {fileID: 851669256}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0ce80c06832d4a49a2a30ece9fb2df6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &868172762
 GameObject:
   m_ObjectHideFlags: 19
@@ -1365,9 +1354,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Profile: {fileID: 0}
+  m_NeedUpdateStaticLightingSky: 0
   m_StaticLightingSkyUniqueID: 0
+  m_LastComputedHash: 0
   m_StaticLightingCloudsUniqueID: 0
+  m_LastComputedCloudHash: 0
+  m_SkySettings: {fileID: 0}
+  m_SkySettingsFromProfile: {fileID: 0}
+  m_CloudSettings: {fileID: 0}
+  m_CloudSettingsFromProfile: {fileID: 0}
   m_StaticLightingVolumetricClouds: 0
+  m_LastComputedVolumetricCloudHash: 0
+  m_VolumetricClouds: {fileID: 0}
+  m_VolumetricCloudSettingsFromProfile: {fileID: 0}
+  m_VolumeSkyList: []
+  m_VolumeCloudsList: []
 --- !u!4 &1628916153
 Transform:
   m_ObjectHideFlags: 1
