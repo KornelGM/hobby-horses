@@ -9,3 +9,12 @@ public enum DecimalPlaces
     One = 1,
     Two = 2,
 }
+
+public enum RoomPart
+{
+    Room,
+    Desk,
+    Trophies,
+    Wardrobe,
+    Door,
+}
