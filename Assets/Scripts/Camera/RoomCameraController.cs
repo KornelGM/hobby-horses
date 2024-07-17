@@ -6,8 +6,14 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class RoomCameraController : MonoBehaviour
+public class RoomCameraController : MonoBehaviour, IServiceLocatorComponent
 {
+    public ServiceLocator MyServiceLocator { get; set; }
+
+    public RoomPart CurrentRoomPart => _currentRoomPart;
+
+    public Action OnRoomPartChange;
+
     [SerializeField, FoldoutGroup("Tracks")] private RoomPath[] _roomPaths;
     [SerializeField, FoldoutGroup("Tracks")] private Transform _roomLookTarget;
     [SerializeField, FoldoutGroup("Cart")] private CinemachineDollyCart _cart;
@@ -26,6 +32,7 @@ public class RoomCameraController : MonoBehaviour
             _cart.m_Speed = -_cartSpeed;
             _cameraBrain.LookAt = _roomLookTarget;
             _currentRoomPart = roomPart;
+            OnRoomPartChange?.Invoke();
             return;
         }
 
@@ -41,21 +48,9 @@ public class RoomCameraController : MonoBehaviour
         if (path.LookTarget)
             _cameraBrain.LookAt = path.LookTarget;
         _cart.m_Speed = _cartSpeed;
-        
-    }
 
-    [Button("Go to part")]
-    private void GoToPointButton(RoomPart roomPart)
-    {
-        GoToPoint(roomPart);
+        OnRoomPartChange?.Invoke();
     }
-
-    [Button("GoToRoom")]
-    private void GoToRoom()
-    {
-        GoToPoint(RoomPart.Room);
-    }
-
 }
 
 [Serializable]

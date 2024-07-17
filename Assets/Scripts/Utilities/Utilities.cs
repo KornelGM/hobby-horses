@@ -156,4 +156,41 @@ public static class Utilities
         return list.Select((value, index) => new { index, value })
             .ToDictionary(pair => pair.index, pair => pair.value);
     }
+
+    public static void PoolFields<T>(int count, List<T> spawnedFields, List<T> activeFields, T prefabToSpawn, Transform spawnContent)
+        where T : MonoBehaviour
+    {
+        if (count > spawnedFields.Count)
+            SpawnFields(count, spawnedFields, prefabToSpawn, spawnContent);
+
+        for (int i = 0; i < count; i++)
+        {
+            if (!activeFields.Contains(spawnedFields[i]))
+            {
+                activeFields.Add(spawnedFields[i]);
+
+                spawnedFields[i].gameObject.SetActive(true);
+            }
+        }
+
+        for (int i = spawnedFields.Count - 1; i >= count; i--)
+        {
+            if (activeFields.Contains(spawnedFields[i]))
+            {
+                activeFields.Remove(spawnedFields[i]);
+            }
+
+            spawnedFields[i].gameObject.SetActive(false);
+        }
+    }
+
+    private static void SpawnFields<T>(int count, List<T> spawnedFields, T prefabToSpawn, Transform spawnContent)
+        where T : MonoBehaviour
+    {
+        while (spawnedFields.Count != count)
+        {
+            T spawnedField = UnityEngine.Object.Instantiate(prefabToSpawn, spawnContent);
+            spawnedFields.Add(spawnedField);
+        }
+    }
 }
