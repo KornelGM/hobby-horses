@@ -23,6 +23,6 @@ public class RoomPartButton : MonoBehaviour, IServiceLocatorComponent
 
     public void OnButtonDown()
     {
-        _roomCameraController.GoToPoint(_roomPart);
+        _roomCameraController.MoveCamera(_roomPart);
     }
 }

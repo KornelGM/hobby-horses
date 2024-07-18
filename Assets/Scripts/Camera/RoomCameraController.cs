@@ -16,47 +16,82 @@ public class RoomCameraController : MonoBehaviour, IServiceLocatorComponent
 
     [SerializeField, FoldoutGroup("Tracks")] private RoomPath[] _roomPaths;
     [SerializeField, FoldoutGroup("Tracks")] private Transform _roomLookTarget;
-    [SerializeField, FoldoutGroup("Cart")] private CinemachineDollyCart _cart;
+    [SerializeField, FoldoutGroup("Cart")] private TrackMovement _cart;
     [SerializeField, FoldoutGroup("Cart")] private CinemachineVirtualCamera _cameraBrain;
-    [SerializeField, FoldoutGroup("Cart")] private float _cartSpeed;
+    [SerializeField, FoldoutGroup("Camera")] private float _cameraRotationSpeed;
+
+    private Coroutine _cameraLookCoroutine;
+    private Transform _cameraTarget;
 
     private RoomPart _currentRoomPart = RoomPart.Room;
+    private Track _currentTrack;
 
-    public void GoToPoint(RoomPart roomPart)
+    private void Update()
+    {
+        if (_cameraTarget != null)
+            CameraFollowTarget(_cameraTarget);
+    }
+
+    public void MoveCamera(RoomPart roomPart)
     {
         if (_currentRoomPart == roomPart)
             return;
 
         if (roomPart == RoomPart.Room)
         {
-            _cart.m_Speed = -_cartSpeed;
-            _cameraBrain.LookAt = _roomLookTarget;
-            _currentRoomPart = roomPart;
-            OnRoomPartChange?.Invoke();
+            GoBack();
             return;
         }
 
         if (_currentRoomPart != RoomPart.Room)
             return;
 
+        GoToPart(roomPart);
+    }
+
+    private void GoBack()
+    {
+        if (_currentTrack == null)
+            return;
+
+        _cameraTarget = _roomLookTarget;
+        _currentRoomPart = RoomPart.Room;
+        _cart.Move(_currentTrack, true);
+        OnRoomPartChange?.Invoke();
+    }
+
+    private void GoToPart(RoomPart roomPart)
+    {
         _currentRoomPart = roomPart;
         RoomPath path = _roomPaths.FirstOrDefault(foundPath => foundPath.RoomPart == roomPart);
         if (path == null)
             return;
 
-        _cart.m_Path = path.Path;
-        if (path.LookTarget)
-            _cameraBrain.LookAt = path.LookTarget;
-        _cart.m_Speed = _cartSpeed;
+        _currentTrack = path.Path;
+
+        if (path.LookOnTarget)
+            _cameraTarget = path.LookTarget;
+
+        _cart.Move(_currentTrack);
 
         OnRoomPartChange?.Invoke();
+    }
+
+    private void CameraFollowTarget(Transform target)
+    {
+        if (target == null)
+            return;
+
+        Vector3 direction = target.position - _cameraBrain.transform.position;
+        Quaternion finalRotation = Quaternion.LookRotation(direction);
+        _cameraBrain.transform.rotation = Quaternion.Slerp(_cameraBrain.transform.rotation, finalRotation, _cameraRotationSpeed);
     }
 }
 
 [Serializable]
 public class RoomPath
 {
-    public CinemachineSmoothPath Path;
+    public Track Path;
     public bool LookOnTarget;
     [ShowIf(nameof(LookOnTarget))] public Transform LookTarget;
     public RoomPart RoomPart;
