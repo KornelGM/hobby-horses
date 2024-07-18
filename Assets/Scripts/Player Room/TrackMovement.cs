@@ -3,11 +3,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 public class TrackMovement : MonoBehaviour
 {
     [SerializeField, FoldoutGroup("Settings")] private float _speed;
+    [SerializeField, FoldoutGroup("Settings")] private AnimationCurve _curve;
 
     public Action OnStartPath;
     public Action OnEndPath;
@@ -32,7 +32,15 @@ public class TrackMovement : MonoBehaviour
             SetNewTargetPoint();
         }
         if(_isMoving)
-            transform.position = Vector3.MoveTowards(transform.position, _currentTrack.AllPositions[_currentTargetPoint], _speed * Time.deltaTime);
+        {
+            float evaluateTargetPoin = _revert
+                ?  Mathf.InverseLerp(_currentTrack.AllPositions.Count, 0, _currentTargetPoint)
+                :  Mathf.InverseLerp(0, _currentTrack.AllPositions.Count, _currentTargetPoint);
+                
+
+            float calculateSpeed = _curve.Evaluate(evaluateTargetPoin) * _speed;
+            transform.position = Vector3.MoveTowards(transform.position, _currentTrack.AllPositions[_currentTargetPoint], calculateSpeed * Time.deltaTime);
+        }
 
     }
 
@@ -78,7 +86,6 @@ public class TrackMovement : MonoBehaviour
         _revert = revert;
 
         _currentTargetPoint = _revert ? _currentTrack.AllPositions.Count - 1 : 0;
-
         _isMoving = true;
         OnStartPath?.Invoke();
     }
