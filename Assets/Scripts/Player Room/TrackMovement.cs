@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 public class TrackMovement : MonoBehaviour
 {
@@ -26,12 +27,13 @@ public class TrackMovement : MonoBehaviour
 
     private void GoToPoint()
     {
-        if(transform.position == _currentTrack.Path[_currentTargetPoint].position)
+        if(transform.position == _currentTrack.AllPositions[_currentTargetPoint])
         {
             SetNewTargetPoint();
         }
         if(_isMoving)
-            transform.position = Vector3.MoveTowards(transform.position, _currentTrack.Path[_currentTargetPoint].position, _speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, _currentTrack.AllPositions[_currentTargetPoint], _speed * Time.deltaTime);
+
     }
 
     private void SetNewTargetPoint()
@@ -55,7 +57,7 @@ public class TrackMovement : MonoBehaviour
         else
         {
             _currentTargetPoint++;
-            if (_currentTargetPoint >= _currentTrack.Path.Length)
+            if (_currentTargetPoint >= _currentTrack.AllPositions.Count)
             {
                 if (_currentTrack.Looped)
                 {
@@ -75,7 +77,7 @@ public class TrackMovement : MonoBehaviour
         _currentTrack = track;
         _revert = revert;
 
-        _currentTargetPoint = _revert ? _currentTrack.Path.Length - 1 : 0;
+        _currentTargetPoint = _revert ? _currentTrack.AllPositions.Count - 1 : 0;
 
         _isMoving = true;
         OnStartPath?.Invoke();
