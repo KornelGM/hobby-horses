@@ -1614,7 +1614,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &224582783
 Transform:
   m_ObjectHideFlags: 0
@@ -2355,7 +2355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &368457172
 Transform:
   m_ObjectHideFlags: 0
@@ -3550,7 +3550,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &611830540
 Transform:
   m_ObjectHideFlags: 0
@@ -11600,6 +11600,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: lvl 2 gym - Track02
       objectReference: {fileID: 0}
+    - target: {fileID: 5155059665116775997, guid: d8831605dc21f8b459ed8e00a423c0e8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5868143226518158992, guid: d8831605dc21f8b459ed8e00a423c0e8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -14782,7 +14786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1328288821
 Transform:
   m_ObjectHideFlags: 0
@@ -15481,7 +15485,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1429621909
 Transform:
   m_ObjectHideFlags: 0
@@ -17193,7 +17197,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1594300085
 Transform:
   m_ObjectHideFlags: 0
@@ -18274,7 +18278,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1737546191
 Transform:
   m_ObjectHideFlags: 0
@@ -19423,7 +19427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1878168288
 Transform:
   m_ObjectHideFlags: 0
