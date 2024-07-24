@@ -3,17 +3,13 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
-public class PlayerInputReader : MonoBehaviour, IServiceLocatorComponent, IStartable, IEarlyUpdate, IAwake, IVirtualController
+public class PlayerInputReader : MonoBehaviour, IServiceLocatorComponent, IEarlyUpdate, IAwake, IVirtualController
 {
     public ServiceLocator MyServiceLocator { get; set; }
     public bool FlipVerticalAxis { get; set; } = false;
     public bool VerticalPouring { get; set; } = false;
 
     [ServiceLocatorComponent] private InputManager _inputManager;
-    
-    [SerializeField] private PlayerInputStateMachine playerInputStateMachine;
-
-    public PlayerInputStateMachine PlayerInputStateMachine => playerInputStateMachine;
 
     public InputManager InputManager => _inputManager;
 
@@ -188,13 +184,6 @@ public class PlayerInputReader : MonoBehaviour, IServiceLocatorComponent, IStart
         };
     }
 
-    public void CustomStart()
-    {
-        if (playerInputStateMachine == null)
-            return;
-        playerInputStateMachine.SwitchToGameplayState(_inputManager);
-    }
-
     public void CustomEarlyUpdate()
     {   
         if (_isDisabled) return;
@@ -205,30 +194,6 @@ public class PlayerInputReader : MonoBehaviour, IServiceLocatorComponent, IStart
     {
         _buttons.Clear();
         _axis.Clear();
-    }
-
-    public void GoToDefaultState()
-    {
-        if (playerInputStateMachine == null) return;
-        playerInputStateMachine.SwitchToDefaultState(_inputManager);
-    }
-
-    public void GoToPauseState()
-    {
-        if (playerInputStateMachine == null) return;
-        playerInputStateMachine.SwitchToPauseState(_inputManager);
-    }
-
-    public void GoToGameplayState()
-    {
-        if (playerInputStateMachine == null) return;
-        playerInputStateMachine.SwitchToGameplayState(_inputManager);
-    }
-
-    public void SwitchPlayerInputState(State playerInputState)
-    {
-        if (playerInputStateMachine == null) return;
-        playerInputStateMachine.SwitchState(playerInputState);
     }
 
     private void ListeningInput()

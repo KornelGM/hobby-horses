@@ -13,14 +13,6 @@ public class CharacterInteraction
 
     public void TryInteract(InteractionType interactionType, ServiceLocator interactionObject)
     {
-        if(_character.TryGetServiceLocatorComponent(out PlayerStateMachine playerStateMachine))
-        {
-            PlayerInputGameplayState playerInputGameplayState =
-                playerStateMachine.PlayerController.PlayerInputStateMachine.CurrentState as PlayerInputGameplayState;
-
-            if (playerInputGameplayState == null) return;
-        }
-
         IAction action = ChooseCorrectAction(interactionType);
         if (action == null) return;
 

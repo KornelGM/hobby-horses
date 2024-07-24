@@ -126,10 +126,6 @@ public class FootstepsGroundChecker : MonoBehaviour, IServiceLocatorComponent, I
 
     private void PlayFootstepSound()
     {
-        PlayerInputGameplayState playerInputGameplayState =
-            _playerInputReader.PlayerInputStateMachine.CurrentState as PlayerInputGameplayState;
-        if (playerInputGameplayState == null) return;
-
         _audioPlayer.PlayOneShot(_currentAudioVariant, _audioSource);
         //_audioPlayer.PlayEvent(_currentAudioVariant, _audioSource);
     }

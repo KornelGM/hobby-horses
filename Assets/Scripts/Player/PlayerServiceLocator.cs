@@ -5,11 +5,11 @@ public class PlayerServiceLocator : ServiceLocator
     protected override List<IServiceLocatorComponent> GetNonMonoBehaviourServiceLocators()
     {
         List<IServiceLocatorComponent> components = base.GetNonMonoBehaviourServiceLocators();
-        PlayerCurrentActionsReference playerCurrentActionsReference = new PlayerCurrentActionsReference();
+        //PlayerCurrentActionsReference playerCurrentActionsReference = new PlayerCurrentActionsReference();
         CharacterHandInventorySlot characterHandInventorySlot = new CharacterHandInventorySlot();
 
         components.Add(characterHandInventorySlot);
-        components.Add(playerCurrentActionsReference);
+        //components.Add(playerCurrentActionsReference);
         return components;
     }
 

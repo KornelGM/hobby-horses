@@ -60,14 +60,9 @@ public class PlayerMoveState : HumanBaseState
 
     public override void CustomUpdate()
     {
-        PlayerInputGameplayState playerInputGameplayState = 
-            StateMachine.PlayerController.PlayerInputStateMachine.CurrentState as PlayerInputGameplayState;
-
-        if (playerInputGameplayState == null) return;
-
         _move.Move(_virtualController.Movement, _virtualController.IsSprint);
         _playerRotator.Rotate(_virtualController.Mouse.x);
-        _cameraRotator.Rotate(_virtualController.Mouse.y);
+        //_cameraRotator.Rotate(_virtualController.Mouse.y);
         _gravityController.ApplyGravity(IsGrounded());
 
         if (_hologramController.Projecting)

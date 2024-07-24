@@ -5,20 +5,20 @@ public class GameplayInitializer : MonoBehaviour, IServiceLocatorComponent
 {
     public ServiceLocator MyServiceLocator { get; set; }
 
-    [ServiceLocatorComponent] private SceneSaveService _saveService;
-    [ServiceLocatorComponent] private DreamParableLogger.Logger _logger;
+    //[ServiceLocatorComponent] private SceneSaveService _saveService;
+    //[ServiceLocatorComponent] private DreamParableLogger.Logger _logger;
 
     [SerializeField] private SaveLoadInfo<SaveData> _saveLoadInfo;
     [SerializeField] private SteamData _steamData;
 
     private void Awake()
     {
-        SetAppID(_steamData.GetID());
+        //SetAppID(_steamData.GetID());
     }
 
     public void Start()
     {
-        if (_saveService != null) _saveService.Initialize(_saveLoadInfo?.CurrentData);
+        //if (_saveService != null) _saveService.Initialize(_saveLoadInfo?.CurrentData);
         MyServiceLocator.CustomStart();
         
         CollectSystemInfo();
@@ -39,11 +39,11 @@ public class GameplayInitializer : MonoBehaviour, IServiceLocatorComponent
 
     private void CollectSystemInfo()
     {
-        if (_logger == null)
-        {
-            Debug.LogWarning("Logger is not initialized in GameplayInitializer");
-            return;
-        }
+        //if (_logger == null)
+        //{
+        //    Debug.LogWarning("Logger is not initialized in GameplayInitializer");
+        //    return;
+        //}
         
         string systemInfo =
             $"Operating system: {SystemInfo.operatingSystem}, {SystemInfo.operatingSystemFamily}\n" +
@@ -51,7 +51,7 @@ public class GameplayInitializer : MonoBehaviour, IServiceLocatorComponent
             $"Graphics card: {SystemInfo.graphicsDeviceName}, ID {SystemInfo.graphicsDeviceID}, {SystemInfo.graphicsDeviceType}, " +
             $"{SystemInfo.graphicsDeviceVersion}v, {SystemInfo.graphicsMemorySize}MB, shader level: {SystemInfo.graphicsShaderLevel}";
 
-        _logger?.Log(LogType.Log, "System Information", this, "System Info", systemInfo + "\r\n");
-        _logger?.Log(LogType.Log, "Game Version", this, $"Game Version: {Application.version}");
+        //_logger?.Log(LogType.Log, "System Information", this, "System Info", systemInfo + "\r\n");
+        //_logger?.Log(LogType.Log, "Game Version", this, $"Game Version: {Application.version}");
     }
 }

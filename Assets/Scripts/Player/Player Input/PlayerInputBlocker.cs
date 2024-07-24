@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 
@@ -26,7 +25,6 @@ public class PlayerInputBlocker : MonoBehaviour, IServiceLocatorComponent, IBloc
         BlockersQueue.Enqueue(blockerSettings);
         if (BlockersQueue.Count == 1)
         {
-            _playerInputReader.SwitchPlayerInputState(blockerSettings.PlayerInputStateOnBlock);
             blockerSettings.OnBlockingBegin?.Invoke();
         }
     }
@@ -56,12 +54,10 @@ public class PlayerInputBlocker : MonoBehaviour, IServiceLocatorComponent, IBloc
         blocker.OnBlockingEnd?.Invoke();
         if (BlockersQueue.Count == 0)
         {
-            _playerInputReader.GoToGameplayState();
             return;
         }
 
         InputBlockerSettings currentBlocker = (InputBlockerSettings)BlockersQueue.Peek();
         currentBlocker.OnBlockingBegin?.Invoke();
-        _playerInputReader.SwitchPlayerInputState(currentBlocker.PlayerInputStateOnBlock);
     }
 }

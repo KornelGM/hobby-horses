@@ -26,7 +26,7 @@ MonoBehaviour:
   <NormalAnimatorMovementSpeed>k__BackingField: 2
   <SprintAnimatorMomenentSpeed>k__BackingField: 3
   <WalkAnimatorMovementSpeed>k__BackingField: 1
-  <RotationSpeed>k__BackingField: 0.27
+  <RotationSpeed>k__BackingField: 0.3
   GamepadRotationSpeedMultiplier: 4
   <TurnAngle>k__BackingField: 0
   <HorizontalMoveSmoother>k__BackingField: 0
