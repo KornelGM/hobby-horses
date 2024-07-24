@@ -652,10 +652,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementSettings: {fileID: 11400000, guid: fa078126e41883d45bcc8c88885574a7, type: 2}
-  _maxSpeed: 6
+  _maxSpeed: 10
   _maxRotateSpeed: 6
   _brakForce: 10
-  _accelerate: 2
+  _accelerate: 3
   _rotateAccelerate: 6
   _drag: 3
   _rotateDrag: 10
