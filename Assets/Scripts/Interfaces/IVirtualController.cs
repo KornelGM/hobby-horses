@@ -8,6 +8,7 @@ public interface IVirtualController
     public bool IsSprint { get; set; }
     public bool IsWalk { get; set; }
     public Action OnJumpPerformed { get; set; }
+    public Action OnJumpCancelled { get; set; }
     public Action OnFirstInteractionPerformed { get; set; }
     public Action OnSecondInteractionPerformed { get; set; }
     public Action OnAdditiveInteractionPerformed { get; set; }

@@ -16,9 +16,9 @@ MonoBehaviour:
   <MovementSpeed>k__BackingField: 5
   <SprintSpeedModification>k__BackingField: 2
   <JumpForce>k__BackingField: 0
-  <GroundedOffset>k__BackingField: 0.1
+  <GroundedOffset>k__BackingField: 0.14
   <JumpAdditionalOffset>k__BackingField: 0.1
-  <GroundedRadius>k__BackingField: 5
+  <GroundedRadius>k__BackingField: 20
   <GroundLayers>k__BackingField:
     serializedVersion: 2
     m_Bits: 2049

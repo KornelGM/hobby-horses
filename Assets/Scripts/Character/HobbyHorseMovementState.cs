@@ -4,7 +4,6 @@ public class HobbyHorseMovementState : State
 {
     private PlayerCameraRotator _cameraRotator;
     private HobbyHorseStateMachine _stateMachine;
-    private ICharacterRotator _playerRotator;
     private HobbyHorseMovement _movement;
     private GravityCharacterController _gravityController;
     private IVirtualController _virtualController;
@@ -24,29 +23,54 @@ public class HobbyHorseMovementState : State
     {
         _virtualController.OnFirstInteractionPerformed += () => _cameraRotator.SwitchFreeCamera(true);
         _virtualController.OnFirstInteractionCancelled += () => _cameraRotator.BackToCenterPosition();
+
+        _virtualController.OnJumpPerformed += ChargingJumpForce;
+        _virtualController.OnJumpCancelled += Jump;
+        _virtualController.OnJumpCancelled += CancelJumpCharge;
     }
 
     public override void CustomUpdate()
     {
-        _movement.Move(_virtualController.Movement);
+        _movement.Move(_virtualController.Movement, IsGrounded());
 
         if (_cameraRotator.FreeCamera)
             _cameraRotator.Rotate(_virtualController.Mouse.y, _virtualController.Mouse.x);
         else
             _cameraRotator.CameraFollowTarget();
 
+        _gravityController.ChargingForce();
         _gravityController.ApplyGravity(IsGrounded());
     }
 
     public override void CustomFixedUpdate()
     {
-        _virtualController.OnFirstInteractionPerformed -= () => _cameraRotator.SwitchFreeCamera(true);
-        _virtualController.OnFirstInteractionCancelled -= () => _cameraRotator.BackToCenterPosition();
+
     }
 
     public override void Exit()
     {
-        _cameraRotator.SwitchFreeCamera(false);
+        _virtualController.OnFirstInteractionPerformed -= () => _cameraRotator.SwitchFreeCamera(true);
+        _virtualController.OnFirstInteractionCancelled -= () => _cameraRotator.BackToCenterPosition();
+
+        _virtualController.OnJumpPerformed -= ChargingJumpForce;
+        _virtualController.OnJumpCancelled -= Jump;
+        _virtualController.OnJumpCancelled -= CancelJumpCharge;
+    }
+
+    private void CancelJumpCharge()
+    {
+        _gravityController.CancelCharge();
+    }
+
+    private void ChargingJumpForce()
+    {
+        _gravityController.SwitchCharge(true);
+    }
+
+    private void Jump()
+    {
+        if (!AbleToJump()) return;
+        _gravityController.Jump();
     }
 
     protected bool IsGrounded()
