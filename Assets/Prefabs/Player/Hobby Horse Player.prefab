@@ -474,7 +474,7 @@ MonoBehaviour:
   _rotateAccelerateOnAir: 10
   _drag: 7
   _dragOnAir: 2
-  _rotateDrag: 20
+  _rotateDrag: 15
   _target: {fileID: 416457773258895089}
   _positionCurve:
     serializedVersion: 2
