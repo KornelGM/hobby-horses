@@ -85,12 +85,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4772287657446101686, guid: 21a09de044323f945895678ee6400ffb, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4772287657446101686, guid: 21a09de044323f945895678ee6400ffb, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3b68b0576e886a343965bbd770c82fbd, type: 2}
     - target: {fileID: 919132149155446097, guid: 21a09de044323f945895678ee6400ffb, type: 3}
       propertyPath: m_Name
       value: Traffic Vertical Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333072237216210279, guid: 21a09de044323f945895678ee6400ffb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

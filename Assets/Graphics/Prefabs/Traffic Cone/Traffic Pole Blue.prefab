@@ -88,6 +88,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Traffic Pole
       objectReference: {fileID: 0}
+    - target: {fileID: 4668596949462496424, guid: 56d877bad87cd8b49bdc3077182a0b45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6649977515504262078, guid: 56d877bad87cd8b49bdc3077182a0b45, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6649977515504262078, guid: 56d877bad87cd8b49bdc3077182a0b45, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

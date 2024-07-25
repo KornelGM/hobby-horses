@@ -41,6 +41,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 4526139452805031047}
     m_Modifications:
     - target: {fileID: -9119689983863728111, guid: 95fb157ce47faa648aeae31d784f230d, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -9119689983863728111, guid: 95fb157ce47faa648aeae31d784f230d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3b68b0576e886a343965bbd770c82fbd, type: 2}
@@ -83,6 +87,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 95fb157ce47faa648aeae31d784f230d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8033288555855496375, guid: 95fb157ce47faa648aeae31d784f230d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3624118210820181084, guid: 95fb157ce47faa648aeae31d784f230d, type: 3}
       propertyPath: m_IsActive

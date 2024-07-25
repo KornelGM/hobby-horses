@@ -80,6 +80,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7297304229739631849, guid: 77f4d4dc50f1cfa41976f2b8e753bbc2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 77f4d4dc50f1cfa41976f2b8e753bbc2, type: 3}
       propertyPath: m_Name
       value: Traffic Cone 28pol
@@ -87,6 +91,10 @@ PrefabInstance:
     - target: {fileID: 5549853481477571292, guid: 77f4d4dc50f1cfa41976f2b8e753bbc2, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269874451757701117, guid: 77f4d4dc50f1cfa41976f2b8e753bbc2, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7269874451757701117, guid: 77f4d4dc50f1cfa41976f2b8e753bbc2, type: 3}
       propertyPath: m_Materials.Array.data[0]
