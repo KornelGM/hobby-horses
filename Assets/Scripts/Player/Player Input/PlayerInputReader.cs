@@ -66,6 +66,7 @@ public class PlayerInputReader : MonoBehaviour, IServiceLocatorComponent, IEarly
         set { }
     }
     public Action OnJumpPerformed { get; set; }
+    public Action OnJumpCancelled { get; set; }
     public Action OnFirstInteractionPerformed { get; set; }
     public Action OnSecondInteractionPerformed { get; set; }
     public Action OnAdditiveInteractionPerformed { get; set; }
@@ -176,11 +177,12 @@ public class PlayerInputReader : MonoBehaviour, IServiceLocatorComponent, IEarly
 
         _buttonsUp = new Dictionary<string, Action>()
         {
-            {"Mouse Left", ()=>OnFirstInteractionCancelled?.Invoke()},
-            {"Mouse Right", ()=>OnSecondInteractionCancelled?.Invoke()},
-            {"Additive Interaction", ()=>OnAdditiveInteractionCancelled?.Invoke()},
-            {"More Info", ()=>OnMoreInfoInteractionCancelled?.Invoke()},
-            {"Gamepad UI Left Button", ()=>OnGamepadUILeftButtonCancelled?.Invoke()}
+            {"Mouse Left", ()=> OnFirstInteractionCancelled?.Invoke()},
+            {"Mouse Right", ()=> OnSecondInteractionCancelled?.Invoke()},
+            {"Additive Interaction", ()=> OnAdditiveInteractionCancelled?.Invoke()},
+            {"More Info", ()=> OnMoreInfoInteractionCancelled?.Invoke()},
+            {"Gamepad UI Left Button", ()=> OnGamepadUILeftButtonCancelled?.Invoke()},
+            {"Jump", ()=> OnJumpCancelled?.Invoke()}
         };
     }
 
