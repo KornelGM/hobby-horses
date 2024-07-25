@@ -41,6 +41,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 4526139452805031047}
     m_Modifications:
     - target: {fileID: -9119689983863728111, guid: 95fb157ce47faa648aeae31d784f230d, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -9119689983863728111, guid: 95fb157ce47faa648aeae31d784f230d, type: 3}
       propertyPath: m_StaticShadowCaster
       value: 1
       objectReference: {fileID: 0}
