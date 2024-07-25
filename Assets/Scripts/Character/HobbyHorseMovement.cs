@@ -1,3 +1,4 @@
+using Cinemachine;
 using Rewired;
 using System;
 using UnityEngine;
@@ -20,6 +21,8 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
     [SerializeField] private Transform _target;
     [SerializeField] private AnimationCurve _positionCurve;
     [SerializeField] private Animator _animator;
+    [SerializeField] private AnimationCurve _cameraTiltCurve;
+    [SerializeField] private CinemachineVirtualCamera _virtualCamera;
 
     public CharacterController CharacterController => _characterController;
     public ServiceLocator MyServiceLocator { get; set; }
@@ -41,6 +44,7 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
         if (!_characterController.enabled)
             return;
 
+        _animator.SetBool("Jump", !isGrounded);
         _animator.SetFloat("Speed", Mathf.InverseLerp(0, _maxSpeed, _actualSpeed));
 
         CalculateRotateSpeed(moveInput.x, isGrounded);
@@ -121,7 +125,9 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
 
         float targetPosition = Mathf.InverseLerp(-_maxRotateSpeed, _maxRotateSpeed, _actualRotateSpeed);
         float evaluateTargetPosition = _positionCurve.Evaluate(targetPosition);
+        float evaluateCameraTilt = _cameraTiltCurve.Evaluate(targetPosition);
 
+        _virtualCamera.m_Lens.Dutch = evaluateCameraTilt;
         _target.localPosition = new Vector3(evaluateTargetPosition, _target.localPosition.y, _target.localPosition.z);
 
         _characterController.transform.rotation = targetAngle;
