@@ -8,8 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Volumetric Fog (High Quality)
-  m_Shader: {fileID: -6465566751694194690, guid: b41208ea9fa867440be4a9ec08db6e2a,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: b41208ea9fa867440be4a9ec08db6e2a, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
@@ -250,7 +249,7 @@ Material:
     - _Cloud_Noise_Voronoi_Animation: {r: 0, g: 0, b: 0.5, a: 0.5}
     - _Cloud_Noise_Voronoi_Offset: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 0.36933854, b: 0, a: 1}
-    - _Colour: {r: 0.05490196, g: 0.09411765, b: 0.20784314, a: 1}
+    - _Colour: {r: 0.25266996, g: 0.39349496, b: 0.8018868, a: 0.12941177}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Offset: {r: 0, g: 0, b: 0, a: 45}
     - _Raymarch_Vertical_Range: {r: 0, g: 0.1, b: 0, a: 0}
