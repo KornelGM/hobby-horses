@@ -21,7 +21,6 @@ public class GravityCharacterController : MonoBehaviour, IServiceLocatorComponen
     private float _jumpForce;
     private CharacterController _characterController;
     private bool _blockGravity = false;
-    private bool _charge;
     private float _currGravity = 0;
 
     public bool IsGrounded => _currGravity == 0;
@@ -53,14 +52,9 @@ public class GravityCharacterController : MonoBehaviour, IServiceLocatorComponen
         _currGravity = value;
     }
 
-    public void SwitchCharge(bool value)
+    public void ChargingForce(bool charge)
     {
-        _charge = value;
-    }
-
-    public void ChargingForce()
-    {
-        if (!_charge)
+        if (!charge)
             return;
 
         float chargingSpeed = Mathf.InverseLerp(0, _maxJumpForce, _jumpForce);
@@ -73,7 +67,6 @@ public class GravityCharacterController : MonoBehaviour, IServiceLocatorComponen
 
     public void CancelCharge()
     {
-        SwitchCharge(false);
         _jumpForce = 0;
         OnJumpForceChange?.Invoke(_jumpForce);
     }

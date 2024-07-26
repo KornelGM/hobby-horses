@@ -86,7 +86,7 @@ public class HumanMoveState : HumanBaseState
 
     protected void CalculateSpeed()
     {
-        if (StateMachine.VirtualController.IsSprint) TargetSpeed = StateMachine.MovementSettings.MovementSpeed * StateMachine.MovementSettings.SprintSpeedModification;
+        if (StateMachine.VirtualController.IsChargeJump) TargetSpeed = StateMachine.MovementSettings.MovementSpeed * StateMachine.MovementSettings.SprintSpeedModification;
         else TargetSpeed = StateMachine.MovementSettings.MovementSpeed;
 
         ActualSpeed = Mathf.SmoothDamp(ActualSpeed, TargetSpeed, ref _velocity, 0.3f);

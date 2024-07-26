@@ -24,7 +24,6 @@ public class HobbyHorseMovementState : State
         _virtualController.OnFirstInteractionPerformed += () => _cameraRotator.SwitchFreeCamera(true);
         _virtualController.OnFirstInteractionCancelled += () => _cameraRotator.BackToCenterPosition();
 
-        _virtualController.OnJumpPerformed += ChargingJumpForce;
         _virtualController.OnJumpCancelled += Jump;
         _virtualController.OnJumpCancelled += CancelJumpCharge;
     }
@@ -38,7 +37,7 @@ public class HobbyHorseMovementState : State
         else
             _cameraRotator.CameraFollowTarget();
 
-        _gravityController.ChargingForce();
+        JumpCharging();
         _gravityController.ApplyGravity(IsGrounded());
     }
 
@@ -47,12 +46,18 @@ public class HobbyHorseMovementState : State
 
     }
 
+    private void JumpCharging()
+    {
+        if (!AbleToJump() && !_gravityController.AbleToChargeForceOnAir) return;
+
+       _gravityController.ChargingForce(_virtualController.IsChargeJump);
+    }
+
     public override void Exit()
     {
         _virtualController.OnFirstInteractionPerformed -= () => _cameraRotator.SwitchFreeCamera(true);
         _virtualController.OnFirstInteractionCancelled -= () => _cameraRotator.BackToCenterPosition();
 
-        _virtualController.OnJumpPerformed -= ChargingJumpForce;
         _virtualController.OnJumpCancelled -= Jump;
         _virtualController.OnJumpCancelled -= CancelJumpCharge;
     }
@@ -60,12 +65,6 @@ public class HobbyHorseMovementState : State
     private void CancelJumpCharge()
     {
         _gravityController.CancelCharge();
-    }
-
-    private void ChargingJumpForce()
-    {
-        if (!AbleToJump() && !_gravityController.AbleToChargeForceOnAir) return;
-        _gravityController.SwitchCharge(true);
     }
 
     private void Jump()

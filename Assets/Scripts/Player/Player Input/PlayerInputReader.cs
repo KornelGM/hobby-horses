@@ -54,15 +54,15 @@ public class PlayerInputReader : MonoBehaviour, IServiceLocatorComponent, IEarly
         set { }
     }
 
-    public bool IsSprint 
+    public bool IsChargeJump 
     {
-        get => GetInteraction("Sprint") && !IsWalk;
+        get => GetInteraction("Jump");
         set { }
     }
 
-    public bool IsWalk 
+    public bool IsSlowMotion 
     {
-        get => GetInteraction("Walk");
+        get => GetInteraction("Slow Motion");
         set { }
     }
     public Action OnJumpPerformed { get; set; }
@@ -117,8 +117,8 @@ public class PlayerInputReader : MonoBehaviour, IServiceLocatorComponent, IEarly
 
     private static List<string> _buttonsToRead = new()
     {
-        "Sprint",
-        "Walk", 
+        "Jump",
+        "Slow Motion", 
     };
 
     private static List<string> _axisesToRead = new()

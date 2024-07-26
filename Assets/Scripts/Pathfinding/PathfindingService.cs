@@ -29,22 +29,22 @@ public class PathfindingService : MonoBehaviour, IUpdateable, IStartable, IPathf
 
     public bool IsSprint
     {
-        get => _virtualController.IsSprint;
+        get => _virtualController.IsChargeJump;
         set
         {
-            _virtualController.IsSprint = value;
-            _virtualController.IsWalk = false;
+            _virtualController.IsChargeJump = value;
+            _virtualController.IsSlowMotion = false;
             _richAI.maxSpeed = _stateMachine.MovementSettings.MovementSpeed * (value ? _stateMachine.MovementSettings.SprintSpeedModification : _stateMachine.MovementSettings.NormalAnimatorMovementSpeed);
         }
     }
 
     public bool IsWalk
     {
-        get => _virtualController.IsWalk;
+        get => _virtualController.IsSlowMotion;
         set
         {
-            _virtualController.IsWalk = value;
-            _virtualController.IsSprint = false;
+            _virtualController.IsSlowMotion = value;
+            _virtualController.IsChargeJump = false;
             _richAI.maxSpeed = _stateMachine.MovementSettings.MovementSpeed * (value ? _stateMachine.MovementSettings.WalkAnimatorMovementSpeed : _stateMachine.MovementSettings.NormalAnimatorMovementSpeed);
         }
     }
@@ -57,18 +57,18 @@ public class PathfindingService : MonoBehaviour, IUpdateable, IStartable, IPathf
             switch (value)
             {
                 case AgentMoveType.Walk:
-                    _virtualController.IsWalk = true;
-                    _virtualController.IsSprint = false;
+                    _virtualController.IsSlowMotion = true;
+                    _virtualController.IsChargeJump = false;
                     _richAI.maxSpeed = _stateMachine.MovementSettings.MovementSpeed * _stateMachine.MovementSettings.WalkAnimatorMovementSpeed;
                     break;
                 case AgentMoveType.Jog:
-                    _virtualController.IsWalk = false;
-                    _virtualController.IsSprint = false;
+                    _virtualController.IsSlowMotion = false;
+                    _virtualController.IsChargeJump = false;
                     _richAI.maxSpeed = _stateMachine.MovementSettings.MovementSpeed * _stateMachine.MovementSettings.NormalAnimatorMovementSpeed;
                     break;
                 case AgentMoveType.Sprint:
-                    _virtualController.IsWalk = false;
-                    _virtualController.IsSprint = true;
+                    _virtualController.IsSlowMotion = false;
+                    _virtualController.IsChargeJump = true;
                     _richAI.maxSpeed = _stateMachine.MovementSettings.MovementSpeed * _stateMachine.MovementSettings.SprintAnimatorMomenentSpeed;
                     break;
             }
@@ -339,11 +339,11 @@ public class PathfindingService : MonoBehaviour, IUpdateable, IStartable, IPathf
                     if (movementChange < (1f / _stateMachine.MovementSettings.SprintSpeedModification))
                     {
                         movementChange *= _stateMachine.MovementSettings.SprintSpeedModification;
-                        _virtualController.IsSprint = false;
+                        _virtualController.IsChargeJump = false;
                     }
                     else
                     {
-                        _virtualController.IsSprint = true;
+                        _virtualController.IsChargeJump = true;
                     }
                 }
 

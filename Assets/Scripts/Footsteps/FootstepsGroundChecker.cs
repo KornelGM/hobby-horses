@@ -62,7 +62,7 @@ public class FootstepsGroundChecker : MonoBehaviour, IServiceLocatorComponent, I
     {
         while (true)
         {
-            float timeToWait = _playerInputReader.IsSprint ? _runSoundFrequencySeconds : _walkSoundFrequencySeconds;
+            float timeToWait = _playerInputReader.IsChargeJump ? _runSoundFrequencySeconds : _walkSoundFrequencySeconds;
 
             if (_currentGround != null && _currentGround.Stairs)
             {

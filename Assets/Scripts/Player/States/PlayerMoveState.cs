@@ -60,7 +60,7 @@ public class PlayerMoveState : HumanBaseState
 
     public override void CustomUpdate()
     {
-        _move.Move(_virtualController.Movement, _virtualController.IsSprint);
+        _move.Move(_virtualController.Movement, _virtualController.IsChargeJump);
         _playerRotator.Rotate(_virtualController.Mouse.x);
         //_cameraRotator.Rotate(_virtualController.Mouse.y);
         _gravityController.ApplyGravity(IsGrounded());

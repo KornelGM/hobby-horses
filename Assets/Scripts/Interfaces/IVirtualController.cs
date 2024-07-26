@@ -5,8 +5,8 @@ public interface IVirtualController
 {
     public Vector3 Movement { get; set; }
     public Vector2 Mouse { get; set; }
-    public bool IsSprint { get; set; }
-    public bool IsWalk { get; set; }
+    public bool IsChargeJump { get; set; }
+    public bool IsSlowMotion { get; set; }
     public Action OnJumpPerformed { get; set; }
     public Action OnJumpCancelled { get; set; }
     public Action OnFirstInteractionPerformed { get; set; }

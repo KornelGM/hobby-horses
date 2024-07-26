@@ -358,9 +358,9 @@ MonoBehaviour:
       _userAssignable: 1
       _categoryId: 1
     - _id: 9
-      _name: Walk
+      _name: Slow Motion
       _type: 1
-      _descriptiveName: Walk Button
+      _descriptiveName: Slow Motion
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
       _behaviorId: 0
