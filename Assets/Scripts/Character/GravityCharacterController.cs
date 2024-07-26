@@ -6,6 +6,7 @@ public class GravityCharacterController : MonoBehaviour, IServiceLocatorComponen
     public Action<float> OnJumpForceChange;
 
     public float MaxJumpForce => _maxJumpForce;
+    public float MinJumpForce => _minJumpForce;
     public bool AbleToChargeForceOnAir => _ableToChargeForceOnAir;
 
     public float CurrGravity => _currGravity;
@@ -14,6 +15,7 @@ public class GravityCharacterController : MonoBehaviour, IServiceLocatorComponen
 
     [SerializeField] private float _gravitySpeed = 10;
     [SerializeField] private float _maxJumpForce = 1;
+    [SerializeField] private float _minJumpForce = 1;
     [SerializeField] private float _forceChargingSpeed = 1;
     [SerializeField] private AnimationCurve _forceCharging;
     [SerializeField] private bool _ableToChargeForceOnAir;
@@ -57,11 +59,11 @@ public class GravityCharacterController : MonoBehaviour, IServiceLocatorComponen
         if (!charge)
             return;
 
-        float chargingSpeed = Mathf.InverseLerp(0, _maxJumpForce, _jumpForce);
+        float chargingSpeed = Mathf.InverseLerp(_minJumpForce, _maxJumpForce, _jumpForce);
         float evaluateChargingSpeed = _forceCharging.Evaluate(chargingSpeed);
 
         _jumpForce += evaluateChargingSpeed * _forceChargingSpeed * Time.deltaTime;
-        _jumpForce = Mathf.Clamp(_jumpForce, 0, _maxJumpForce);
+        _jumpForce = Mathf.Clamp(_jumpForce, _minJumpForce, _maxJumpForce);
         OnJumpForceChange?.Invoke(_jumpForce);
     }
 

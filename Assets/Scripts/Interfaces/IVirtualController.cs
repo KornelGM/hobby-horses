@@ -12,11 +12,11 @@ public interface IVirtualController
     public Action OnFirstInteractionPerformed { get; set; }
     public Action OnSecondInteractionPerformed { get; set; }
     public Action OnAdditiveInteractionPerformed { get; set; }
-    public Action OnMoreInfoInteractionPerformed { get; set; }
+    public Action OnSlowMotionPerformed { get; set; }
     public Action OnFirstInteractionCancelled { get; set; }
     public Action OnSecondInteractionCancelled { get; set; }
     public Action OnAdditiveInteractionCancelled { get; set; }
-    public Action OnMoreInfoInteractionCancelled { get; set; }
+    public Action OnSlowMotionCancelled { get; set; }
 
     public float HologramRotatingAxis { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     public Action OnToggleHologramGridSnappingPerformed {  get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

@@ -7,6 +7,7 @@ public class HobbyHorseMovementState : State
     private HobbyHorseMovement _movement;
     private GravityCharacterController _gravityController;
     private IVirtualController _virtualController;
+    private SlowMotionManager _slowMotionManager;
 
     public HobbyHorseMovementState(HobbyHorseStateMachine stateMachine)
     {
@@ -17,6 +18,8 @@ public class HobbyHorseMovementState : State
         _stateMachine.MyServiceLocator.TryGetServiceLocatorComponent(out _stateMachine);
         _stateMachine.MyServiceLocator.TryGetServiceLocatorComponent(out _virtualController);
         _stateMachine.MyServiceLocator.TryGetServiceLocatorComponent(out _gravityController);
+
+        SceneServiceLocator.Instance.TryGetServiceLocatorComponent(out _slowMotionManager);
     }
 
     public override void Enter()
@@ -26,6 +29,17 @@ public class HobbyHorseMovementState : State
 
         _virtualController.OnJumpCancelled += Jump;
         _virtualController.OnJumpCancelled += CancelJumpCharge;
+        _virtualController.OnSlowMotionPerformed += ChangeTime;
+    }
+
+    public override void Exit()
+    {
+        _virtualController.OnFirstInteractionPerformed -= () => _cameraRotator.SwitchFreeCamera(true);
+        _virtualController.OnFirstInteractionCancelled -= () => _cameraRotator.BackToCenterPosition();
+
+        _virtualController.OnJumpCancelled -= Jump;
+        _virtualController.OnJumpCancelled -= CancelJumpCharge;
+        _virtualController.OnSlowMotionPerformed -= ChangeTime;
     }
 
     public override void CustomUpdate()
@@ -46,20 +60,16 @@ public class HobbyHorseMovementState : State
 
     }
 
+    private void ChangeTime()
+    {
+        _slowMotionManager.ChangeTime();
+    }
+
     private void JumpCharging()
     {
         if (!AbleToJump() && !_gravityController.AbleToChargeForceOnAir) return;
 
        _gravityController.ChargingForce(_virtualController.IsChargeJump);
-    }
-
-    public override void Exit()
-    {
-        _virtualController.OnFirstInteractionPerformed -= () => _cameraRotator.SwitchFreeCamera(true);
-        _virtualController.OnFirstInteractionCancelled -= () => _cameraRotator.BackToCenterPosition();
-
-        _virtualController.OnJumpCancelled -= Jump;
-        _virtualController.OnJumpCancelled -= CancelJumpCharge;
     }
 
     private void CancelJumpCharge()

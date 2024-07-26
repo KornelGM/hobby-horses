@@ -415,6 +415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gravitySpeed: 10
   _maxJumpForce: 6
+  _minJumpForce: 3
   _forceChargingSpeed: 10
   _forceCharging:
     serializedVersion: 2

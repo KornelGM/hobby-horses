@@ -32,11 +32,11 @@ public class PlayerMoveState : HumanBaseState
         _virtualController.OnFirstInteractionPerformed += PrimaryInteraction;
         _virtualController.OnSecondInteractionPerformed += SecondaryInteraction;
         _virtualController.OnAdditiveInteractionPerformed += AdditiveInteraction;
-        _virtualController.OnMoreInfoInteractionPerformed += MoreIfnoInteraction;
+        _virtualController.OnSlowMotionPerformed += MoreIfnoInteraction;
         _virtualController.OnFirstInteractionCancelled += CancelPrimaryInteraction;
         _virtualController.OnSecondInteractionCancelled += CancelSecondaryInteraction;
         _virtualController.OnAdditiveInteractionCancelled += CancelAdditiveInteraction;
-        _virtualController.OnMoreInfoInteractionCancelled += CancelMoreInfo;
+        _virtualController.OnSlowMotionCancelled += CancelMoreInfo;
 
         _itemSelector.DetectItems();
     }
@@ -47,11 +47,11 @@ public class PlayerMoveState : HumanBaseState
         _virtualController.OnFirstInteractionPerformed -= PrimaryInteraction;
         _virtualController.OnSecondInteractionPerformed -= SecondaryInteraction;
         _virtualController.OnAdditiveInteractionPerformed -= AdditiveInteraction;
-        _virtualController.OnMoreInfoInteractionPerformed -= MoreIfnoInteraction;
+        _virtualController.OnSlowMotionPerformed -= MoreIfnoInteraction;
         _virtualController.OnFirstInteractionCancelled -= CancelPrimaryInteraction;
         _virtualController.OnSecondInteractionCancelled -= CancelSecondaryInteraction;
         _virtualController.OnAdditiveInteractionCancelled -= CancelAdditiveInteraction;
-        _virtualController.OnMoreInfoInteractionCancelled -= CancelMoreInfo;
+        _virtualController.OnSlowMotionCancelled -= CancelMoreInfo;
         _characterInteraction = null;
         _itemSelector.Deselect(true);
         _hologramController.StopDisplayingHologram();

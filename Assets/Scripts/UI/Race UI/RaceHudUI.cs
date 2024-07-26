@@ -14,11 +14,16 @@ public class RaceHudUI : MonoBehaviour, IWindow, IServiceLocatorComponent
     public bool ShouldDeactivateCrosshair { get; set; }
 
     [ServiceLocatorComponent] private HobbyHorsePlayerManager _playerManager;
+    [ServiceLocatorComponent] private SlowMotionManager _slowMotionManager;
 
     [SerializeField] private TextMeshProUGUI _speedValueText;
     [SerializeField] private GameObject _jumpBar;
     [SerializeField] private float _jumpBarVisibilityTreshold;
     [SerializeField] private Image _jumpForceBar;
+
+    [SerializeField] private GameObject _slowMotionBar;
+    [SerializeField] private float _slowMotionVisibilityTreshold;
+    [SerializeField] private Image _slowMotionTimeBar;
 
     private HobbyHorseMovement _movement;
     private GravityCharacterController _gravityController;
@@ -30,6 +35,11 @@ public class RaceHudUI : MonoBehaviour, IWindow, IServiceLocatorComponent
 
         _movement.OnActualSpeedChange += UpdateSpeedValue;
         _gravityController.OnJumpForceChange += UpdateJumpForce;
+        _slowMotionManager.OnSlowMotionTimeChange += UpdateSlowMotionBar;
+
+        UpdateJumpForce(0);
+        UpdateSpeedValue(0);
+        UpdateSlowMotionBar(_slowMotionManager.MaxSlowMotionTime);
     }
 
     private void UpdateSpeedValue(float speed)
@@ -39,8 +49,15 @@ public class RaceHudUI : MonoBehaviour, IWindow, IServiceLocatorComponent
 
     private void UpdateJumpForce(float force)
     {
-        float evaluatedJumpForce = Mathf.InverseLerp(0, _gravityController.MaxJumpForce, force);
+        float evaluatedJumpForce = Mathf.InverseLerp(_gravityController.MinJumpForce, _gravityController.MaxJumpForce, force);
         _jumpBar.SetActive(evaluatedJumpForce > _jumpBarVisibilityTreshold);
         _jumpForceBar.fillAmount = evaluatedJumpForce;
+    }
+
+    private void UpdateSlowMotionBar(float time)
+    {
+        float evaluatedSlowMotionTime = Mathf.InverseLerp(0, _slowMotionManager.MaxSlowMotionTime, time);
+        _slowMotionBar.SetActive(evaluatedSlowMotionTime < _slowMotionVisibilityTreshold);
+        _slowMotionTimeBar.fillAmount = evaluatedSlowMotionTime;
     }
 }

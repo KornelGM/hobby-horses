@@ -70,11 +70,11 @@ public class PlayerInputReader : MonoBehaviour, IServiceLocatorComponent, IEarly
     public Action OnFirstInteractionPerformed { get; set; }
     public Action OnSecondInteractionPerformed { get; set; }
     public Action OnAdditiveInteractionPerformed { get; set; }
-    public Action OnMoreInfoInteractionPerformed { get; set; }
+    public Action OnSlowMotionPerformed { get; set; }
     public Action OnFirstInteractionCancelled { get; set; }
     public Action OnSecondInteractionCancelled { get; set; }
     public Action OnAdditiveInteractionCancelled { get; set; }
-    public Action OnMoreInfoInteractionCancelled { get; set; }
+    public Action OnSlowMotionCancelled { get; set; }
     public Action OnToggleHologramGridSnappingPerformed { get; set; }
     public Action OnPausePerformed { get; set; }
     public Action OnUnpausePerformed { get; set; }
@@ -149,7 +149,7 @@ public class PlayerInputReader : MonoBehaviour, IServiceLocatorComponent, IEarly
             {"Mouse Left", () => OnFirstInteractionPerformed?.Invoke()},
             {"Mouse Right",()=> OnSecondInteractionPerformed?.Invoke()},
             {"Additive Interaction", ()=>OnAdditiveInteractionPerformed?.Invoke()},
-            {"More Info", ()=>OnMoreInfoInteractionPerformed?.Invoke()},
+            {"Slow Motion", ()=>OnSlowMotionPerformed?.Invoke()},
             {"Toggle Hologram Grid Snapping", ()=>OnToggleHologramGridSnappingPerformed?.Invoke()},
             {"Pause", ()=>OnPausePerformed?.Invoke()},
             {"Unpause", ()=>OnUnpausePerformed?.Invoke()},
@@ -180,7 +180,7 @@ public class PlayerInputReader : MonoBehaviour, IServiceLocatorComponent, IEarly
             {"Mouse Left", ()=> OnFirstInteractionCancelled?.Invoke()},
             {"Mouse Right", ()=> OnSecondInteractionCancelled?.Invoke()},
             {"Additive Interaction", ()=> OnAdditiveInteractionCancelled?.Invoke()},
-            {"More Info", ()=> OnMoreInfoInteractionCancelled?.Invoke()},
+            {"Slow Motion", ()=> OnSlowMotionCancelled?.Invoke()},
             {"Gamepad UI Left Button", ()=> OnGamepadUILeftButtonCancelled?.Invoke()},
             {"Jump", ()=> OnJumpCancelled?.Invoke()}
         };
