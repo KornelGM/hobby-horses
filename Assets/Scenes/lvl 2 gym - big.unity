@@ -405,14 +405,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3497454571324623897, guid: 29dd10eabe40b5c47944692ffd4bf70d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7356470439415526340, guid: 29dd10eabe40b5c47944692ffd4bf70d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9054149529742709387, guid: 29dd10eabe40b5c47944692ffd4bf70d, type: 3}
       propertyPath: m_Name
       value: Environment - lvl 2 Gym
