@@ -6,14 +6,17 @@ public class GravityCharacterController : MonoBehaviour, IServiceLocatorComponen
     public Action<float> OnJumpForceChange;
 
     public float MaxJumpForce => _maxJumpForce;
+    public bool AbleToChargeForceOnAir => _ableToChargeForceOnAir;
 
     public float CurrGravity => _currGravity;
+    public float JumpForce => _jumpForce;
     public ServiceLocator MyServiceLocator { get; set; }
 
     [SerializeField] private float _gravitySpeed = 10;
     [SerializeField] private float _maxJumpForce = 1;
     [SerializeField] private float _forceChargingSpeed = 1;
     [SerializeField] private AnimationCurve _forceCharging;
+    [SerializeField] private bool _ableToChargeForceOnAir;
 
     private float _jumpForce;
     private CharacterController _characterController;

@@ -64,6 +64,7 @@ public class HobbyHorseMovementState : State
 
     private void ChargingJumpForce()
     {
+        if (!AbleToJump() && !_gravityController.AbleToChargeForceOnAir) return;
         _gravityController.SwitchCharge(true);
     }
 
