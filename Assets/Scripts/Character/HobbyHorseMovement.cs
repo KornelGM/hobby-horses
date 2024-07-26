@@ -1,36 +1,43 @@
 using Cinemachine;
 using Rewired;
+using Sirenix.OdinInspector;
 using System;
 using UnityEngine;
 
 public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwake
 {
-    public Action<float> OnActualSpeedChange;
-
-    [SerializeField] private MovementSettings _movementSettings;
-
-    [SerializeField] private float _maxSpeed;
-    [SerializeField] private float _maxRotateSpeed;
-    [SerializeField] private float _brakForce;
-    [SerializeField] private float _accelerate;
-    [SerializeField] private float _rotateAccelerate;
-    [SerializeField] private float _rotateAccelerateOnAir;
-    [SerializeField] private float _drag;
-    [SerializeField] private float _dragOnAir;
-    [SerializeField] private float _rotateDrag;
-    [SerializeField] private Transform _target;
-    [SerializeField] private AnimationCurve _positionCurve;
-    [SerializeField] private Animator _animator;
-    [SerializeField] private AnimationCurve _cameraTiltCurve;
-    [SerializeField] private CinemachineVirtualCamera _virtualCamera;
-
-    public CharacterController CharacterController => _characterController;
     public ServiceLocator MyServiceLocator { get; set; }
     public float ActualSpeed => _actualSpeed;
+    public CharacterController CharacterController => _characterController;
+    public Action<float> OnActualSpeedChange;
+
+    [ServiceLocatorComponent] private GravityCharacterController _gravityController;
+
+    [SerializeField, FoldoutGroup("Global Settings")] private MovementSettings _movementSettings;
+
+    [SerializeField, FoldoutGroup("Hobby Horse Settings")] private float _maxSpeed;
+    [SerializeField, FoldoutGroup("Hobby Horse Settings")] private float _maxRotateSpeed;
+    [SerializeField, FoldoutGroup("Hobby Horse Settings")] private float _brakForce;
+    [SerializeField, FoldoutGroup("Hobby Horse Settings")] private float _accelerate;
+    [SerializeField, FoldoutGroup("Hobby Horse Settings")] private float _rotateAccelerate;
+    [SerializeField, FoldoutGroup("Hobby Horse Settings")] private float _rotateAccelerateOnAir;
+
+    [SerializeField, FoldoutGroup("Constant values")] private float _drag;
+    [SerializeField, FoldoutGroup("Constant values")] private float _dragOnAir;
+    [SerializeField, FoldoutGroup("Constant values")] private float _rotateDrag;
+    [SerializeField, FoldoutGroup("Constant values")] private float _maxBackwardSpeed;
+    [SerializeField, FoldoutGroup("Constant values")] private float _minOnAirSpeed;
+
+    [SerializeField, FoldoutGroup("Curves")] private AnimationCurve _positionCurve;
+    [SerializeField, FoldoutGroup("Curves")] private AnimationCurve _cameraTiltCurve;
+
+    [SerializeField, FoldoutGroup("References")] private Transform _target;
+    [SerializeField, FoldoutGroup("References")] private Animator _animator;
+    [SerializeField, FoldoutGroup("References")] private CinemachineVirtualCamera _virtualCamera;
+
     private float _actualSpeed;
     private float _actualRotateSpeed;
     private CharacterController _characterController;
-    private float _lastActualSpeed;
 
     public void CustomAwake()
     {
@@ -58,8 +65,8 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
     {
         if(!isGrounded)
         {
-            _actualSpeed -= _dragOnAir * Time.deltaTime;
-            _actualSpeed = Mathf.Clamp(_actualSpeed, 0, _maxSpeed);
+            _actualSpeed -= Math.Abs(_dragOnAir * _gravityController.CurrGravity) * Time.deltaTime;
+            _actualSpeed = Mathf.Clamp(_actualSpeed, _minOnAirSpeed, _maxSpeed);
             OnActualSpeedChange?.Invoke(_actualSpeed);
             return _actualSpeed;
         }
@@ -76,7 +83,7 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
                 : verticalInput * _brakForce;
 
             _actualSpeed += accelerate * Time.deltaTime;
-            _actualSpeed = Mathf.Clamp(_actualSpeed, -1, _maxSpeed);
+            _actualSpeed = Mathf.Clamp(_actualSpeed, _maxBackwardSpeed, _maxSpeed);
         }
 
         OnActualSpeedChange?.Invoke(_actualSpeed);
