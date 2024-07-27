@@ -95,9 +95,10 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 10
     - _DstBlendAlpha: 10
+    - _Edge_Fallof: 1
     - _EnvironmentReflections: 1
-    - _Fade_start_distance: 15
-    - _Fade_stop_distance: 5
+    - _Fade_start_distance: 12
+    - _Fade_stop_distance: 3
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -120,7 +121,7 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 0.019607844}
-    - _Color: {r: 1, g: 0.99370974, b: 0.94716984, a: 0.019607844}
+    - _Color: {r: 1, g: 0.99370974, b: 0.94716984, a: 0.023529412}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
