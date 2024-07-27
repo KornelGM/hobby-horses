@@ -1689,6 +1689,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1110815569}
+    - target: {fileID: 990289000861890727, guid: 29dd10eabe40b5c47944692ffd4bf70d, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1008786723612582970, guid: 29dd10eabe40b5c47944692ffd4bf70d, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1753,6 +1757,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1591500461}
+    - target: {fileID: 4914249049150703064, guid: 29dd10eabe40b5c47944692ffd4bf70d, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5354298860355025307, guid: 29dd10eabe40b5c47944692ffd4bf70d, type: 3}
       propertyPath: m_Mesh
       value: 
