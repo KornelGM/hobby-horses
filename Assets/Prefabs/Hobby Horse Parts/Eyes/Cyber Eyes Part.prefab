@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5337885985290179617
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3479084344881888242, guid: 208666e1052446748a7fbaf53d21d5c1, type: 3}
+      propertyPath: m_Name
+      value: Cyber Glasses Part 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182875539311607929, guid: 208666e1052446748a7fbaf53d21d5c1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182875539311607929, guid: 208666e1052446748a7fbaf53d21d5c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182875539311607929, guid: 208666e1052446748a7fbaf53d21d5c1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182875539311607929, guid: 208666e1052446748a7fbaf53d21d5c1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182875539311607929, guid: 208666e1052446748a7fbaf53d21d5c1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182875539311607929, guid: 208666e1052446748a7fbaf53d21d5c1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182875539311607929, guid: 208666e1052446748a7fbaf53d21d5c1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182875539311607929, guid: 208666e1052446748a7fbaf53d21d5c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182875539311607929, guid: 208666e1052446748a7fbaf53d21d5c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182875539311607929, guid: 208666e1052446748a7fbaf53d21d5c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7404849751193929729, guid: 208666e1052446748a7fbaf53d21d5c1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1570249835649865856}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 208666e1052446748a7fbaf53d21d5c1, type: 3}
+--- !u!4 &3229279498017709088 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7404849751193929729, guid: 208666e1052446748a7fbaf53d21d5c1, type: 3}
+  m_PrefabInstance: {fileID: 5337885985290179617}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5648416938906929007
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3229279498017709088}
+    m_Modifications:
+    - target: {fileID: 3050584413804352462, guid: ea3f563f4a0d90549bf53dd4aa477eb4, type: 3}
+      propertyPath: m_Name
+      value: Cyber eyes
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604969347202834415, guid: ea3f563f4a0d90549bf53dd4aa477eb4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604969347202834415, guid: ea3f563f4a0d90549bf53dd4aa477eb4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604969347202834415, guid: ea3f563f4a0d90549bf53dd4aa477eb4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604969347202834415, guid: ea3f563f4a0d90549bf53dd4aa477eb4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604969347202834415, guid: ea3f563f4a0d90549bf53dd4aa477eb4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604969347202834415, guid: ea3f563f4a0d90549bf53dd4aa477eb4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604969347202834415, guid: ea3f563f4a0d90549bf53dd4aa477eb4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604969347202834415, guid: ea3f563f4a0d90549bf53dd4aa477eb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604969347202834415, guid: ea3f563f4a0d90549bf53dd4aa477eb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604969347202834415, guid: ea3f563f4a0d90549bf53dd4aa477eb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ea3f563f4a0d90549bf53dd4aa477eb4, type: 3}
+--- !u!4 &1570249835649865856 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6604969347202834415, guid: ea3f563f4a0d90549bf53dd4aa477eb4, type: 3}
+  m_PrefabInstance: {fileID: 5648416938906929007}
+  m_PrefabAsset: {fileID: 0}

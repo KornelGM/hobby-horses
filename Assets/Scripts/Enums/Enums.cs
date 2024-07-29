@@ -18,3 +18,24 @@ public enum RoomPart
     Wardrobe,
     Door,
 }
+
+public enum HobbyHorsePart
+{
+    None,
+    Stick,
+    Head,
+    Hat,
+    Eyes,
+    Mouth,
+    Manes,
+}
+
+public enum HobbyHorseStat
+{
+    None,
+    MaxSpeed,
+    Accelerate,
+    BrakeForce,
+    MaxRotateSpeed,
+    RotateAccelerate,
+}

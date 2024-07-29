@@ -10,6 +10,7 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
     public float ActualSpeed => _actualSpeed;
     public CharacterController CharacterController => _characterController;
     public Action<float> OnActualSpeedChange;
+    public CustomHobbyHorse CustomHobbyHorse => _customHobbyHorse;
 
     [ServiceLocatorComponent] private GravityCharacterController _gravityController;
 
@@ -20,13 +21,13 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
     [SerializeField, FoldoutGroup("Hobby Horse Settings")] private float _brakForce;
     [SerializeField, FoldoutGroup("Hobby Horse Settings")] private float _accelerate;
     [SerializeField, FoldoutGroup("Hobby Horse Settings")] private float _rotateAccelerate;
-    [SerializeField, FoldoutGroup("Hobby Horse Settings")] private float _rotateAccelerateOnAir;
 
     [SerializeField, FoldoutGroup("Constant values")] private float _drag;
     [SerializeField, FoldoutGroup("Constant values")] private float _dragOnAir;
     [SerializeField, FoldoutGroup("Constant values")] private float _rotateDrag;
     [SerializeField, FoldoutGroup("Constant values")] private float _maxBackwardSpeed;
     [SerializeField, FoldoutGroup("Constant values")] private float _minOnAirSpeed;
+    [SerializeField, FoldoutGroup("Constant values")] private float _rotateAccelerateOnAirDivider;
 
     [SerializeField, FoldoutGroup("Curves")] private AnimationCurve _positionCurve;
     [SerializeField, FoldoutGroup("Curves")] private AnimationCurve _cameraTiltCurve;
@@ -34,6 +35,7 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
     [SerializeField, FoldoutGroup("References")] private Transform _target;
     [SerializeField, FoldoutGroup("References")] private Animator _animator;
     [SerializeField, FoldoutGroup("References")] private CinemachineVirtualCamera _virtualCamera;
+    [SerializeField, FoldoutGroup("References")] private CustomHobbyHorse _customHobbyHorse;
 
     private float _actualSpeed;
     private float _actualRotateSpeed;
@@ -44,6 +46,42 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
         _characterController = MyServiceLocator.GetComponent<CharacterController>();
         _characterController.IsNotNull(this, nameof(_characterController));
         _movementSettings.IsNotNull(this, nameof(_movementSettings));
+    }
+
+    public void SetStats(HobbyHorseStats stats)
+    {
+        _maxSpeed = stats.MaxSpeed;
+        _maxRotateSpeed = stats.MaxRotateSpeed;
+        _brakForce = stats.BrakeForce;
+        _accelerate = stats.Accelerate;
+        _rotateAccelerate= stats.RotateAccelerate;
+    }
+
+    public void SetStats(HobbyHorseStats[] hobbyHorseStats)
+    {
+        if (hobbyHorseStats is not { Length: > 0 })
+            return;
+
+        float maxSpeed = 0;
+        float maxRotateSpeed = 0;
+        float brakeForce = 0;
+        float accelerate = 0;
+        float rotateAccelerate = 0;
+
+        foreach (var stats in hobbyHorseStats)
+        {
+            maxSpeed += stats.MaxSpeed;
+            maxRotateSpeed += stats.MaxRotateSpeed;
+            brakeForce += stats.BrakeForce;
+            accelerate += stats.Accelerate;
+            rotateAccelerate += stats.RotateAccelerate;
+        }
+
+        _maxSpeed = maxSpeed;
+        _maxRotateSpeed = maxRotateSpeed;
+        _brakForce = brakeForce;
+        _accelerate = accelerate;
+        _rotateAccelerate = rotateAccelerate;
     }
 
     public void Move(Vector3 moveInput, bool isGrounded)
@@ -107,7 +145,7 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
         {
             float accelerate = isGrounded 
                 ? horizontalInput * _rotateAccelerate
-                : horizontalInput * _rotateAccelerateOnAir;
+                : horizontalInput * (_rotateAccelerate / _rotateAccelerateOnAirDivider);
 
             _actualRotateSpeed += accelerate * Time.deltaTime;
             _actualRotateSpeed = Mathf.Clamp(_actualRotateSpeed, -_maxRotateSpeed, _maxRotateSpeed);

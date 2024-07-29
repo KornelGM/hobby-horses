@@ -1,8 +1,6 @@
 using Cinemachine;
 using Sirenix.OdinInspector;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -13,6 +11,8 @@ public class RoomCameraController : MonoBehaviour, IServiceLocatorComponent
     public RoomPart CurrentRoomPart => _currentRoomPart;
 
     public Action OnRoomPartChange;
+
+    public TrackMovement Cart => _cart;
 
     [SerializeField, FoldoutGroup("Tracks")] private RoomPath[] _roomPaths;
     [SerializeField, FoldoutGroup("Tracks")] private Transform _roomLookTarget;

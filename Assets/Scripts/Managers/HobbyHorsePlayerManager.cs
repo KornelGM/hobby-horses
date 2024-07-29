@@ -1,9 +1,13 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class HobbyHorsePlayerManager : MonoBehaviour, IServiceLocatorComponent, IAwake
 {
     public ServiceLocator MyServiceLocator { get; set; }
+
+    [ServiceLocatorComponent] private HobbyHorseCustomizationManager _customizationManager;
 
     public Action<PlayerServiceLocator> OnLocalPlayerSet;
     public PlayerSpawnPoint PlayerSpawnPoint => _playerSpawnPoint;
@@ -31,6 +35,34 @@ public class HobbyHorsePlayerManager : MonoBehaviour, IServiceLocatorComponent, 
         }
 
         LocalPlayer = Instantiate(_playerPrefab, _playerSpawnPoint.transform.position, _playerSpawnPoint.transform.rotation);
-        //SetupPlayer(player);
+        SetupPlayer();
+    }
+
+    private void SetupPlayer()
+    {
+        if (!LocalPlayer.TryGetServiceLocatorComponent(out HobbyHorseMovement movement))
+            return;
+
+        if (_customizationManager.CurrentHobbyHorseInfo.PartsGuids is { Count: > 0 })
+            movement.CustomHobbyHorse.LoadAppearance(_customizationManager.CurrentHobbyHorseInfo.PartsGuids.ToArray());
+        else
+            movement.CustomHobbyHorse.LoadDefaultAppearance();
+
+        List<HobbyHorseStats> allStats = new();
+
+        foreach (var guid in movement.CustomHobbyHorse.HobbyHorsePartsGuids)
+        {
+            HobbyHorseCustomizationPartInfo newInfo = _customizationManager.HobbyHorseParts.FirstOrDefault(info => info.Guid == guid);
+
+            if (newInfo == null)
+                continue;
+
+            if (!newInfo.HasStats || newInfo.HobbyHorseStats == null)
+                continue;
+
+            allStats.Add(newInfo.HobbyHorseStats);
+        }
+
+        movement.SetStats(allStats.ToArray());
     }
 }
