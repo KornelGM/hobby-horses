@@ -29,7 +29,7 @@ public class HobbyHorseCustomizationManager : MonoBehaviour, IServiceLocatorComp
     [ServiceLocatorComponent] private WindowManager _windowManager;
     [ServiceLocatorComponent] private FundsManager _fundsManager;
     [ServiceLocatorComponent] private ModalWindowManager _modalWindowManager;
-    [ServiceLocatorComponent] private RoomCameraController _roomCameraController;
+    [ServiceLocatorComponent(canBeNull: true)] private RoomCameraController _roomCameraController;
     [ServiceLocatorComponent(canBeNull: true)] private RoomUIManager _roomUIManager;
 
     [SerializeField, FoldoutGroup("Customization Parts")] private HobbyHorseCustomizationCategory[] _hobbyHorsePartsCategories;
@@ -54,7 +54,8 @@ public class HobbyHorseCustomizationManager : MonoBehaviour, IServiceLocatorComp
 
     private void SubscribeStartCustomization()
     {
-        _roomCameraController.Cart.OnEndPath += StartCustomize;
+        if(_roomCameraController != null)
+            _roomCameraController.Cart.OnEndPath += StartCustomize;
     }
 
     public void StartCustomize()
