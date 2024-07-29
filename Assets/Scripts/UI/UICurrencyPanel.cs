@@ -32,7 +32,7 @@ public class UICurrencyPanel : MonoBehaviour, IServiceLocatorComponent
 
         void OnUpdate(float value)
         {
-            _valueText.text = value.ToString("F0") + "$";
+            _valueText.text = value.ToString("F0") + $"{_fundsManager.Currency}";
         }
     }
 }

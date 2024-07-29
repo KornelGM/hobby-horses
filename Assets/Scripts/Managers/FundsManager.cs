@@ -1,9 +1,8 @@
 using System;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class FundsManager : MonoBehaviour, IServiceLocatorComponent, IStartable, ISaveable<SaveData>
+public class FundsManager : MonoBehaviour, IServiceLocatorComponent, IAwake, ISaveable<SaveData>
 {
     public event Action<int> OnCurrencyAmountChange;
     public ServiceLocator MyServiceLocator { get; set; }
@@ -19,9 +18,10 @@ public class FundsManager : MonoBehaviour, IServiceLocatorComponent, IStartable,
 
     public string Currency => _currency;
 
-    public void CustomStart()
+    public void CustomAwake()
     {
         _currencyText.text = _currency;
+        _availableFunds = _startingAmount;
         OnCurrencyAmountChange?.Invoke(_availableFunds);
     }
 

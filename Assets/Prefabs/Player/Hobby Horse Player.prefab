@@ -473,12 +473,12 @@ MonoBehaviour:
   _brakForce: 10
   _accelerate: 3
   _rotateAccelerate: 15
-  _rotateAccelerateOnAir: 5
   _drag: 7
   _dragOnAir: 1
   _rotateDrag: 15
   _maxBackwardSpeed: -2
   _minOnAirSpeed: 2
+  _rotateAccelerateOnAirDivider: 3
   _positionCurve:
     serializedVersion: 2
     m_Curve:
@@ -539,6 +539,7 @@ MonoBehaviour:
   _target: {fileID: 416457773258895089}
   _animator: {fileID: 2862790279303835845}
   _virtualCamera: {fileID: 1513976609573336316}
+  _customHobbyHorse: {fileID: 3201348002019141022}
 --- !u!1 &7826793727811103638
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,10 +613,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1035121641207732146}
+  - {fileID: 7906224085696997739}
   m_Father: {fileID: 5734548860171883627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &8375155990954059285
+--- !u!1001 &7623178219269431916
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -623,73 +624,68 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6099517870762267167}
     m_Modifications:
-    - target: {fileID: 388612962647873593, guid: 42627b7bdb06e7d4db15438f76f9f1c9, type: 3}
-      propertyPath: m_Name
-      value: Hobby Horse Head Blond
-      objectReference: {fileID: 0}
-    - target: {fileID: 8820288488152543655, guid: 42627b7bdb06e7d4db15438f76f9f1c9, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8820288488152543655, guid: 42627b7bdb06e7d4db15438f76f9f1c9, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8820288488152543655, guid: 42627b7bdb06e7d4db15438f76f9f1c9, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8820288488152543655, guid: 42627b7bdb06e7d4db15438f76f9f1c9, type: 3}
+    - target: {fileID: 320447002168511239, guid: 0072f802544203e47ace0ccc405da089, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8820288488152543655, guid: 42627b7bdb06e7d4db15438f76f9f1c9, type: 3}
+    - target: {fileID: 320447002168511239, guid: 0072f802544203e47ace0ccc405da089, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8820288488152543655, guid: 42627b7bdb06e7d4db15438f76f9f1c9, type: 3}
+    - target: {fileID: 320447002168511239, guid: 0072f802544203e47ace0ccc405da089, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8820288488152543655, guid: 42627b7bdb06e7d4db15438f76f9f1c9, type: 3}
+    - target: {fileID: 320447002168511239, guid: 0072f802544203e47ace0ccc405da089, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8820288488152543655, guid: 42627b7bdb06e7d4db15438f76f9f1c9, type: 3}
+    - target: {fileID: 320447002168511239, guid: 0072f802544203e47ace0ccc405da089, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8820288488152543655, guid: 42627b7bdb06e7d4db15438f76f9f1c9, type: 3}
+    - target: {fileID: 320447002168511239, guid: 0072f802544203e47ace0ccc405da089, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8820288488152543655, guid: 42627b7bdb06e7d4db15438f76f9f1c9, type: 3}
+    - target: {fileID: 320447002168511239, guid: 0072f802544203e47ace0ccc405da089, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8820288488152543655, guid: 42627b7bdb06e7d4db15438f76f9f1c9, type: 3}
+    - target: {fileID: 320447002168511239, guid: 0072f802544203e47ace0ccc405da089, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8820288488152543655, guid: 42627b7bdb06e7d4db15438f76f9f1c9, type: 3}
+    - target: {fileID: 320447002168511239, guid: 0072f802544203e47ace0ccc405da089, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8820288488152543655, guid: 42627b7bdb06e7d4db15438f76f9f1c9, type: 3}
+    - target: {fileID: 320447002168511239, guid: 0072f802544203e47ace0ccc405da089, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8820288488152543655, guid: 42627b7bdb06e7d4db15438f76f9f1c9, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 0
+    - target: {fileID: 8356323255748598458, guid: 0072f802544203e47ace0ccc405da089, type: 3}
+      propertyPath: m_Name
+      value: Customizable Hobby Horse
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 42627b7bdb06e7d4db15438f76f9f1c9, type: 3}
---- !u!4 &1035121641207732146 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 0072f802544203e47ace0ccc405da089, type: 3}
+--- !u!114 &3201348002019141022 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5019122390027552754, guid: 0072f802544203e47ace0ccc405da089, type: 3}
+  m_PrefabInstance: {fileID: 7623178219269431916}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afd47700462da6c4881609b6837f412f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &7906224085696997739 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 8820288488152543655, guid: 42627b7bdb06e7d4db15438f76f9f1c9, type: 3}
-  m_PrefabInstance: {fileID: 8375155990954059285}
+  m_CorrespondingSourceObject: {fileID: 320447002168511239, guid: 0072f802544203e47ace0ccc405da089, type: 3}
+  m_PrefabInstance: {fileID: 7623178219269431916}
   m_PrefabAsset: {fileID: 0}
