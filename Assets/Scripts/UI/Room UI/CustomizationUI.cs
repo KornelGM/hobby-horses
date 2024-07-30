@@ -21,6 +21,7 @@ public class CustomizationUI : MonoBehaviour, IServiceLocatorComponent, IWindow
     [SerializeField, FoldoutGroup("References")] private GameObject _confirmButton;
     [SerializeField, FoldoutGroup("References")] private HobbyHorsePartButton _partButtonPrefab;
     [SerializeField, FoldoutGroup("References")] private Transform _partButtonsContent;
+    [SerializeField, FoldoutGroup("References")] private RoomPartButton _backButton;
 
     private CustomizationCamera[] _customizationCameras;
 
@@ -74,7 +75,7 @@ public class CustomizationUI : MonoBehaviour, IServiceLocatorComponent, IWindow
 
     public void StopCustomize()
     {
-        _customizationManager.StopCustomize();
+        _customizationManager.StopCustomize(_backButton.OnButtonDown);
     }
 
     private void SwitchCamera(HobbyHorsePart newCategory)

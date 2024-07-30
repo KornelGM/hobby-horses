@@ -12,9 +12,14 @@ public class HobbyHorseStateMachine : MonoBehaviour, IServiceLocatorComponent, I
         SwitchToMoveState();
     }
 
-    protected virtual void SwitchToMoveState()
+    public void SwitchToMoveState()
     {
         SwitchState(new HobbyHorseMovementState(this));
+    }
+
+    public void SwitchToPasueState()
+    {
+        SwitchState(new HobbyHorsePauseState(this));
     }
 
     public void SwitchState(State state)

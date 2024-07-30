@@ -205,6 +205,7 @@ MonoBehaviour:
   _confirmButton: {fileID: 5408180898050762430}
   _partButtonPrefab: {fileID: 8476276899145877446, guid: 986168f13e7294d4286a8ac57f7993b8, type: 3}
   _partButtonsContent: {fileID: 3603826702077032763}
+  _backButton: {fileID: 7932605567023487797}
 --- !u!114 &1132635061934294199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1397,12 +1398,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4613034327275541742, guid: b40a4c386995acc418087ea31b1e5928, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4613034327275541742, guid: b40a4c386995acc418087ea31b1e5928, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4613034327275541742, guid: b40a4c386995acc418087ea31b1e5928, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2099595046224731083}
     - target: {fileID: 4613034327275541742, guid: b40a4c386995acc418087ea31b1e5928, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -1412,8 +1417,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4613034327275541742, guid: b40a4c386995acc418087ea31b1e5928, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StopCustomize
+      objectReference: {fileID: 0}
+    - target: {fileID: 4613034327275541742, guid: b40a4c386995acc418087ea31b1e5928, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: StopCustomize
+      objectReference: {fileID: 0}
+    - target: {fileID: 4613034327275541742, guid: b40a4c386995acc418087ea31b1e5928, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CustomizationUI, HobbyHorsing
       objectReference: {fileID: 0}
     - target: {fileID: 4613034327275541742, guid: b40a4c386995acc418087ea31b1e5928, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -1437,6 +1450,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4209350228578197820, guid: b40a4c386995acc418087ea31b1e5928, type: 3}
   m_PrefabInstance: {fileID: 3614714908612191125}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7932605567023487797 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6646269281839085728, guid: b40a4c386995acc418087ea31b1e5928, type: 3}
+  m_PrefabInstance: {fileID: 3614714908612191125}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37229c1b8bf9c1047b15a56072fc46ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3615716121820244327
 PrefabInstance:
   m_ObjectHideFlags: 0

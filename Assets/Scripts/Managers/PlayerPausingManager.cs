@@ -9,28 +9,26 @@ public class PlayerPausingManager : MonoBehaviour, IServiceLocatorComponent, IMa
 
     [SerializeField] private PauseMenuUI pauseMenuUIPrefab;
 
-    [ServiceLocatorComponent] private PlayerManager _playerManager;
+    [ServiceLocatorComponent] private HobbyHorsePlayerManager _playerManager;
     [ServiceLocatorComponent] private WindowManager _windowManager;
     [ServiceLocatorComponent] private ModalWindowManager _modalWindowManager;
     [ServiceLocatorComponent] private TimePausingManager _timePausingManager;
 
-    private PlayerStateMachine _stateMachine;
     private PlayerInputReader _playerInputReader;
     private PlayerInputBlocker _playerInputBlocker;
-    private InteractableSelector _playerInteractableSelector;
     private PauseMenuUI _createdPauseMenuUI;
     private IVirtualController _virtualController;
-
-    private State inputPauseState => new PlayerInputPauseState(_playerInputBlocker.InputManager);
+    private HobbyHorseStateMachine _stateMachine;
 
     public void CustomStart()
     {
-        if(_playerManager.LocalPlayer.TryGetServiceLocatorComponent(out _virtualController))
+        _playerManager.LocalPlayer.TryGetServiceLocatorComponent(out _stateMachine);
+
+        if (_playerManager.LocalPlayer.TryGetServiceLocatorComponent(out _virtualController))
         {
             _virtualController.OnPausePerformed += TryPauseGame;
             _virtualController.OnUnpausePerformed += TryPauseGame;
         }
-        _playerManager.LocalPlayer.TryGetServiceLocatorComponent(out _stateMachine);
     }
 
     private void TryPauseGame()
@@ -85,16 +83,6 @@ public class PlayerPausingManager : MonoBehaviour, IServiceLocatorComponent, IMa
     {
         if (_playerInputBlocker == null) return;
 
-        if (_playerInteractableSelector != null)
-        {
-            _playerInteractableSelector.Unblock(this);
-        }
-
-        if (_stateMachine != null)
-        {
-            _stateMachine.SwitchState(new PlayerMoveState(_stateMachine));
-        }
-
         _windowManager.SetMainCanvasOrder();
 
         _playerInputBlocker.TryUnblock(this);
@@ -112,19 +100,9 @@ public class PlayerPausingManager : MonoBehaviour, IServiceLocatorComponent, IMa
             _playerManager.LocalPlayer.TryGetServiceLocatorComponent(out _playerInputReader);
         }
 
-        if (_playerInteractableSelector == null)
-        {
-            _playerManager.LocalPlayer.TryGetServiceLocatorComponent(out _playerInteractableSelector);
-        }
-
         if (((IBlocker)_playerInputBlocker).IsBlocked)
         {
             return;
-        }
-
-        if (_playerInteractableSelector != null)
-        {
-            _playerInteractableSelector.Block(this);
         }
 
         _windowManager.SetMainCanvasOrder(110);
@@ -144,6 +122,9 @@ public class PlayerPausingManager : MonoBehaviour, IServiceLocatorComponent, IMa
         _createdPauseMenuUI = _windowManager.CreateWindow(pauseMenuUIPrefab, WindowManager.PauseMenuBasePriority)
             .GetComponent<PauseMenuUI>();
         _createdPauseMenuUI.PausingManager = this;
+
+        _stateMachine.SwitchToPasueState();
+
         _timePausingManager.Pause();
     }
 
@@ -151,6 +132,9 @@ public class PlayerPausingManager : MonoBehaviour, IServiceLocatorComponent, IMa
     {
         OnPause?.Invoke(false);
         _windowManager.DeleteWindow(_createdPauseMenuUI);
+
+        _stateMachine.SwitchToMoveState();
+
         _timePausingManager.Unpause();
     }
 

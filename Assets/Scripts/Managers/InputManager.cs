@@ -16,12 +16,19 @@ public class InputManager : MonoBehaviour, IManager, IInput, IAwake, IServiceLoc
     {
         PlayerInput = ReInput.players.GetPlayer(0);
 
-        PlayerInput.controllers.maps.SetMapsEnabled(true, GameplayCategoryName);
-
+        PlayerInput.controllers.maps.SetMapsEnabled(false, GameplayCategoryName);
         PlayerInput.controllers.maps.SetMapsEnabled(false, DefaultCategoryName);
         PlayerInput.controllers.maps.SetMapsEnabled(false, PauseCategoryName);
         PlayerInput.controllers.maps.SetMapsEnabled(false, BookCategoryName);
         PlayerInput.controllers.maps.SetMapsEnabled(false, DesignCategoryName);
+    }
+
+    public void SwitchInputMap(bool value, string name)
+    {
+        if (PlayerInput == null)
+            return;
+
+        PlayerInput.controllers.maps.SetMapsEnabled(value, name);
     }
 
     public void CustomReset()
