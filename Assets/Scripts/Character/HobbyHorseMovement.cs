@@ -103,8 +103,8 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
     {
         if(!isGrounded)
         {
-            _actualSpeed -= Math.Abs(_dragOnAir * _gravityController.CurrGravity) * Time.deltaTime;
-            _actualSpeed = Mathf.Clamp(_actualSpeed, _minOnAirSpeed, _maxSpeed);
+            _actualSpeed -= _dragOnAir * _gravityController.CurrGravity * Time.deltaTime;
+            _actualSpeed = Mathf.Clamp(_actualSpeed, _minOnAirSpeed, 100);
             OnActualSpeedChange?.Invoke(_actualSpeed);
             return _actualSpeed;
         }
