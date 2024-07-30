@@ -8,6 +8,7 @@ public class HobbyHorseMovementState : State
     private GravityCharacterController _gravityController;
     private IVirtualController _virtualController;
     private SlowMotionManager _slowMotionManager;
+    private InputManager _inputManager;
 
     public HobbyHorseMovementState(HobbyHorseStateMachine stateMachine)
     {
@@ -19,11 +20,14 @@ public class HobbyHorseMovementState : State
         _stateMachine.MyServiceLocator.TryGetServiceLocatorComponent(out _virtualController);
         _stateMachine.MyServiceLocator.TryGetServiceLocatorComponent(out _gravityController);
 
+
         SceneServiceLocator.Instance.TryGetServiceLocatorComponent(out _slowMotionManager);
+        SceneServiceLocator.Instance.TryGetServiceLocatorComponent(out _inputManager);
     }
 
     public override void Enter()
     {
+        _inputManager.SwitchInputMap(true, _inputManager.GameplayCategoryName);
         _virtualController.OnFirstInteractionPerformed += () => _cameraRotator.SwitchFreeCamera(true);
         _virtualController.OnFirstInteractionCancelled += () => _cameraRotator.BackToCenterPosition();
 
@@ -34,6 +38,7 @@ public class HobbyHorseMovementState : State
 
     public override void Exit()
     {
+        _inputManager.SwitchInputMap(false, _inputManager.GameplayCategoryName);
         _virtualController.OnFirstInteractionPerformed -= () => _cameraRotator.SwitchFreeCamera(true);
         _virtualController.OnFirstInteractionCancelled -= () => _cameraRotator.BackToCenterPosition();
 

@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5962283615812394320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3994399119007885890}
+  - component: {fileID: 4885653510976474447}
+  m_Layer: 0
+  m_Name: Race Selector Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3994399119007885890
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5962283615812394320}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4885653510976474447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5962283615812394320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b556df5fb8aa24c43a79ac1271c2c7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _raceSelectorUI: {fileID: 8014795815221449007, guid: 1cc51ae9bbe23fe489c67f0727e251b3, type: 3}
+  _racesInofs:
+  - RaceName: Training Place
+    SceneName: lvl 1 Training Place
+    RaceIcon: {fileID: 21300000, guid: 4d352ba02b5902d48b491a091b72a624, type: 3}
+  - RaceName: Gym
+    SceneName: lvl 2 gym - big
+    RaceIcon: {fileID: 21300000, guid: 487ab870a742b9c4391667e88e259769, type: 3}

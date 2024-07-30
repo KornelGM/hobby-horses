@@ -1,7 +1,5 @@
 using DG.Tweening;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,7 +8,7 @@ public class LoadingWindow : MonoBehaviour, IServiceLocatorComponent
 {
     public ServiceLocator MyServiceLocator { get; set; }
 
-    [ServiceLocatorComponent] private SaveLoadManager<SaveData, BaseHeaderData> _saveLoadManager;
+    //[ServiceLocatorComponent] private SaveLoadManager<SaveData, BaseHeaderData> _saveLoadManager;
 
     [SerializeField] private CustomSaveLoadInfo _saveLoadInfo = null;
     [SerializeField] private Image _loadingPanel;
@@ -19,8 +17,8 @@ public class LoadingWindow : MonoBehaviour, IServiceLocatorComponent
 
     public void OnNewGameSceneLoad(string sceneName = "Chocolate Manufacture")
     {
-        if (_saveLoadInfo.GetSaveDataForScene(sceneName) != null)
-            _saveLoadManager.ChangeCurrentSave(_saveLoadInfo.GetSaveDataForScene(sceneName));
+        //if (_saveLoadInfo.GetSaveDataForScene(sceneName) != null)
+        //    _saveLoadManager.ChangeCurrentSave(_saveLoadInfo.GetSaveDataForScene(sceneName));
 
         LoadScene(sceneName);
     }
@@ -31,8 +29,14 @@ public class LoadingWindow : MonoBehaviour, IServiceLocatorComponent
         {
             newGameData.PlayerSaveData.Statistics.Clear();
         }
-        _saveLoadManager.ChangeCurrentSave(null);
+        //_saveLoadManager.ChangeCurrentSave(null);
         LoadScene(sceneName);
+    }
+
+    public void ReloadCurrentScene()
+    {
+        string scene = SceneManager.GetActiveScene().name;
+        OnSceneLoad(scene);
     }
 
     public void OnSceneLoad(string sceneName)

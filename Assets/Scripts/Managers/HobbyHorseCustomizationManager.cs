@@ -42,6 +42,8 @@ public class HobbyHorseCustomizationManager : MonoBehaviour, IServiceLocatorComp
     [SerializeField, FoldoutGroup("References")] private CustomHobbyHorse _hobbyHorsePrefab;
     [SerializeField, FoldoutGroup("References")] private CustomizationUI _customizationUI;
 
+    [SerializeField, FoldoutGroup("Settings")] private bool _spawnHorseOnStart;
+
     private List<string> _unlockedParts = new();
     private CustomHobbyHorse _createdHobbyHorse;
     private CustomizationUI _createdCustomizationUI;
@@ -50,6 +52,12 @@ public class HobbyHorseCustomizationManager : MonoBehaviour, IServiceLocatorComp
     {
         if(_roomUIManager != null)
             _roomUIManager.RoomUI.AddListenerToButton(RoomPart.Wardrobe, SubscribeStartCustomization);
+
+        if (_spawnHorseOnStart)
+        {
+            _createdHobbyHorse = Instantiate(_hobbyHorsePrefab, _hobbyHorseHolder);
+            LoadAppearance();
+        }
     }
 
     private void SubscribeStartCustomization()
@@ -60,18 +68,22 @@ public class HobbyHorseCustomizationManager : MonoBehaviour, IServiceLocatorComp
 
     public void StartCustomize()
     {
-        _createdHobbyHorse = Instantiate(_hobbyHorsePrefab, _hobbyHorseHolder);
+        _createdCustomizationUI = _windowManager.CreateWindow(_customizationUI).GetComponent<CustomizationUI>();
+        _createdCustomizationUI.Initialize(_customizationCameras);
+    }
+
+    private void LoadAppearance()
+    {
+        if (_createdHobbyHorse == null)
+            return;
 
         if (_currentHobbyHorseInfo.PartsGuids is { Count: > 0 })
             _createdHobbyHorse.LoadAppearance(_currentHobbyHorseInfo.PartsGuids.ToArray());
         else
             _createdHobbyHorse.LoadDefaultAppearance();
-
-        _createdCustomizationUI = _windowManager.CreateWindow(_customizationUI).GetComponent<CustomizationUI>();
-        _createdCustomizationUI.Initialize(_customizationCameras);
     }
 
-    public void StopCustomize()
+    public void StopCustomize(Action onStopAction = null)
     {
         bool canSave = true;
         foreach (var guid in _createdHobbyHorse.HobbyHorsePartsGuids)
@@ -95,9 +107,10 @@ public class HobbyHorseCustomizationManager : MonoBehaviour, IServiceLocatorComp
 
         void Exit()
         {
+            LoadAppearance();
+            onStopAction?.Invoke();
             _roomCameraController.Cart.OnEndPath -= StartCustomize;
             _windowManager.DeleteWindow(_createdCustomizationUI);
-            Destroy(_createdHobbyHorse.gameObject);
         }
     }
 
