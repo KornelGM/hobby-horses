@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9236194e13835794caac653d22566efd, type: 2}
+  - {fileID: 2100000, guid: 54d7d0ce2f2b3b04c97ed60d150661e9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -116,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6644783281904268135}
   m_Layer: 0
-  m_Name: Decal - Angry eyes 2
+  m_Name: Decal - Brown eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

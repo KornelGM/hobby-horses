@@ -116,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6644783281904268135}
   m_Layer: 0
-  m_Name: Decal - Blue eyes 3
+  m_Name: Decal - Blue eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
