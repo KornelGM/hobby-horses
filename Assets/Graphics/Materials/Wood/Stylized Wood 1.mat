@@ -125,6 +125,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _Hue_shift_180_180: 0
     - _Metallic: 0
     - _MetallicValue: 0
     - _OcclusionStrength: 1
@@ -136,12 +137,14 @@ Material:
     - _RoughnessValue: 1
     - _Smoothness: 0.15
     - _SmoothnessTextureChannel: 0
+    - _SmoothnessValue: 0.1
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
     - _UseMetallic: 0
     - _UseRoughness: 0
+    - _UseSmoothness_from_Metallic_A: 0
     - _WorkflowMode: 1
     - _ZTest: 4
     - _ZWrite: 1
