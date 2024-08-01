@@ -134,7 +134,7 @@ Material:
     - _Hue_shift: 130
     - _Hue_shift_180_180: 120
     - _Metallic: 0
-    - _MetallicValue: 0.2
+    - _MetallicValue: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
@@ -151,7 +151,7 @@ Material:
     - _Surface: 0
     - _UseMetallic: 1
     - _UseRoughness: 0
-    - _UseSmoothness_from_Metallic_A: 0
+    - _UseSmoothness_from_Metallic_A: 1
     - _WorkflowMode: 1
     - _ZTest: 4
     - _ZWrite: 1
