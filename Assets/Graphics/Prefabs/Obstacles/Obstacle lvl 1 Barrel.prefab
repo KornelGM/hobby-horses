@@ -81,12 +81,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 2ec6999830b901c48b74df1f52276305, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2ec6999830b901c48b74df1f52276305, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2ec6999830b901c48b74df1f52276305, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 15a86f4e4249c2846baae1b0f8d5b763, type: 2}
     - target: {fileID: 919132149155446097, guid: 2ec6999830b901c48b74df1f52276305, type: 3}
       propertyPath: m_Name
       value: Obstacle lvl 1 Barrel
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2ec6999830b901c48b74df1f52276305, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

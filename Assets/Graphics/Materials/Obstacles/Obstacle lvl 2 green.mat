@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Obstacle lvl 3
+  m_Name: Obstacle lvl 2 green
   m_Shader: {fileID: -6465566751694194690, guid: dcdd326db32883b4ca9c464d5a0ea260, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -131,6 +131,8 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _Hue_shift: 60
+    - _Hue_shift_180_180: 120
     - _Metallic: 0
     - _MetallicValue: 0.2
     - _OcclusionStrength: 1
@@ -142,12 +144,14 @@ Material:
     - _RoughnessValue: 0
     - _Smoothness: 1
     - _SmoothnessTextureChannel: 0
+    - _SmoothnessValue: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
     - _UseMetallic: 1
     - _UseRoughness: 0
+    - _UseSmoothness_from_Metallic_A: 0
     - _WorkflowMode: 1
     - _ZTest: 4
     - _ZWrite: 1
