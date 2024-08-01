@@ -131,7 +131,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Hue_shift: 60
+    - _Hue_shift: 130
     - _Hue_shift_180_180: 120
     - _Metallic: 0
     - _MetallicValue: 0.2
