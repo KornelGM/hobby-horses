@@ -83,11 +83,11 @@ PrefabInstance:
     - target: {fileID: -7820906949461956693, guid: ec2504cc8356b36478b4e7a932ad2df4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e651ae555fd1ba04497a8c7f78d3d5e7, type: 2}
+      objectReference: {fileID: 2100000, guid: a17b23ff7317e0d47a89c906c4becc33, type: 2}
     - target: {fileID: -5573362461636309420, guid: ec2504cc8356b36478b4e7a932ad2df4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e651ae555fd1ba04497a8c7f78d3d5e7, type: 2}
+      objectReference: {fileID: 2100000, guid: a17b23ff7317e0d47a89c906c4becc33, type: 2}
     - target: {fileID: 919132149155446097, guid: ec2504cc8356b36478b4e7a932ad2df4, type: 3}
       propertyPath: m_Name
       value: Obstacle lvl 2
