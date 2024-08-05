@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using System;
 using UnityEngine;
 
@@ -12,6 +13,8 @@ public class GravityCharacterController : MonoBehaviour, IServiceLocatorComponen
     public float CurrGravity => _currGravity;
     public float JumpForce => _jumpForce;
     public ServiceLocator MyServiceLocator { get; set; }
+
+    [SerializeField, FoldoutGroup("References")] private Animator _animator;
 
     [SerializeField] private float _gravitySpeed = 10;
     [SerializeField] private float _maxJumpForce = 1;
@@ -65,6 +68,7 @@ public class GravityCharacterController : MonoBehaviour, IServiceLocatorComponen
         _jumpForce += evaluateChargingSpeed * _forceChargingSpeed * Time.deltaTime;
         _jumpForce = Mathf.Clamp(_jumpForce, _minJumpForce, _maxJumpForce);
         OnJumpForceChange?.Invoke(_jumpForce);
+
     }
 
     public void CancelCharge()
@@ -76,5 +80,22 @@ public class GravityCharacterController : MonoBehaviour, IServiceLocatorComponen
     public void Jump()
     {
         SetGravity(-_jumpForce);
+        //-----
+        //Debug.Log("Jump Force: " + _jumpForce + "Normalized: " + (Mathf.Clamp(_jumpForce, _minJumpForce, _maxJumpForce) / _maxJumpForce));
+        if ((Mathf.Clamp(_jumpForce, _minJumpForce, _maxJumpForce) / _maxJumpForce) > 0.95 && !IsGrounded)
+        {
+            _animator.SetFloat("JumpForce", 0);
+            Debug.Log("High Jump");
+        }
+        else if ((Mathf.Clamp(_jumpForce, _minJumpForce, _maxJumpForce) / _maxJumpForce) <= 0.95 && (Mathf.Clamp(_jumpForce, _minJumpForce, _maxJumpForce) / _maxJumpForce) > 0.75 && !IsGrounded)
+        {
+            _animator.SetFloat("JumpForce", 1);
+            Debug.Log("Mid Jump");
+        }
+        else
+        {
+            _animator.SetFloat("JumpForce", 1);
+            Debug.Log("Low Jump");
+        }
     }
 }

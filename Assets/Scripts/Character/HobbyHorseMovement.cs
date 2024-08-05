@@ -37,9 +37,22 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
     [SerializeField, FoldoutGroup("References")] private CinemachineVirtualCamera _virtualCamera;
     [SerializeField, FoldoutGroup("References")] private CustomHobbyHorse _customHobbyHorse;
 
+
+
     private float _actualSpeed;
     private float _actualRotateSpeed;
+
+
+
+
+    // ---------------------------- Controller
     private CharacterController _characterController;
+    private int turnIndex;
+    private int jumpIndex;
+
+
+    // ----------------------------- Falling
+
 
     public void CustomAwake()
     {
@@ -82,6 +95,11 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
         _brakForce = brakeForce;
         _accelerate = accelerate;
         _rotateAccelerate = rotateAccelerate;
+
+        // ----------------------------------------- Animation Controller
+        turnIndex = _animator.GetLayerIndex("Turn");
+        jumpIndex = _animator.GetLayerIndex("Jump");
+       
     }
 
     public void Move(Vector3 moveInput, bool isGrounded)
@@ -90,13 +108,24 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
             return;
 
         _animator.SetBool("Jump", !isGrounded);
+
+
         _animator.SetFloat("Speed", Mathf.InverseLerp(0, _maxSpeed, _actualSpeed));
+
+        // ----------------- Influence of turns
+        _animator.SetLayerWeight(turnIndex, (Mathf.Abs(_actualRotateSpeed)) / 3);
+        _animator.SetFloat("Twist", Mathf.InverseLerp(-1, _maxRotateSpeed, _actualRotateSpeed));
+
 
         CalculateRotateSpeed(moveInput.x, isGrounded);
         RotatePlayer(moveInput);
 
         CalculateSpeed(moveInput.z, isGrounded);
         MoveForward(_actualSpeed);
+
+
+
+       
     }
 
     protected float CalculateSpeed(float verticalInput, bool isGrounded)
@@ -121,7 +150,16 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
                 : verticalInput * _brakForce;
 
             _actualSpeed += accelerate * Time.deltaTime;
-            _actualSpeed = Mathf.Clamp(_actualSpeed, _maxBackwardSpeed, _maxSpeed);
+
+            if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.E))
+            {
+                _actualSpeed = Mathf.Clamp(_actualSpeed, _maxBackwardSpeed, _maxSpeed);
+            }
+            else
+            {
+                _actualSpeed = Mathf.Clamp(_actualSpeed, _maxBackwardSpeed, _maxSpeed/10*7);
+            }
+            
         }
 
         OnActualSpeedChange?.Invoke(_actualSpeed);
