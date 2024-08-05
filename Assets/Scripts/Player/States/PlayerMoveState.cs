@@ -100,4 +100,9 @@ public class PlayerMoveState : HumanBaseState
     {
         _characterInteraction.TryInteract(interactionType, _itemSelector.ItemToInteract);
     }
+
+    public override void CustomLateUpdate()
+    {
+        throw new System.NotImplementedException();
+    }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class HumanMoveState : HumanBaseState
@@ -98,6 +96,11 @@ public class HumanMoveState : HumanBaseState
     }
 
     public override void CustomFixedUpdate()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void CustomLateUpdate()
     {
         throw new System.NotImplementedException();
     }

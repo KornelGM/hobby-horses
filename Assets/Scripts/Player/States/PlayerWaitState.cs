@@ -17,4 +17,9 @@
     public override void CustomFixedUpdate()
     {
     }
+
+    public override void CustomLateUpdate()
+    {
+
+    }
 }

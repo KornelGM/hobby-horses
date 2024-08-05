@@ -25,4 +25,9 @@ public class PlayerInputPauseState : State
     {
         _inputManager?.PlayerInput?.controllers.maps.SetMapsEnabled(false,_inputManager.PauseCategoryName);
     }
+
+    public override void CustomLateUpdate()
+    {
+        throw new System.NotImplementedException();
+    }
 }

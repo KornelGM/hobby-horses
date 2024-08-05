@@ -8,9 +8,12 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
 {
     public ServiceLocator MyServiceLocator { get; set; }
     public float ActualSpeed => _actualSpeed;
+    public float Velocity => _velocity;
     public CharacterController CharacterController => _characterController;
-    public Action<float> OnActualSpeedChange;
     public CustomHobbyHorse CustomHobbyHorse => _customHobbyHorse;
+
+    public Action<float> OnActualSpeedChange;
+    public Action<float> OnVelocityChange;
 
     [ServiceLocatorComponent] private GravityCharacterController _gravityController;
 
@@ -37,19 +40,15 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
     [SerializeField, FoldoutGroup("References")] private CinemachineVirtualCamera _virtualCamera;
     [SerializeField, FoldoutGroup("References")] private CustomHobbyHorse _customHobbyHorse;
 
-
-
     private float _actualSpeed;
+    private float _velocity;
     private float _actualRotateSpeed;
-
-
-
+    private Vector3 _oldPosition;
 
     // ---------------------------- Controller
     private CharacterController _characterController;
     private int turnIndex;
     private int jumpIndex;
-
 
     // ----------------------------- Falling
 
@@ -59,6 +58,11 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
         _characterController = MyServiceLocator.GetComponent<CharacterController>();
         _characterController.IsNotNull(this, nameof(_characterController));
         _movementSettings.IsNotNull(this, nameof(_movementSettings));
+        _oldPosition = _characterController.transform.position;
+
+        // ----------------------------------------- Animation Controller
+        turnIndex = _animator.GetLayerIndex("Turn");
+        jumpIndex = _animator.GetLayerIndex("Jump");
     }
 
     public void SetStats(HobbyHorseStats stats)
@@ -94,47 +98,43 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
         _maxRotateSpeed = maxRotateSpeed;
         _brakForce = brakeForce;
         _accelerate = accelerate;
-        _rotateAccelerate = rotateAccelerate;
-
-        // ----------------------------------------- Animation Controller
-        turnIndex = _animator.GetLayerIndex("Turn");
-        jumpIndex = _animator.GetLayerIndex("Jump");
-       
+        _rotateAccelerate = rotateAccelerate;   
     }
 
-    public void Move(Vector3 moveInput, bool isGrounded)
+    public void CalculateInput(Vector3 moveInput, bool isGrounded)
+    {
+        CalculateSpeed(moveInput.z, isGrounded);
+        CalculateRotateSpeed(moveInput.x, isGrounded);
+
+        // ----------------- Influence of turns
+        _animator.SetLayerWeight(turnIndex, (Mathf.Abs(_actualRotateSpeed)) / 3);
+        _animator.SetFloat("Twist", Mathf.InverseLerp(-1, _maxRotateSpeed, _actualRotateSpeed));
+    }
+
+    public void Move(bool isGrounded)
     {
         if (!_characterController.enabled)
             return;
 
         _animator.SetBool("Jump", !isGrounded);
+        _animator.SetFloat("Speed", Mathf.InverseLerp(0, _maxSpeed, _velocity));
 
 
-        _animator.SetFloat("Speed", Mathf.InverseLerp(0, _maxSpeed, _actualSpeed));
+        MoveForward(_actualSpeed);   
+    }
 
-        // ----------------- Influence of turns
-        _animator.SetLayerWeight(turnIndex, (Mathf.Abs(_actualRotateSpeed)) / 3);
-        _animator.SetFloat("Twist", Mathf.InverseLerp(-1, _maxRotateSpeed, _actualRotateSpeed));
-
-
-        CalculateRotateSpeed(moveInput.x, isGrounded);
-        RotatePlayer(moveInput);
-
-        CalculateSpeed(moveInput.z, isGrounded);
-        MoveForward(_actualSpeed);
-
-
-
-       
+    public void Rotate()
+    {
+        RotatePlayer();
     }
 
     protected float CalculateSpeed(float verticalInput, bool isGrounded)
     {
         if(!isGrounded)
         {
-            _actualSpeed -= _dragOnAir * _gravityController.CurrGravity * Time.deltaTime;
+            _actualSpeed -= _dragOnAir * (_gravityController.CurrGravity * 0.5f) * Time.deltaTime;
             _actualSpeed = Mathf.Clamp(_actualSpeed, _minOnAirSpeed, 100);
-            OnActualSpeedChange?.Invoke(_actualSpeed);
+            OnActualSpeedChange?.Invoke(_velocity);
             return _actualSpeed;
         }
 
@@ -150,16 +150,7 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
                 : verticalInput * _brakForce;
 
             _actualSpeed += accelerate * Time.deltaTime;
-
-            if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.E))
-            {
-                _actualSpeed = Mathf.Clamp(_actualSpeed, _maxBackwardSpeed, _maxSpeed);
-            }
-            else
-            {
-                _actualSpeed = Mathf.Clamp(_actualSpeed, _maxBackwardSpeed, _maxSpeed/10*7);
-            }
-            
+            _actualSpeed = Mathf.Clamp(_actualSpeed, _maxBackwardSpeed, _maxSpeed);
         }
 
         OnActualSpeedChange?.Invoke(_actualSpeed);
@@ -194,10 +185,23 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
 
     protected void MoveForward(float speed)
     {
-        _characterController.Move(transform.forward * speed * Time.deltaTime);
+        _characterController.Move(transform.forward * speed * Time.fixedDeltaTime);
+        CalculateVelocity();
     }
 
-    private void RotatePlayer(Vector3 input)
+
+    private void CalculateVelocity()
+    {
+        float velocity = _velocity;
+        _velocity = Vector3.Distance(_oldPosition, _characterController.transform.position) / Time.fixedDeltaTime;
+
+        if (_velocity != velocity)
+            OnVelocityChange?.Invoke(_velocity);
+
+        _oldPosition = _characterController.transform.position;
+    }
+
+    private void RotatePlayer()
     {
         var frameRotationSpeed = _movementSettings.RotationSpeed * _actualRotateSpeed;
 

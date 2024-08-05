@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HH Stats Slow
   m_EditorClassIdentifier: 
   _maxSpeed: 6
-  _maxRotateSpeed: 3
+  _maxRotateSpeed: 6
   _brakeForce: 6
   _accelerate: 2
-  _rotateAccelerate: 10
+  _rotateAccelerate: 15

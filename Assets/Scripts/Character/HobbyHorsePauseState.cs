@@ -29,4 +29,9 @@ public class HobbyHorsePauseState : State
     {
 
     }
+
+    public override void CustomLateUpdate()
+    {
+
+    }
 }

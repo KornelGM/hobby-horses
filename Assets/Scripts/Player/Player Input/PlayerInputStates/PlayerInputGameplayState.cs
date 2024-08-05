@@ -24,4 +24,9 @@
     {
         _inputManager.PlayerInput.controllers.maps.SetMapsEnabled(false,_inputManager.GameplayCategoryName);
     }
+
+    public override void CustomLateUpdate()
+    {
+        throw new System.NotImplementedException();
+    }
 }

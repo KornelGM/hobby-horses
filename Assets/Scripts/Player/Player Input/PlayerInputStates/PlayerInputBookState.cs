@@ -25,4 +25,9 @@ public class PlayerInputBookState : State
     {
         _inputManager?.PlayerInput?.controllers.maps.SetMapsEnabled(false, _inputManager.BookCategoryName);
     }
+
+    public override void CustomLateUpdate()
+    {
+        throw new System.NotImplementedException();
+    }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class HumanFallState : HumanBaseState
@@ -38,5 +36,10 @@ public class HumanFallState : HumanBaseState
 
     public override void CustomFixedUpdate()
     {
+    }
+
+    public override void CustomLateUpdate()
+    {
+        throw new System.NotImplementedException();
     }
 }

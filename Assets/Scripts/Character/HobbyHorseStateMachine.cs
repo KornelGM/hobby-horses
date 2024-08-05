@@ -38,4 +38,9 @@ public class HobbyHorseStateMachine : MonoBehaviour, IServiceLocatorComponent, I
     {
         CurrentState?.CustomFixedUpdate();
     }
+
+    private void LateUpdate()
+    {
+        CurrentState?.CustomLateUpdate();
+    }
 }

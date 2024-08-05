@@ -33,7 +33,7 @@ public class RaceHudUI : MonoBehaviour, IWindow, IServiceLocatorComponent
         _playerManager.LocalPlayer.TryGetServiceLocatorComponent(out _movement);
         _playerManager.LocalPlayer.TryGetServiceLocatorComponent(out _gravityController);
 
-        _movement.OnActualSpeedChange += UpdateSpeedValue;
+        _movement.OnVelocityChange += UpdateSpeedValue;
         _gravityController.OnJumpForceChange += UpdateJumpForce;
         _slowMotionManager.OnSlowMotionTimeChange += UpdateSlowMotionBar;
 

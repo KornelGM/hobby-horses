@@ -38,4 +38,9 @@ public class HumanJumpState : HumanBaseState
     public override void CustomFixedUpdate()
     {
     }
+
+    public override void CustomLateUpdate()
+    {
+        throw new System.NotImplementedException();
+    }
 }

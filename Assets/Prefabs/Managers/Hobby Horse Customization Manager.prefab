@@ -641,6 +641,60 @@ MonoBehaviour:
       HobbyHorseStats: {fileID: 0}
       HobbyHorsePart: 2
       Guid: b6471344-f58c-402f-8c2b-0c522b00b1d7
+    - HobbyHorsePartPrefab: {fileID: 2196508000728886572, guid: ad2a7644f6677ad42b64861a95913c5b, type: 3}
+      Icon: {fileID: 0}
+      CanUnlocked: 1
+      Cost: 60
+      ReputationLevel: 0
+      HasStats: 0
+      HobbyHorseStats: {fileID: 0}
+      HobbyHorsePart: 2
+      Guid: db5684a3-dc14-48e0-b618-eaf1137b9179
+    - HobbyHorsePartPrefab: {fileID: 2196508000728886572, guid: 273928766fd6d654d88d78ed45f9a728, type: 3}
+      Icon: {fileID: 0}
+      CanUnlocked: 1
+      Cost: 70
+      ReputationLevel: 0
+      HasStats: 0
+      HobbyHorseStats: {fileID: 0}
+      HobbyHorsePart: 2
+      Guid: bca8e1f8-ac50-4779-8a41-2e7ed432acba
+    - HobbyHorsePartPrefab: {fileID: 2196508000728886572, guid: 8f856ff11092e134289f8bfd1a8dc062, type: 3}
+      Icon: {fileID: 0}
+      CanUnlocked: 1
+      Cost: 200
+      ReputationLevel: 0
+      HasStats: 0
+      HobbyHorseStats: {fileID: 0}
+      HobbyHorsePart: 2
+      Guid: 6c4180b4-f0ff-43bf-8ac7-018ced20af1c
+    - HobbyHorsePartPrefab: {fileID: 2196508000728886572, guid: 69d9e5871c9d70f44bac90a108dbe8ab, type: 3}
+      Icon: {fileID: 0}
+      CanUnlocked: 1
+      Cost: 60
+      ReputationLevel: 0
+      HasStats: 0
+      HobbyHorseStats: {fileID: 0}
+      HobbyHorsePart: 2
+      Guid: 66c72399-ecff-461a-b130-0015837bdacb
+    - HobbyHorsePartPrefab: {fileID: 2196508000728886572, guid: 0d25ca5a9d248ec48ade7ff5e118f24b, type: 3}
+      Icon: {fileID: 0}
+      CanUnlocked: 1
+      Cost: 40
+      ReputationLevel: 0
+      HasStats: 0
+      HobbyHorseStats: {fileID: 0}
+      HobbyHorsePart: 2
+      Guid: 71c11e23-709c-4024-b719-8d106cf97f4b
+    - HobbyHorsePartPrefab: {fileID: 2196508000728886572, guid: cdd596bad5038c14f865715c5c92677c, type: 3}
+      Icon: {fileID: 0}
+      CanUnlocked: 1
+      Cost: 75
+      ReputationLevel: 0
+      HasStats: 0
+      HobbyHorseStats: {fileID: 0}
+      HobbyHorsePart: 2
+      Guid: 2ea601be-18d4-4978-a314-5b2fe51d4eb2
   - HobbyHorsePart: 4
     CustomizationPart:
     - HobbyHorsePartPrefab: {fileID: 1798356404626109016, guid: 208666e1052446748a7fbaf53d21d5c1, type: 3}
@@ -763,6 +817,7 @@ MonoBehaviour:
   _hobbyHorseHolder: {fileID: 549015284721360046}
   _hobbyHorsePrefab: {fileID: 5019122390027552754, guid: 0072f802544203e47ace0ccc405da089, type: 3}
   _customizationUI: {fileID: 2099595046224731083, guid: 17bc1a147a72c7c4394656803b84ed89, type: 3}
+  _spawnHorseOnStart: 0
 --- !u!1 &6621127674572959522
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,7 +884,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7028966041814411553}
   - {fileID: 5524846461477044967}
   m_Father: {fileID: 5648961217575087338}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
@@ -1093,69 +1147,3 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 251392509341956114}
---- !u!1001 &2380638644749814340
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 549015284721360046}
-    m_Modifications:
-    - target: {fileID: 4648380450723652453, guid: 3ab29e75925d58943a5ac28f76c4e66a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4648380450723652453, guid: 3ab29e75925d58943a5ac28f76c4e66a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4648380450723652453, guid: 3ab29e75925d58943a5ac28f76c4e66a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4648380450723652453, guid: 3ab29e75925d58943a5ac28f76c4e66a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4648380450723652453, guid: 3ab29e75925d58943a5ac28f76c4e66a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4648380450723652453, guid: 3ab29e75925d58943a5ac28f76c4e66a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4648380450723652453, guid: 3ab29e75925d58943a5ac28f76c4e66a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4648380450723652453, guid: 3ab29e75925d58943a5ac28f76c4e66a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4648380450723652453, guid: 3ab29e75925d58943a5ac28f76c4e66a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4648380450723652453, guid: 3ab29e75925d58943a5ac28f76c4e66a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6750133330923795209, guid: 3ab29e75925d58943a5ac28f76c4e66a, type: 3}
-      propertyPath: m_Name
-      value: Cyber Hobby Horse
-      objectReference: {fileID: 0}
-    - target: {fileID: 6750133330923795209, guid: 3ab29e75925d58943a5ac28f76c4e66a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3ab29e75925d58943a5ac28f76c4e66a, type: 3}
---- !u!4 &7028966041814411553 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4648380450723652453, guid: 3ab29e75925d58943a5ac28f76c4e66a, type: 3}
-  m_PrefabInstance: {fileID: 2380638644749814340}
-  m_PrefabAsset: {fileID: 0}

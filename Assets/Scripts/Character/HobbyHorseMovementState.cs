@@ -10,6 +10,9 @@ public class HobbyHorseMovementState : State
     private SlowMotionManager _slowMotionManager;
     private InputManager _inputManager;
 
+    private Vector3 _inputMouse;
+    private Vector3 _inputMovement;
+
     public HobbyHorseMovementState(HobbyHorseStateMachine stateMachine)
     {
         _stateMachine = stateMachine;
@@ -49,18 +52,28 @@ public class HobbyHorseMovementState : State
 
     public override void CustomUpdate()
     {
-        _movement.Move(_virtualController.Movement, IsGrounded());
+        _inputMovement = _virtualController.Movement;
+        _inputMouse = _virtualController.Mouse;
 
-        if (_cameraRotator.FreeCamera)
-            _cameraRotator.Rotate(_virtualController.Mouse.y, _virtualController.Mouse.x);
-        else
-            _cameraRotator.CameraFollowTarget();
+        _movement.CalculateInput(_inputMovement, IsGrounded());
 
         JumpCharging();
-        _gravityController.ApplyGravity(IsGrounded());
     }
 
     public override void CustomFixedUpdate()
+    {
+        _movement.Move(IsGrounded());
+        _movement.Rotate();
+
+        if (_cameraRotator.FreeCamera)
+            _cameraRotator.Rotate(_inputMouse.y, _inputMouse.x);
+        else
+            _cameraRotator.CameraFollowTarget();
+
+        _gravityController.ApplyGravity(IsGrounded());
+    }
+
+    public override void CustomLateUpdate()
     {
 
     }
