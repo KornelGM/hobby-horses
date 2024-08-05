@@ -659,15 +659,6 @@ MonoBehaviour:
       HobbyHorseStats: {fileID: 0}
       HobbyHorsePart: 2
       Guid: bca8e1f8-ac50-4779-8a41-2e7ed432acba
-    - HobbyHorsePartPrefab: {fileID: 2196508000728886572, guid: 8f856ff11092e134289f8bfd1a8dc062, type: 3}
-      Icon: {fileID: 0}
-      CanUnlocked: 1
-      Cost: 200
-      ReputationLevel: 0
-      HasStats: 0
-      HobbyHorseStats: {fileID: 0}
-      HobbyHorsePart: 2
-      Guid: 6c4180b4-f0ff-43bf-8ac7-018ced20af1c
     - HobbyHorsePartPrefab: {fileID: 2196508000728886572, guid: 69d9e5871c9d70f44bac90a108dbe8ab, type: 3}
       Icon: {fileID: 0}
       CanUnlocked: 1
