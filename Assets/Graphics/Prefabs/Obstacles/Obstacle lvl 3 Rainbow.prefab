@@ -81,12 +81,36 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7959525176717234588, guid: 5fc21a5bf1291714388800823199398a, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7959525176717234588, guid: 5fc21a5bf1291714388800823199398a, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7959525176717234588, guid: 5fc21a5bf1291714388800823199398a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4c3272c062efe5541af16ecb94e12084, type: 2}
+    - target: {fileID: -6591125442118996619, guid: 5fc21a5bf1291714388800823199398a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -15888473136606100, guid: 5fc21a5bf1291714388800823199398a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5fc21a5bf1291714388800823199398a, type: 3}
       propertyPath: m_Name
       value: Obstacle lvl 3 Rainbow
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573195434065515203, guid: 5fc21a5bf1291714388800823199398a, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573195434065515203, guid: 5fc21a5bf1291714388800823199398a, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4573195434065515203, guid: 5fc21a5bf1291714388800823199398a, type: 3}
       propertyPath: m_Materials.Array.data[0]

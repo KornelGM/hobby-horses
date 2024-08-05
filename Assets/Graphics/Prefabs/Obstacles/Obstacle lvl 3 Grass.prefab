@@ -81,12 +81,36 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1345805665844047819, guid: b1499e2b7cb66ef46b67a15c269df6ee, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1345805665844047819, guid: b1499e2b7cb66ef46b67a15c269df6ee, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1345805665844047819, guid: b1499e2b7cb66ef46b67a15c269df6ee, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e0c4b90c28c3ae242b0f8f289060cf1b, type: 2}
     - target: {fileID: 919132149155446097, guid: b1499e2b7cb66ef46b67a15c269df6ee, type: 3}
       propertyPath: m_Name
       value: Obstacle lvl 3 Grass
+      objectReference: {fileID: 0}
+    - target: {fileID: 3328537294469306193, guid: b1499e2b7cb66ef46b67a15c269df6ee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3752292361366853569, guid: b1499e2b7cb66ef46b67a15c269df6ee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7462331658582684235, guid: b1499e2b7cb66ef46b67a15c269df6ee, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7462331658582684235, guid: b1499e2b7cb66ef46b67a15c269df6ee, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7462331658582684235, guid: b1499e2b7cb66ef46b67a15c269df6ee, type: 3}
       propertyPath: m_Materials.Array.data[0]
