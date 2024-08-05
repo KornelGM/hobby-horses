@@ -14,6 +14,7 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
 
     public Action<float> OnActualSpeedChange;
     public Action<float> OnVelocityChange;
+    public Action OnLanding;
 
     [ServiceLocatorComponent] private GravityCharacterController _gravityController;
 
@@ -44,6 +45,7 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
     private float _velocity;
     private float _actualRotateSpeed;
     private Vector3 _oldPosition;
+    private bool _isGrounded;
 
     // ---------------------------- Controller
     private CharacterController _characterController;
@@ -103,22 +105,26 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
 
     public void CalculateInput(Vector3 moveInput, bool isGrounded)
     {
-        CalculateSpeed(moveInput.z, isGrounded);
-        CalculateRotateSpeed(moveInput.x, isGrounded);
+        if (isGrounded && !_isGrounded)
+            OnLanding?.Invoke();
+
+        _isGrounded = isGrounded;
+
+        CalculateSpeed(moveInput.z, _isGrounded);
+        CalculateRotateSpeed(moveInput.x, _isGrounded);
 
         // ----------------- Influence of turns
         _animator.SetLayerWeight(turnIndex, (Mathf.Abs(_actualRotateSpeed)) / 3);
         _animator.SetFloat("Twist", Mathf.InverseLerp(-1, _maxRotateSpeed, _actualRotateSpeed));
     }
 
-    public void Move(bool isGrounded)
+    public void Move()
     {
         if (!_characterController.enabled)
             return;
 
-        _animator.SetBool("Jump", !isGrounded);
+        _animator.SetBool("Jump", !_isGrounded);
         _animator.SetFloat("Speed", Mathf.InverseLerp(0, _maxSpeed, _velocity));
-
 
         MoveForward(_actualSpeed);   
     }

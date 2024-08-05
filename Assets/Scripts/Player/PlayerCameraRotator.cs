@@ -1,4 +1,6 @@
+using DG.Tweening;
 using Rewired;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class PlayerCameraRotator : MonoBehaviour, IServiceLocatorComponent, IAwake
@@ -12,6 +14,15 @@ public class PlayerCameraRotator : MonoBehaviour, IServiceLocatorComponent, IAwa
     [SerializeField] private Transform _camera;
     [SerializeField] private Transform _target;
     [SerializeField] private float _cameraSpeed;
+
+    [SerializeField, FoldoutGroup("Shake settings")] private float _strength = 1;
+    [SerializeField, FoldoutGroup("Shake settings")] private int _vibrato = 10;
+    [SerializeField, FoldoutGroup("Shake settings")] private float _randomness = 90;
+    [SerializeField, FoldoutGroup("Shake settings")] private bool _fadeOut = true;
+    [SerializeField, FoldoutGroup("Shake settings")] private ShakeRandomnessMode _randomnessMode = ShakeRandomnessMode.Full;
+    [SerializeField, FoldoutGroup("Shake settings")] private AnimationCurve _durationMultiplerCurve;
+    [SerializeField, FoldoutGroup("Shake settings")] private float _maxStrength;
+
 
     private bool _freeCamera = false;
 
@@ -65,6 +76,16 @@ public class PlayerCameraRotator : MonoBehaviour, IServiceLocatorComponent, IAwa
         Vector3 direction = target.position - _camera.transform.position;
         Quaternion finalRotation = Quaternion.LookRotation(direction);
         _camera.transform.rotation = Quaternion.Slerp(_camera.transform.rotation, finalRotation, _cameraSpeed);
+    }
+
+    public void ShakeCamera(float gravity)
+    {
+        float strength = _strength * gravity;
+
+        float targetStrenght = Mathf.InverseLerp(0, _maxStrength, strength);
+        float evaluateStrength = _durationMultiplerCurve.Evaluate(targetStrenght);
+
+        _camera.DOShakeRotation(evaluateStrength, strength, _vibrato, _randomness, _fadeOut, _randomnessMode);
     }
 
     public void SwitchFreeCamera(bool value)

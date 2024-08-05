@@ -37,6 +37,8 @@ public class HobbyHorseMovementState : State
         _virtualController.OnJumpCancelled += Jump;
         _virtualController.OnJumpCancelled += CancelJumpCharge;
         _virtualController.OnSlowMotionPerformed += ChangeTime;
+
+        _movement.OnLanding += DoShakeCamera;
     }
 
     public override void Exit()
@@ -48,6 +50,8 @@ public class HobbyHorseMovementState : State
         _virtualController.OnJumpCancelled -= Jump;
         _virtualController.OnJumpCancelled -= CancelJumpCharge;
         _virtualController.OnSlowMotionPerformed -= ChangeTime;
+
+        _movement.OnLanding -= DoShakeCamera;
     }
 
     public override void CustomUpdate()
@@ -62,7 +66,7 @@ public class HobbyHorseMovementState : State
 
     public override void CustomFixedUpdate()
     {
-        _movement.Move(IsGrounded());
+        _movement.Move();
         _movement.Rotate();
 
         if (_cameraRotator.FreeCamera)
@@ -99,6 +103,11 @@ public class HobbyHorseMovementState : State
     {
         if (!AbleToJump()) return;
         _gravityController.Jump();
+    }
+
+    private void DoShakeCamera()
+    {
+        _cameraRotator.ShakeCamera(_gravityController.CurrGravity);
     }
 
     protected bool IsGrounded()
