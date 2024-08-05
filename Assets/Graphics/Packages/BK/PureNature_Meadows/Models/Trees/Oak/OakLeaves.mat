@@ -11,7 +11,8 @@ Material:
   m_Shader: {fileID: 4800000, guid: 0f96a2937f6bace459a5fdaac39c0fb3, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _HIDESIDES_ON
   m_InvalidKeywords:
   - _BASEWINDCHANNEL_R
   - _BASEWIND_B
@@ -165,7 +166,7 @@ Material:
     - _GradientPosition: 0.74
     - _HideHardAngles: 1
     - _HidePower: 2.5
-    - _HideSides: 0
+    - _HideSides: 1
     - _Int0: 0
     - _InvertGradient: 0
     - _Keyword0: 0
@@ -235,7 +236,7 @@ Material:
     - _ColorVariation: {r: 0.27471778, g: 0.4245283, b: 0.12281949, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GradientColor: {r: 0.32809457, g: 0.7924528, b: 0, a: 1}
-    - _MainColor: {r: 0.3489784, g: 0.5566038, b: 0.06651235, a: 1}
+    - _MainColor: {r: 0.3423332, g: 0.4528302, b: 0.13414025, a: 1}
     - _ScatteringColor: {r: 0.56218994, g: 1, b: 0, a: 0}
     - _SpecularColor: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
     - _Tiling: {r: 4, g: 4, b: 0, a: 0}
