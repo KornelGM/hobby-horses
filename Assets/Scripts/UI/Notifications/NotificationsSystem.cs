@@ -1,9 +1,5 @@
 using I2.Loc;
-using Pathfinding;
-using System;
 using System.Collections;
-using System.Xml.Linq;
-using UnityEditor;
 using UnityEngine;
 
 public class NotificationsSystem : MonoBehaviour, IServiceLocatorComponent, IUpdateable
@@ -13,13 +9,13 @@ public class NotificationsSystem : MonoBehaviour, IServiceLocatorComponent, IUpd
     public bool Enabled { get; } = true;
     public float TimeMultiplier;
 
-    [field: SerializeField] public NotificationHandler CenterNotificationHandler { get; private set; } = new();
+    [field: SerializeField] public NotificationHandler SuccessNotificationHandler { get; private set; } = new();
     [field: SerializeField] public NotificationHandler SideNotificationHandler { get; private set; } = new();
     [field: SerializeField] public NotificationHandler DialoguesNotificationHandler { get; private set; } = new();
 
-    public void SendCenterNotification(LocalizedString notificationText, NotificationType notificationType = NotificationType.Information)
+    public void SendSuccessNotification(LocalizedString notificationText, NotificationType notificationType = NotificationType.Information)
     {
-        SendNotification(notificationText, notificationType, CenterNotificationHandler);
+        SendNotification(notificationText, notificationType, SuccessNotificationHandler);
     }
 
     public void SendDelayedSideNotification(LocalizedString notificationText, NotificationType notificationType,
@@ -53,7 +49,7 @@ public class NotificationsSystem : MonoBehaviour, IServiceLocatorComponent, IUpd
     
     public void CustomUpdate()
     {
-        CenterNotificationHandler.CustomUpdate();
+        SuccessNotificationHandler.CustomUpdate();
         SideNotificationHandler.CustomUpdate();
         DialoguesNotificationHandler.CustomUpdate();
 

@@ -14,6 +14,8 @@ public class GravityCharacterController : MonoBehaviour, IServiceLocatorComponen
     public float JumpForce => _jumpForce;
     public ServiceLocator MyServiceLocator { get; set; }
 
+    [ServiceLocatorComponent] private NotificationsSystem _notificationsSystem;
+
     [SerializeField, FoldoutGroup("References")] private Animator _animator;
 
     [SerializeField] private float _gravitySpeed = 10;
@@ -85,16 +87,19 @@ public class GravityCharacterController : MonoBehaviour, IServiceLocatorComponen
         if ((Mathf.Clamp(_jumpForce, _minJumpForce, _maxJumpForce) / _maxJumpForce) > 0.95 && !IsGrounded)
         {
             _animator.SetFloat("JumpForce", 0);
+            _notificationsSystem.SendSuccessNotification("Essa!", NotificationType.Information);
             Debug.Log("High Jump");
         }
         else if ((Mathf.Clamp(_jumpForce, _minJumpForce, _maxJumpForce) / _maxJumpForce) <= 0.95 && (Mathf.Clamp(_jumpForce, _minJumpForce, _maxJumpForce) / _maxJumpForce) > 0.75 && !IsGrounded)
         {
             _animator.SetFloat("JumpForce", 1);
+            _notificationsSystem.SendSuccessNotification("Super!", NotificationType.Information);
             Debug.Log("Mid Jump");
         }
         else
         {
             _animator.SetFloat("JumpForce", 1);
+            _notificationsSystem.SendSuccessNotification("Nieüle!", NotificationType.Information);
             Debug.Log("Low Jump");
         }
     }

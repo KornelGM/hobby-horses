@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 783946867637136440}
   - component: {fileID: 7854465075239968543}
   m_Layer: 10
-  m_Name: Center Notifications Layout
+  m_Name: Success  Notifications Layout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,10 +35,10 @@ RectTransform:
   - {fileID: 3327708766797431551}
   m_Father: {fileID: 6357099612283159899}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1222.05, y: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 450, y: 250}
+  m_SizeDelta: {x: 500, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &2109779252383700742
 CanvasRenderer:
@@ -93,9 +93,9 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 20
+    m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 1
+  m_ChildAlignment: 7
   m_Spacing: 10
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -236,11 +236,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b0a7d05c307f947ae7d819ae3e6bf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nougatInfo: {fileID: 11400000, guid: 7fa7936d3f0046d4fbb0226c4c39bca8, type: 2}
-  <CenterNotificationHandler>k__BackingField:
-    _unitOfTimePerLetter: 0.048
-    _minimumNotyficationTime: 3
-    _maxNotificationsSameTime: 4
+  TimeMultiplier: 1
+  <SuccessNotificationHandler>k__BackingField:
+    _unitOfTimePerLetter: 0.15
+    _minimumNotyficationTime: 0.5
+    _maxNotificationsSameTime: 1
   <SideNotificationHandler>k__BackingField:
     _unitOfTimePerLetter: 0.048
     _minimumNotyficationTime: 3
@@ -262,10 +262,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sideNotificationPrefab: {fileID: -808551763911667502, guid: 9271ac2541f03f94ea6938c31ff39835, type: 3}
-  _centerNotificationPrefab: {fileID: 557562134612486106, guid: b02d402ec91d403488a88068806e50c1, type: 3}
+  _successNotificationPrefab: {fileID: 557562134612486106, guid: b02d402ec91d403488a88068806e50c1, type: 3}
   _dialogueNotificationPrefab: {fileID: 5889844628664031915, guid: 331907e45c1060744a97b181d65d3b6f, type: 3}
   _sideNotificationParent: {fileID: 5050517834858806299}
-  _centerNotificationParent: {fileID: 1711453032775428426}
+  _successNotificationParent: {fileID: 1711453032775428426}
   _dialogueNotificationParent: {fileID: 8252290481779297592}
   _notificationsColors:
   - ColorHook: {fileID: 11400000, guid: 466e369b4313e9b44b8867ee307cdd8d, type: 2}
@@ -789,29 +789,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1711453032775428426}
     m_Modifications:
-    - target: {fileID: 3692075284293911271, guid: b02d402ec91d403488a88068806e50c1, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
+    - target: {fileID: 2477057964048273933, guid: b02d402ec91d403488a88068806e50c1, type: 3}
+      propertyPath: m_fontSize
+      value: 186.8
       objectReference: {fileID: 0}
-    - target: {fileID: 3692075284293911271, guid: b02d402ec91d403488a88068806e50c1, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3692075284293911271, guid: b02d402ec91d403488a88068806e50c1, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 800
-      objectReference: {fileID: 0}
-    - target: {fileID: 3692075284293911271, guid: b02d402ec91d403488a88068806e50c1, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 47.23
-      objectReference: {fileID: 0}
-    - target: {fileID: 3692075284293911271, guid: b02d402ec91d403488a88068806e50c1, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 3692075284293911271, guid: b02d402ec91d403488a88068806e50c1, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -23.615
+    - target: {fileID: 2477057964048273933, guid: b02d402ec91d403488a88068806e50c1, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4280731107
       objectReference: {fileID: 0}
     - target: {fileID: 5716669845855492355, guid: b02d402ec91d403488a88068806e50c1, type: 3}
       propertyPath: m_Pivot.x
@@ -839,7 +823,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5716669845855492355, guid: b02d402ec91d403488a88068806e50c1, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 800
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 5716669845855492355, guid: b02d402ec91d403488a88068806e50c1, type: 3}
       propertyPath: m_SizeDelta.y
@@ -875,11 +859,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5716669845855492355, guid: b02d402ec91d403488a88068806e50c1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 611.025
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 5716669845855492355, guid: b02d402ec91d403488a88068806e50c1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -56.114998
+      value: -250
       objectReference: {fileID: 0}
     - target: {fileID: 5716669845855492355, guid: b02d402ec91d403488a88068806e50c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -895,7 +879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7341877017761899380, guid: b02d402ec91d403488a88068806e50c1, type: 3}
       propertyPath: m_Name
-      value: Center Notification
+      value: Success Notification
       objectReference: {fileID: 0}
     - target: {fileID: 7341877017761899380, guid: b02d402ec91d403488a88068806e50c1, type: 3}
       propertyPath: m_IsActive
