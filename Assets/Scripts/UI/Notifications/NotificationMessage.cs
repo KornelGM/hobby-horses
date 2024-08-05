@@ -9,9 +9,7 @@ public class NotificationMessage : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
     [SerializeField] private TextMeshProUGUI _notificationText;
-    [SerializeField] private TextMeshProUGUI _name;
     [SerializeField] private Image _notificationImage;
-    [SerializeField] private Image _avatar;
 
     [SerializeField, FoldoutGroup("Audio")] private AudioPlayer _audioPlayer;
     [SerializeField, FoldoutGroup("Audio")] private AudioSource _audioSource;

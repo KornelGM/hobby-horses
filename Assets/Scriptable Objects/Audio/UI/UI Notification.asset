@@ -25,7 +25,7 @@ MonoBehaviour:
     - Name: <Entries>k__BackingField
       Entry: 7
       Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[AudioEventVariant,
-        ChocolateManufacture]], mscorlib
+        HobbyHorsing]], mscorlib
     - Name: comparer
       Entry: 7
       Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,

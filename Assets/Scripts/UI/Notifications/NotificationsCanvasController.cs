@@ -1,12 +1,8 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using DG.Tweening;
 using Sirenix.Utilities;
-using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class NotificationsCanvasController : MonoBehaviour, IServiceLocatorComponent, IStartable
@@ -14,10 +10,10 @@ public class NotificationsCanvasController : MonoBehaviour, IServiceLocatorCompo
     public ServiceLocator MyServiceLocator { get; set; }
 
     [SerializeField] private NotificationMessage _sideNotificationPrefab;
-    [SerializeField] private NotificationMessage _centerNotificationPrefab;
+    [SerializeField] private NotificationMessage _successNotificationPrefab;
     [SerializeField] private NotificationMessage _dialogueNotificationPrefab;
     [SerializeField] private Transform _sideNotificationParent;
-    [SerializeField] private Transform _centerNotificationParent;
+    [SerializeField] private Transform _successNotificationParent;
     [SerializeField] private Transform _dialogueNotificationParent;
 
     [Space(10)]
@@ -37,15 +33,15 @@ public class NotificationsCanvasController : MonoBehaviour, IServiceLocatorCompo
     public void CustomStart()
     { 
         _notificationsSystem.SideNotificationHandler.OnShowNotification += info => OnShowNotification(info, _sideNotificationParent);
-        _notificationsSystem.CenterNotificationHandler.OnShowNotification += info => OnShowNotification(info, _centerNotificationParent);
+        _notificationsSystem.SuccessNotificationHandler.OnShowNotification += info => OnShowNotification(info, _successNotificationParent);
         _notificationsSystem.DialoguesNotificationHandler.OnShowNotification += info => OnShowNotification(info, _dialogueNotificationParent);
 
         _notificationsSystem.SideNotificationHandler.OnNotificationDoubled += OnDuplicateNotification;
-        _notificationsSystem.CenterNotificationHandler.OnNotificationDoubled += OnDuplicateNotification;
+        _notificationsSystem.SuccessNotificationHandler.OnNotificationDoubled += OnDuplicateNotification;
         _notificationsSystem.DialoguesNotificationHandler.OnNotificationDoubled += OnDuplicateNotification;
         
         _notificationsSystem.SideNotificationHandler.OnHideNotification += info => OnHideNotification(info, _sideNotificationParent);
-        _notificationsSystem.CenterNotificationHandler.OnHideNotification += info => OnHideNotification(info, _centerNotificationParent);
+        _notificationsSystem.SuccessNotificationHandler.OnHideNotification += info => OnHideNotification(info, _successNotificationParent);
         _notificationsSystem.DialoguesNotificationHandler.OnHideNotification += info => OnHideNotification(info, _dialogueNotificationParent);
     }
 
@@ -133,8 +129,8 @@ public class NotificationsCanvasController : MonoBehaviour, IServiceLocatorCompo
     {
         if (transform == _sideNotificationParent)
             return _sideNotificationPrefab;
-        else if (transform == _centerNotificationParent)
-            return _centerNotificationPrefab;
+        else if (transform == _successNotificationParent)
+            return _successNotificationPrefab;
         else if (transform == _dialogueNotificationParent)
             return _dialogueNotificationPrefab;
 
