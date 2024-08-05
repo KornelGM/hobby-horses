@@ -28,6 +28,8 @@ public enum HobbyHorsePart
     Eyes,
     Mouth,
     Manes,
+    Bangs,
+    Bridle,
 }
 
 public enum HobbyHorseStat
