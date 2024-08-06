@@ -25,6 +25,7 @@ public class HobbyHorseCustomizationManager : MonoBehaviour, IServiceLocatorComp
     }
 
     public CurrentHobbyHorseInfo CurrentHobbyHorseInfo => _currentHobbyHorseInfo;
+    public CustomHobbyHorse CreatedHobbyHorse => _createdHobbyHorse;
 
     [ServiceLocatorComponent] private WindowManager _windowManager;
     [ServiceLocatorComponent] private FundsManager _fundsManager;

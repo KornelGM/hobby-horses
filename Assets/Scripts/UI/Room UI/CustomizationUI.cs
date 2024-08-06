@@ -65,8 +65,22 @@ public class CustomizationUI : MonoBehaviour, IServiceLocatorComponent, IWindow
     {
         _currentCategory = newCategory;
 
-        _currentHobbyHorsePart = _customizationManager.HobbyHorsePartsCategories.
-            FirstOrDefault(category => category.HobbyHorsePart == _currentCategory).CustomizationPart[0];
+        HobbyHorseCustomizationCategory foundCategory = _customizationManager.HobbyHorsePartsCategories.
+            FirstOrDefault(category => category.HobbyHorsePart == _currentCategory);
+
+        _currentHobbyHorsePart = null;
+        foreach (var guid in _customizationManager.CreatedHobbyHorse.HobbyHorsePartsGuids)
+        {
+            _currentHobbyHorsePart = foundCategory.CustomizationPart.FirstOrDefault(part => part.Guid == guid);
+
+            if (_currentHobbyHorsePart != null)
+                break;
+        }
+
+        if (_currentHobbyHorsePart == null)
+            return;
+
+        _customizationManager.ChangeHobbyHorsePart(_currentHobbyHorsePart);
 
         RefreshConfirmButton();
         CreateButtons(_currentCategory);

@@ -536,7 +536,7 @@ MonoBehaviour:
   _brakForce: 10
   _accelerate: 3
   _rotateAccelerate: 15
-  _drag: 7
+  _drag: 1
   _dragOnAir: 1
   _rotateDrag: 15
   _maxBackwardSpeed: -2
