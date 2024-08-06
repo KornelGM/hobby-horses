@@ -32,6 +32,10 @@ public class CustomizationUI : MonoBehaviour, IServiceLocatorComponent, IWindow
 
     private HobbyHorsePart _currentCategory = HobbyHorsePart.Head;
 
+    bool _hide = false;
+
+    int _index = 0;
+
     public void Initialize(CustomizationCamera[] customizationCameras)
     {
         _customizationCameras = customizationCameras;
@@ -41,6 +45,58 @@ public class CustomizationUI : MonoBehaviour, IServiceLocatorComponent, IWindow
             FirstOrDefault(category => category.HobbyHorsePart == _currentCategory).CustomizationPart[0];
 
         RefreshConfirmButton();
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            KeyBoardChangePart(1);
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            KeyBoardChangePart(-1);
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            ConfirmButton();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            HideUI(!_hide);
+        }
+    }
+
+    private void KeyBoardChangePart(int value)
+    {
+        _index += value;
+
+        HobbyHorseCustomizationCategory foundCategory = _customizationManager.HobbyHorsePartsCategories.
+            FirstOrDefault(category => category.HobbyHorsePart == _currentCategory);
+
+        _currentHobbyHorsePart = null;
+
+        if (_index >= foundCategory.CustomizationPart.Length)
+            _index = 0;
+        else if (_index < 0)
+            _index = foundCategory.CustomizationPart.Length - 1;
+
+        HobbyHorseCustomizationPartInfo newPart = foundCategory.CustomizationPart[_index];
+
+        SetHobbyHorsePart(newPart);
+    }
+
+    private void HideUI(bool hide)
+    {
+        if (hide)
+            transform.localScale = Vector3.zero;
+        else
+            transform.localScale = Vector3.one;
+
+        _hide = !_hide;
     }
 
     public void SetHobbyHorsePart(HobbyHorseCustomizationPartInfo newPart)
@@ -64,6 +120,7 @@ public class CustomizationUI : MonoBehaviour, IServiceLocatorComponent, IWindow
     public void SetCategory(HobbyHorsePart newCategory)
     {
         _currentCategory = newCategory;
+        _index = 0;
 
         HobbyHorseCustomizationCategory foundCategory = _customizationManager.HobbyHorsePartsCategories.
             FirstOrDefault(category => category.HobbyHorsePart == _currentCategory);
