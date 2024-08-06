@@ -477,8 +477,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 5137547512785249964}
   _gravitySpeed: 10
-  _maxJumpForce: 6
-  _minJumpForce: 3
+  _maxJumpForce: 4
+  _minJumpForce: 2
   _forceChargingSpeed: 10
   _forceCharging:
     serializedVersion: 2
@@ -537,10 +537,10 @@ MonoBehaviour:
   _accelerate: 3
   _rotateAccelerate: 15
   _drag: 1
-  _dragOnAir: 1
+  _dragOnAir: 0.1
   _rotateDrag: 15
   _maxBackwardSpeed: -2
-  _minOnAirSpeed: 2
+  _minOnAirSpeed: 1
   _rotateAccelerateOnAirDivider: 3
   _positionCurve:
     serializedVersion: 2
