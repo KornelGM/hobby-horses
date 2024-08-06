@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mountain2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 061e88bde8e40074687d05537af2922c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
