@@ -1,13 +1,8 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using Rewired;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Controls;
 using UnityEngine.InputSystem.LowLevel;
-using UnityEngine.UIElements;
 using Mouse = UnityEngine.InputSystem.Mouse;
 
 public class GamepadCursorManager : MonoBehaviour, IServiceLocatorComponent, IAwake
@@ -19,19 +14,16 @@ public class GamepadCursorManager : MonoBehaviour, IServiceLocatorComponent, IAw
     [field: SerializeField] public float CursorSensitivity { get; set; } = 10f;
     [field: SerializeField] public float ScrollSensitivity { get; set; } = 50f;
 
-    [ServiceLocatorComponent] private PlayerManager _playerManager;
+    [ServiceLocatorComponent] private HobbyHorsePlayerManager _playerManager;
     private PlayerInputReader _playerInputReader;
     
     private Vector2 _gamepadCursorPosition;
 
     public void CustomAwake()
     {
-        _playerManager.OnLocalPlayerSet += playerServiceLocator =>
-        {
-            playerServiceLocator.TryGetServiceLocatorComponent(out _playerInputReader);
-            _playerInputReader.OnGamepadUILeftButtonPerformed += () => SimulateUILeftPressed(true);
-            _playerInputReader.OnGamepadUILeftButtonCancelled += () => SimulateUILeftPressed(false);
-        };
+        _playerManager.LocalPlayer.TryGetServiceLocatorComponent(out _playerInputReader);
+        _playerInputReader.OnGamepadUILeftButtonPerformed += () => SimulateUILeftPressed(true);
+        _playerInputReader.OnGamepadUILeftButtonCancelled += () => SimulateUILeftPressed(false);
     }
 
     private void Update()

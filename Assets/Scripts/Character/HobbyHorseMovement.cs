@@ -1,5 +1,4 @@
 using Cinemachine;
-using Rewired;
 using Sirenix.OdinInspector;
 using System;
 using UnityEngine;
@@ -216,8 +215,8 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
     {
         var frameRotationSpeed = _movementSettings.RotationSpeed * _setRotateSpeed;
 
-        if (ReInput.controllers.GetLastActiveController().type == ControllerType.Joystick)
-            frameRotationSpeed = _movementSettings.GamepadRotationSpeedMultiplier * _setSpeed;
+        //if (ReInput.controllers.GetLastActiveController().type == ControllerType.Joystick)
+        //    frameRotationSpeed = _movementSettings.GamepadRotationSpeedMultiplier * _setSpeed;
 
         Quaternion targetAngle = _characterController.transform.rotation * Quaternion.Euler(0, frameRotationSpeed, 0);
 
