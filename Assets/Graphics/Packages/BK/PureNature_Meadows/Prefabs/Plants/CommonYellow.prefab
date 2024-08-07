@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CommonYellow
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 782bec4da3a6f34459d6cd62e1546a0a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 125
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

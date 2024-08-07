@@ -53,12 +53,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 6d515a56392ff0c4ba584d38eb4fa711, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6d515a56392ff0c4ba584d38eb4fa711, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cc141c77d5af61244907e84951c627d0, type: 2}
     - target: {fileID: 919132149155446097, guid: 6d515a56392ff0c4ba584d38eb4fa711, type: 3}
       propertyPath: m_Name
       value: FlowerMeadow2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6d515a56392ff0c4ba584d38eb4fa711, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 125
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

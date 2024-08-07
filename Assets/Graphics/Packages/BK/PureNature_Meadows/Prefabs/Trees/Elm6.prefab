@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -9073292701763051647, guid: 9278c4adb0d6aeb4284844b4c427a6c7, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 18
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9278c4adb0d6aeb4284844b4c427a6c7, type: 3}
       propertyPath: m_RootOrder
@@ -57,6 +57,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -6060103781943364059, guid: 9278c4adb0d6aeb4284844b4c427a6c7, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6060103781943364059, guid: 9278c4adb0d6aeb4284844b4c427a6c7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2f1cb8f4881caa9469082499ce3d926d, type: 2}
@@ -66,11 +70,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ff1034aff585fcf488012125dcb10a81, type: 2}
     - target: {fileID: -2876924392563684752, guid: 9278c4adb0d6aeb4284844b4c427a6c7, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 18
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: -2180311638445578767, guid: 9278c4adb0d6aeb4284844b4c427a6c7, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 18
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -749280691187977648, guid: 9278c4adb0d6aeb4284844b4c427a6c7, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -749280691187977648, guid: 9278c4adb0d6aeb4284844b4c427a6c7, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -81,12 +89,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 2f1cb8f4881caa9469082499ce3d926d, type: 2}
     - target: {fileID: -77531358102194210, guid: 9278c4adb0d6aeb4284844b4c427a6c7, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -77531358102194210, guid: 9278c4adb0d6aeb4284844b4c427a6c7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5feb29fec2a453e448cc43c35f051f04, type: 2}
     - target: {fileID: 919132149155446097, guid: 9278c4adb0d6aeb4284844b4c427a6c7, type: 3}
       propertyPath: m_Name
       value: Elm6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9278c4adb0d6aeb4284844b4c427a6c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4742473837712756890, guid: 9278c4adb0d6aeb4284844b4c427a6c7, type: 3}
       propertyPath: m_FadeMode
@@ -110,7 +126,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8643742306393739920, guid: 9278c4adb0d6aeb4284844b4c427a6c7, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 18
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965490355427617483, guid: 9278c4adb0d6aeb4284844b4c427a6c7, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8965490355427617483, guid: 9278c4adb0d6aeb4284844b4c427a6c7, type: 3}
       propertyPath: m_Materials.Array.data[0]
