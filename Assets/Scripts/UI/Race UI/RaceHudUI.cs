@@ -17,6 +17,7 @@ public class RaceHudUI : MonoBehaviour, IWindow, IServiceLocatorComponent
     [ServiceLocatorComponent] private HobbyHorsePlayerManager _playerManager;
     [ServiceLocatorComponent] private SlowMotionManager _slowMotionManager;
 
+    [SerializeField] private GameObject _helpTTPanel;
     [SerializeField] private TextMeshProUGUI _speedValueText;
     [SerializeField] private TextMeshProUGUI _timerText;
     [SerializeField] private GameObject _startPanel;
@@ -78,6 +79,11 @@ public class RaceHudUI : MonoBehaviour, IWindow, IServiceLocatorComponent
                 StopCoroutine(_coroutine);
 
             _coroutine = StartCoroutine(StartTimer());
+        }
+
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            _helpTTPanel.SetActive(!_helpTTPanel.activeSelf);
         }
 
         if (_timer)
