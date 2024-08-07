@@ -479,7 +479,7 @@ MonoBehaviour:
   _gravitySpeed: 10
   _maxJumpForce: 4
   _minJumpForce: 2
-  _forceChargingSpeed: 10
+  _forceChargingSpeed: 7
   _forceCharging:
     serializedVersion: 2
     m_Curve:
