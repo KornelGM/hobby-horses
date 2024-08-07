@@ -10,6 +10,7 @@ public class NotificationMessage : MonoBehaviour
     [SerializeField] private Animator _animator;
     [SerializeField] private TextMeshProUGUI _notificationText;
     [SerializeField] private Image _notificationImage;
+    [SerializeField] private bool _changeColor;
 
     [SerializeField, FoldoutGroup("Audio")] private AudioPlayer _audioPlayer;
     [SerializeField, FoldoutGroup("Audio")] private AudioSource _audioSource;
@@ -18,7 +19,8 @@ public class NotificationMessage : MonoBehaviour
     private UnityEvent _onEndAnimation;
     public void SetNotification(NotificationInfo info, Color notificationColor)
     {   
-        _notificationImage.color = notificationColor;
+        if (_changeColor)
+            _notificationImage.color = notificationColor;
 
         string message = info.Description;
 

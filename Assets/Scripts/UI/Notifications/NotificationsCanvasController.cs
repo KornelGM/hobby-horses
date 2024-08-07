@@ -11,10 +11,10 @@ public class NotificationsCanvasController : MonoBehaviour, IServiceLocatorCompo
 
     [SerializeField] private NotificationMessage _sideNotificationPrefab;
     [SerializeField] private NotificationMessage _successNotificationPrefab;
-    [SerializeField] private NotificationMessage _dialogueNotificationPrefab;
+    [SerializeField] private NotificationMessage _failNotificationPrefab;
     [SerializeField] private Transform _sideNotificationParent;
     [SerializeField] private Transform _successNotificationParent;
-    [SerializeField] private Transform _dialogueNotificationParent;
+    [SerializeField] private Transform _failNotificationParent;
 
     [Space(10)]
     [SerializeField] private NotificationColor[] _notificationsColors;
@@ -34,15 +34,15 @@ public class NotificationsCanvasController : MonoBehaviour, IServiceLocatorCompo
     { 
         _notificationsSystem.SideNotificationHandler.OnShowNotification += info => OnShowNotification(info, _sideNotificationParent);
         _notificationsSystem.SuccessNotificationHandler.OnShowNotification += info => OnShowNotification(info, _successNotificationParent);
-        _notificationsSystem.DialoguesNotificationHandler.OnShowNotification += info => OnShowNotification(info, _dialogueNotificationParent);
+        _notificationsSystem.FailNotificationHandler.OnShowNotification += info => OnShowNotification(info, _failNotificationParent);
 
         _notificationsSystem.SideNotificationHandler.OnNotificationDoubled += OnDuplicateNotification;
         _notificationsSystem.SuccessNotificationHandler.OnNotificationDoubled += OnDuplicateNotification;
-        _notificationsSystem.DialoguesNotificationHandler.OnNotificationDoubled += OnDuplicateNotification;
+        _notificationsSystem.FailNotificationHandler.OnNotificationDoubled += OnDuplicateNotification;
         
         _notificationsSystem.SideNotificationHandler.OnHideNotification += info => OnHideNotification(info, _sideNotificationParent);
         _notificationsSystem.SuccessNotificationHandler.OnHideNotification += info => OnHideNotification(info, _successNotificationParent);
-        _notificationsSystem.DialoguesNotificationHandler.OnHideNotification += info => OnHideNotification(info, _dialogueNotificationParent);
+        _notificationsSystem.FailNotificationHandler.OnHideNotification += info => OnHideNotification(info, _failNotificationParent);
     }
 
     private void Update()
@@ -131,8 +131,8 @@ public class NotificationsCanvasController : MonoBehaviour, IServiceLocatorCompo
             return _sideNotificationPrefab;
         else if (transform == _successNotificationParent)
             return _successNotificationPrefab;
-        else if (transform == _dialogueNotificationParent)
-            return _dialogueNotificationPrefab;
+        else if (transform == _failNotificationParent)
+            return _failNotificationPrefab;
 
         return null;
     }

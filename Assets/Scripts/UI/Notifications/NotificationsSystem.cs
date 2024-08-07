@@ -11,7 +11,7 @@ public class NotificationsSystem : MonoBehaviour, IServiceLocatorComponent, IUpd
 
     [field: SerializeField] public NotificationHandler SuccessNotificationHandler { get; private set; } = new();
     [field: SerializeField] public NotificationHandler SideNotificationHandler { get; private set; } = new();
-    [field: SerializeField] public NotificationHandler DialoguesNotificationHandler { get; private set; } = new();
+    [field: SerializeField] public NotificationHandler FailNotificationHandler { get; private set; } = new();
 
     public void SendSuccessNotification(LocalizedString notificationText, NotificationType notificationType = NotificationType.Information)
     {
@@ -37,9 +37,9 @@ public class NotificationsSystem : MonoBehaviour, IServiceLocatorComponent, IUpd
         SendNotification(notificationText, notificationType, SideNotificationHandler);
     }
 
-    public void SendDialogueNotification(LocalizedString notificationText, NotificationType notificationType)
+    public void SendFailNotification(LocalizedString notificationText, NotificationType notificationType)
     {
-        SendNotification(notificationText, notificationType, DialoguesNotificationHandler);
+        SendNotification(notificationText, notificationType, FailNotificationHandler);
     }
 
     private void SendNotification(LocalizedString notificationText, NotificationType notificationType, NotificationHandler handler)
@@ -51,13 +51,54 @@ public class NotificationsSystem : MonoBehaviour, IServiceLocatorComponent, IUpd
     {
         SuccessNotificationHandler.CustomUpdate();
         SideNotificationHandler.CustomUpdate();
-        DialoguesNotificationHandler.CustomUpdate();
+        FailNotificationHandler.CustomUpdate();
 
-        //Basic notification funcitonality testing
-        //if (Input.GetKeyDown(KeyCode.Insert))
-        //{
-        //    SendSideNotification($"Test {Guid.NewGuid()}", NotificationType.Information);
-        //    SendCenterNotification($"Test {Guid.NewGuid()}", NotificationType.Warning);
-        //}
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            string succes = GetSucces();
+
+            SendSuccessNotification(succes, NotificationType.Information);
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            string fail = GetFail();
+
+            SendFailNotification(fail, NotificationType.Information);
+        }
+    }
+
+    private string GetSucces()
+    {
+        int random = Random.Range(0, 3);
+
+        switch (random)
+        {
+            case 0:
+                return "OMG!";
+            case 1:
+                return "Super!";
+            case 2:
+                return "Essa!";
+        }
+
+        return "";
+    }
+
+    private string GetFail()
+    {
+        int random = Random.Range(0, 3);
+
+        switch (random)
+        {
+            case 0:
+                return "WTF!?";
+            case 1:
+                return "LoL";
+            case 2:
+                return "Bad!";
+        }
+
+        return "";
     }
 }
