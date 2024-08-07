@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,6 +18,9 @@ public class RaceHudUI : MonoBehaviour, IWindow, IServiceLocatorComponent
     [ServiceLocatorComponent] private SlowMotionManager _slowMotionManager;
 
     [SerializeField] private TextMeshProUGUI _speedValueText;
+    [SerializeField] private TextMeshProUGUI _timerText;
+    [SerializeField] private GameObject _startPanel;
+    [SerializeField] private TextMeshProUGUI _startTimerText;
     [SerializeField] private GameObject _jumpBar;
     [SerializeField] private float _jumpBarVisibilityTreshold;
     [SerializeField] private Image _jumpForceBar;
@@ -28,8 +32,13 @@ public class RaceHudUI : MonoBehaviour, IWindow, IServiceLocatorComponent
     private HobbyHorseMovement _movement;
     private GravityCharacterController _gravityController;
 
+    private float _time;
+    private bool _timer;
+    private Coroutine _coroutine;
+
     public void Initialize()
     {
+        _startPanel.SetActive(false);
         _playerManager.LocalPlayer.TryGetServiceLocatorComponent(out _movement);
         _playerManager.LocalPlayer.TryGetServiceLocatorComponent(out _gravityController);
 
@@ -59,5 +68,59 @@ public class RaceHudUI : MonoBehaviour, IWindow, IServiceLocatorComponent
         float evaluatedSlowMotionTime = Mathf.InverseLerp(0, _slowMotionManager.MaxSlowMotionTime, time);
         _slowMotionBar.SetActive(evaluatedSlowMotionTime < _slowMotionVisibilityTreshold);
         _slowMotionTimeBar.fillAmount = evaluatedSlowMotionTime;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            if (_coroutine != null)
+                StopCoroutine(_coroutine);
+
+            _coroutine = StartCoroutine(StartTimer());
+        }
+
+        if (_timer)
+        {
+            _time += Time.deltaTime;
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (_timer)
+        {
+            UpdateTimer(_time);
+        }
+    }
+
+    private void UpdateTimer(float time)
+    {
+        var ts = System.TimeSpan.FromSeconds(time);
+        _timerText.text = ts.ToString("mm\\:ss\\:ff");
+    }
+
+    private IEnumerator StartTimer()
+    {
+        _startPanel.SetActive(true);
+        _timer = false;
+        _time = 0;
+        UpdateTimer(_time);
+
+        _startTimerText.text = "";
+        yield return new WaitForSecondsRealtime(1f);
+        _startTimerText.text = $"3";
+        yield return new WaitForSecondsRealtime(1f);
+        _startTimerText.text = $"2";
+        yield return new WaitForSecondsRealtime(1f);
+        _startTimerText.text = $"1";
+        yield return new WaitForSecondsRealtime(1f);
+        _startTimerText.text = $"GO!";
+
+        _timer = true;
+
+        yield return new WaitForSecondsRealtime(1f);
+        _startTimerText.text = "";
+        _startPanel.SetActive(false);
     }
 }
