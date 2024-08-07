@@ -7,7 +7,7 @@ using UnityEngine;
 public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwake
 {
     public ServiceLocator MyServiceLocator { get; set; }
-    public float ActualSpeed => _actualSpeed;
+    public float SetSpeed => _setSpeed;
     public float Velocity => _velocity;
     public CharacterController CharacterController => _characterController;
     public CustomHobbyHorse CustomHobbyHorse => _customHobbyHorse;
@@ -30,6 +30,7 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
     [SerializeField, FoldoutGroup("Constant values")] private float _dragOnAir;
     [SerializeField, FoldoutGroup("Constant values")] private float _rotateDrag;
     [SerializeField, FoldoutGroup("Constant values")] private float _maxBackwardSpeed;
+    [SerializeField, FoldoutGroup("Constant values")] private float _maxDifferenceValocitySetSpeed;
     [SerializeField, FoldoutGroup("Constant values")] private float _minOnAirSpeed;
     [SerializeField, FoldoutGroup("Constant values")] private float _rotateAccelerateOnAirDivider;
 
@@ -41,9 +42,9 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
     [SerializeField, FoldoutGroup("References")] private CinemachineVirtualCamera _virtualCamera;
     [SerializeField, FoldoutGroup("References")] private CustomHobbyHorse _customHobbyHorse;
 
-    private float _actualSpeed;
+    private float _setSpeed;
     private float _velocity;
-    private float _actualRotateSpeed;
+    private float _setRotateSpeed;
     private Vector3 _oldPosition;
     private bool _isGrounded;
 
@@ -114,8 +115,8 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
         CalculateRotateSpeed(moveInput.x, _isGrounded);
 
         // ----------------- Influence of turns
-        _animator.SetLayerWeight(turnIndex, (Mathf.Abs(_actualRotateSpeed)) / 3);
-        _animator.SetFloat("Twist", Mathf.InverseLerp(-1, _maxRotateSpeed, _actualRotateSpeed));
+        _animator.SetLayerWeight(turnIndex, (Mathf.Abs(_setRotateSpeed)) / 3);
+        _animator.SetFloat("Twist", Mathf.InverseLerp(-1, _maxRotateSpeed, _setRotateSpeed));
     }
 
     public void Move()
@@ -126,7 +127,7 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
         _animator.SetBool("Jump", !_isGrounded);
         _animator.SetFloat("Speed", Mathf.InverseLerp(0, _maxSpeed, _velocity));
 
-        MoveForward(_actualSpeed);   
+        MoveForward(_setSpeed);   
     }
 
     public void Rotate()
@@ -138,42 +139,46 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
     {
         if(!isGrounded)
         {
-            _actualSpeed -= _dragOnAir * (_gravityController.CurrGravity * 0.5f) * Time.deltaTime;
-            _actualSpeed = Mathf.Clamp(_actualSpeed, _minOnAirSpeed, 100);
+            _setSpeed -= _dragOnAir * (_gravityController.CurrGravity * 0.5f) * Time.deltaTime;
+            _setSpeed = Mathf.Clamp(_setSpeed, _minOnAirSpeed, 100);
             OnActualSpeedChange?.Invoke(_velocity);
-            return _actualSpeed;
+            return _setSpeed;
         }
 
         if (verticalInput == 0)
         {
-            _actualSpeed -= _drag * Time.deltaTime;
-            _actualSpeed = Mathf.Clamp(_actualSpeed, 0, _maxSpeed);
+            _setSpeed -= _drag * Time.deltaTime;
+            _setSpeed = Mathf.Clamp(_setSpeed, 0, _maxSpeed);
         }
-        else
+        else if (_setSpeed - _velocity <= _maxDifferenceValocitySetSpeed)
         {
             float accelerate = verticalInput > 0 
                 ? verticalInput * _accelerate 
                 : verticalInput * _brakForce;
 
-            _actualSpeed += accelerate * Time.deltaTime;
-            _actualSpeed = Mathf.Clamp(_actualSpeed, _maxBackwardSpeed, _maxSpeed);
+            _setSpeed += accelerate * Time.deltaTime;
+            _setSpeed = Mathf.Clamp(_setSpeed, _maxBackwardSpeed, _maxSpeed);
+        }
+        else
+        {
+            _setSpeed = _velocity;
         }
 
-        OnActualSpeedChange?.Invoke(_actualSpeed);
-        return _actualSpeed;
+        OnActualSpeedChange?.Invoke(_setSpeed);
+        return _setSpeed;
     }
 
     protected float CalculateRotateSpeed(float horizontalInput, bool isGrounded)
     {
-        if (_actualRotateSpeed < 0 && horizontalInput >= 0)
+        if (_setRotateSpeed < 0 && horizontalInput >= 0)
         {
-            _actualRotateSpeed += (_rotateDrag) * Time.deltaTime;
-            _actualRotateSpeed = Mathf.Clamp(_actualRotateSpeed, -_maxRotateSpeed, 0);
+            _setRotateSpeed += (_rotateDrag) * Time.deltaTime;
+            _setRotateSpeed = Mathf.Clamp(_setRotateSpeed, -_maxRotateSpeed, 0);
         }
-        else if (_actualRotateSpeed > 0 && horizontalInput <= 0)
+        else if (_setRotateSpeed > 0 && horizontalInput <= 0)
         {
-            _actualRotateSpeed -= (_rotateDrag) * Time.deltaTime;
-            _actualRotateSpeed = Mathf.Clamp(_actualRotateSpeed, 0, _maxRotateSpeed);
+            _setRotateSpeed -= (_rotateDrag) * Time.deltaTime;
+            _setRotateSpeed = Mathf.Clamp(_setRotateSpeed, 0, _maxRotateSpeed);
         }
 
         if (horizontalInput != 0)
@@ -182,11 +187,11 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
                 ? horizontalInput * _rotateAccelerate
                 : horizontalInput * (_rotateAccelerate / _rotateAccelerateOnAirDivider);
 
-            _actualRotateSpeed += accelerate * Time.deltaTime;
-            _actualRotateSpeed = Mathf.Clamp(_actualRotateSpeed, -_maxRotateSpeed, _maxRotateSpeed);
+            _setRotateSpeed += accelerate * Time.deltaTime;
+            _setRotateSpeed = Mathf.Clamp(_setRotateSpeed, -_maxRotateSpeed, _maxRotateSpeed);
         }
 
-        return _actualRotateSpeed;
+        return _setRotateSpeed;
     }
 
     protected void MoveForward(float speed)
@@ -209,14 +214,14 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
 
     private void RotatePlayer()
     {
-        var frameRotationSpeed = _movementSettings.RotationSpeed * _actualRotateSpeed;
+        var frameRotationSpeed = _movementSettings.RotationSpeed * _setRotateSpeed;
 
         if (ReInput.controllers.GetLastActiveController().type == ControllerType.Joystick)
-            frameRotationSpeed = _movementSettings.GamepadRotationSpeedMultiplier * _actualSpeed;
+            frameRotationSpeed = _movementSettings.GamepadRotationSpeedMultiplier * _setSpeed;
 
         Quaternion targetAngle = _characterController.transform.rotation * Quaternion.Euler(0, frameRotationSpeed, 0);
 
-        float targetPosition = Mathf.InverseLerp(-_maxRotateSpeed, _maxRotateSpeed, _actualRotateSpeed);
+        float targetPosition = Mathf.InverseLerp(-_maxRotateSpeed, _maxRotateSpeed, _setRotateSpeed);
         float evaluateTargetPosition = _positionCurve.Evaluate(targetPosition);
         float evaluateCameraTilt = _cameraTiltCurve.Evaluate(targetPosition);
 

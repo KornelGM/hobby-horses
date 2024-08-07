@@ -540,6 +540,7 @@ MonoBehaviour:
   _dragOnAir: 0.1
   _rotateDrag: 15
   _maxBackwardSpeed: -2
+  _maxDifferenceValocitySetSpeed: 0.5
   _minOnAirSpeed: 1
   _rotateAccelerateOnAirDivider: 3
   _positionCurve:
