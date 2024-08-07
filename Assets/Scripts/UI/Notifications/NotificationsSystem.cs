@@ -59,13 +59,6 @@ public class NotificationsSystem : MonoBehaviour, IServiceLocatorComponent, IUpd
 
             SendSuccessNotification(succes, NotificationType.Information);
         }
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            string fail = GetFail();
-
-            SendFailNotification(fail, NotificationType.Information);
-        }
     }
 
     private string GetSucces()
@@ -80,23 +73,6 @@ public class NotificationsSystem : MonoBehaviour, IServiceLocatorComponent, IUpd
                 return "Super!";
             case 2:
                 return "Essa!";
-        }
-
-        return "";
-    }
-
-    private string GetFail()
-    {
-        int random = Random.Range(0, 3);
-
-        switch (random)
-        {
-            case 0:
-                return "WTF!?";
-            case 1:
-                return "LoL";
-            case 2:
-                return "Bad!";
         }
 
         return "";

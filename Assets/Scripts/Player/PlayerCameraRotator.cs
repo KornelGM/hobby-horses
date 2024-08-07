@@ -9,6 +9,8 @@ public class PlayerCameraRotator : MonoBehaviour, IServiceLocatorComponent, IAwa
     public ServiceLocator MyServiceLocator { get; set; }
     public Transform Camera => _camera;
 
+    [ServiceLocatorComponent] private NotificationsSystem _notificationSystem;
+
     [SerializeField] private MovementSettings _movementSettings;
 
     [SerializeField] private Transform _camera;
@@ -50,6 +52,17 @@ public class PlayerCameraRotator : MonoBehaviour, IServiceLocatorComponent, IAwa
         angleY = Mathf.Clamp(angleY, -20, 40);
         angleX = Mathf.Clamp(angleX, -80, 80);
         _camera.localRotation = Quaternion.Euler(angleY, angleX, 0);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            string fail = GetFail();
+
+            _notificationSystem.SendFailNotification(fail, NotificationType.Information);
+            ShakeCamera(10);
+        }
     }
 
     private void RotateCamera(float MouseY, float MouseX)
@@ -96,5 +109,22 @@ public class PlayerCameraRotator : MonoBehaviour, IServiceLocatorComponent, IAwa
     public void BackToCenterPosition()
     {
         SwitchFreeCamera(false);
+    }
+
+    private string GetFail()
+    {
+        int random = Random.Range(0, 3);
+
+        switch (random)
+        {
+            case 0:
+                return "WTF!?";
+            case 1:
+                return "LoL";
+            case 2:
+                return "Bad!";
+        }
+
+        return "";
     }
 }

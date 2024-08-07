@@ -87,19 +87,19 @@ public class GravityCharacterController : MonoBehaviour, IServiceLocatorComponen
         if ((Mathf.Clamp(_jumpForce, _minJumpForce, _maxJumpForce) / _maxJumpForce) > 0.95 && !IsGrounded)
         {
             _animator.SetFloat("JumpForce", 0);
-            _notificationsSystem.SendSuccessNotification("Essa!", NotificationType.Information);
+            //_notificationsSystem.SendSuccessNotification("Essa!", NotificationType.Information);
             Debug.Log("High Jump");
         }
         else if ((Mathf.Clamp(_jumpForce, _minJumpForce, _maxJumpForce) / _maxJumpForce) <= 0.95 && (Mathf.Clamp(_jumpForce, _minJumpForce, _maxJumpForce) / _maxJumpForce) > 0.75 && !IsGrounded)
         {
             _animator.SetFloat("JumpForce", 1);
-            _notificationsSystem.SendSuccessNotification("Super!", NotificationType.Information);
+            //_notificationsSystem.SendSuccessNotification("Super!", NotificationType.Information);
             Debug.Log("Mid Jump");
         }
         else
         {
             _animator.SetFloat("JumpForce", 1);
-            _notificationsSystem.SendSuccessNotification("Nieüle!", NotificationType.Information);
+            //_notificationsSystem.SendSuccessNotification("Nieüle!", NotificationType.Information);
             Debug.Log("Low Jump");
         }
     }
