@@ -97,6 +97,7 @@ MonoBehaviour:
   _animator: {fileID: 8568255583814149471}
   _notificationText: {fileID: 5844527325012092165}
   _notificationImage: {fileID: 178354182740422907}
+  _changeColor: 0
   _audioPlayer: {fileID: 2597881015727520321}
   _audioSource: {fileID: 8805347218332819678}
   _audioStorage: {fileID: 5298217902915552688}
@@ -263,8 +264,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Main room
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a5e554f9606f41048b94dbf88fc30e17, type: 2}
-  m_sharedMaterial: {fileID: 9040772708419309493, guid: a5e554f9606f41048b94dbf88fc30e17, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a2d95355c8dac9b45a5dcedb8e201758, type: 2}
+  m_sharedMaterial: {fileID: 6485396988296030409, guid: a2d95355c8dac9b45a5dcedb8e201758, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
