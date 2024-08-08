@@ -239,7 +239,7 @@ MonoBehaviour:
   TimeMultiplier: 1
   <SuccessNotificationHandler>k__BackingField:
     _unitOfTimePerLetter: 0.15
-    _minimumNotyficationTime: 0.5
+    _minimumNotyficationTime: 0.25
     _maxNotificationsSameTime: 1
   <SideNotificationHandler>k__BackingField:
     _unitOfTimePerLetter: 0.048
@@ -247,7 +247,7 @@ MonoBehaviour:
     _maxNotificationsSameTime: 4
   <FailNotificationHandler>k__BackingField:
     _unitOfTimePerLetter: 0.15
-    _minimumNotyficationTime: 0.5
+    _minimumNotyficationTime: 0.25
     _maxNotificationsSameTime: 1
 --- !u!114 &3475547960665906456
 MonoBehaviour:

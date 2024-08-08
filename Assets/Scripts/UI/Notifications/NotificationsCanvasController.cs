@@ -4,6 +4,7 @@ using Sirenix.Utilities;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using static NotificationHandler;
 
 public class NotificationsCanvasController : MonoBehaviour, IServiceLocatorComponent, IStartable
 {
@@ -20,7 +21,7 @@ public class NotificationsCanvasController : MonoBehaviour, IServiceLocatorCompo
     [SerializeField] private NotificationColor[] _notificationsColors;
 
     [Space(10)]
-    [SerializeField] private LayoutGroup[] _handledLayoutGroups;
+    [SerializeField] private VerticalLayoutGroup[] _handledLayoutGroups;
 
     [Space(10)]
     [SerializeField] private float _scrollingSpeed = 400f;
@@ -40,9 +41,9 @@ public class NotificationsCanvasController : MonoBehaviour, IServiceLocatorCompo
         _notificationsSystem.SuccessNotificationHandler.OnNotificationDoubled += OnDuplicateNotification;
         _notificationsSystem.FailNotificationHandler.OnNotificationDoubled += OnDuplicateNotification;
         
-        _notificationsSystem.SideNotificationHandler.OnHideNotification += info => OnHideNotification(info, _sideNotificationParent);
-        _notificationsSystem.SuccessNotificationHandler.OnHideNotification += info => OnHideNotification(info, _successNotificationParent);
-        _notificationsSystem.FailNotificationHandler.OnHideNotification += info => OnHideNotification(info, _failNotificationParent);
+        _notificationsSystem.SideNotificationHandler.OnHideNotification += info => OnHideNotification(info, _sideNotificationParent, _notificationsSystem.SideNotificationHandler);
+        _notificationsSystem.SuccessNotificationHandler.OnHideNotification += info => OnHideNotification(info, _successNotificationParent, _notificationsSystem.SuccessNotificationHandler);
+        _notificationsSystem.FailNotificationHandler.OnHideNotification += info => OnHideNotification(info, _failNotificationParent, _notificationsSystem.FailNotificationHandler);
     }
 
     private void Update()
@@ -74,12 +75,12 @@ public class NotificationsCanvasController : MonoBehaviour, IServiceLocatorCompo
         notificationObject.DuplicateAnimation();
     }
     
-    private void OnHideNotification(NotificationInfo notificationInfo, Transform notificationParent)
+    private void OnHideNotification(NotificationData notificationInfo, Transform notificationParent, NotificationHandler handler)
     {
-        NotificationMessage notificationObject = FindObjectByNotificationInfo(notificationInfo);
+        NotificationMessage notificationObject = FindObjectByNotificationInfo(notificationInfo.Info);
         for (int i = 0; i < notificationsBeingShown.Count; i++)
         {
-            if (notificationsBeingShown[i].Key.CompareNotification(notificationInfo))
+            if (notificationsBeingShown[i].Key.CompareNotification(notificationInfo.Info))
             {
                 notificationsBeingShown.RemoveAt(i);
                 break;
@@ -95,13 +96,25 @@ public class NotificationsCanvasController : MonoBehaviour, IServiceLocatorCompo
 
         void OnEndAnimation()
         {
+            handler.RemoveNotification(notificationInfo);
             var parentLayout = notificationParent.GetComponent<VerticalLayoutGroup>();
             int notificationHeight = (int)notificationObject.GetComponent<RectTransform>().rect.height;
             Destroy(notificationObject.gameObject);
 
-            if (notificationsBeingShown.Count == 0) parentLayout.padding.top = 0;
 
-            parentLayout.padding.top += (int)(notificationHeight + parentLayout.spacing);
+
+            if (notificationsBeingShown.Count == 0)
+            {
+                if (parentLayout.reverseArrangement)
+                    parentLayout.padding.top = 0;
+                else
+                    parentLayout.padding.bottom = 0;
+            }
+
+            if (parentLayout.reverseArrangement)
+                parentLayout.padding.top += (int)(notificationHeight + parentLayout.spacing);
+            else
+                parentLayout.padding.bottom += (int)(notificationHeight + parentLayout.spacing);
         }
     }
 
@@ -114,12 +127,25 @@ public class NotificationsCanvasController : MonoBehaviour, IServiceLocatorCompo
             int cumulatedInts = Mathf.FloorToInt(scrollingCumulation);
             _handledLayoutGroups.ForEach(group =>
             {
-                if (group.padding.top > 0)
+                if (group.reverseArrangement)
                 {
-                    group.padding.top-=cumulatedInts;
-                    if(group.padding.top < 0)
-                        group.padding.top = 0;
+                    if (group.padding.top > 0)
+                    {
+                        group.padding.top -= cumulatedInts;
+                        if (group.padding.top < 0)
+                            group.padding.top = 0;
+                    }
                 }
+                else
+                {
+                    if (group.padding.bottom > 0)
+                    {
+                        group.padding.bottom -= cumulatedInts;
+                        if (group.padding.bottom < 0)
+                            group.padding.bottom = 0;
+                    }
+                }
+
             });
             scrollingCumulation -= cumulatedInts;
         }

@@ -32,7 +32,7 @@ public class NotificationHandler
 
     public event Action<NotificationInfo> OnShowNotification;
     public event Action<NotificationInfo> OnNotificationDoubled;
-    public event Action<NotificationInfo> OnHideNotification;
+    public event Action<NotificationData> OnHideNotification;
 
     [SerializeField] private float _unitOfTimePerLetter = 0.15f;
     [SerializeField] private float _minimumNotyficationTime = 3f;
@@ -71,10 +71,14 @@ public class NotificationHandler
 
             if(notification.LeastTime <= 0)
             {
-                HideNotification(notification.Info);
-                _shownNotifications.Remove(notification);
+                HideNotification(notification);
             }
         }
+    }
+
+    public void RemoveNotification(NotificationData notification)
+    {
+        _shownNotifications.Remove(notification);
     }
 
     private void TryShowNotificationsFromQueue()
@@ -85,17 +89,17 @@ public class NotificationHandler
             
             NotificationData notification = _notificationsInQueue.Dequeue();
 
-            ShowNotification(notification.Info);
+            ShowNotification(notification);
             _shownNotifications.Add(notification);
         }
     }
 
-    private void ShowNotification(NotificationInfo notification)
+    private void ShowNotification(NotificationData notification)
     {
-        OnShowNotification?.Invoke(notification);
+        OnShowNotification?.Invoke(notification.Info);
     }
 
-    private void HideNotification(NotificationInfo notification)
+    private void HideNotification(NotificationData notification)
     {
         OnHideNotification?.Invoke(notification);
     }
