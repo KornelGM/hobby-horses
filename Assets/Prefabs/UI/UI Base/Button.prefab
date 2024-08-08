@@ -68,8 +68,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Resume
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef28964c79674c441a824c889d8c7de4, type: 2}
-  m_sharedMaterial: {fileID: 1594391274719333039, guid: ef28964c79674c441a824c889d8c7de4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: eca444148bb7d344fad9d6c06725524f, type: 2}
+  m_sharedMaterial: {fileID: 1750512695499804688, guid: eca444148bb7d344fad9d6c06725524f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.8
+  m_fontSize: 40
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 10, y: 5, z: 10, w: 9}
+  m_margin: {x: 20, y: 5, z: 20, w: 9}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -186,8 +186,6 @@ GameObject:
   - component: {fileID: 1762772413655750729}
   - component: {fileID: 8233201240988529075}
   - component: {fileID: 7509671898468181714}
-  - component: {fileID: 529819563307763673}
-  - component: {fileID: 6659522799950311972}
   - component: {fileID: 546187894799019247}
   - component: {fileID: 3247718497650143637}
   - component: {fileID: -5787472662498011380}
@@ -248,7 +246,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 732fb5aeeb15f0344a49312dcdbf787f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8b92da5c9c55df48a7e6905bc679760, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -257,7 +255,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 5
+  m_PixelsPerUnitMultiplier: 2
 --- !u!114 &7509671898468181714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,11 +277,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.86412054, b: 0.7783019, a: 1}
-    m_PressedColor: {r: 0.990566, g: 0.6587286, b: 0.3037113, a: 1}
-    m_SelectedColor: {r: 0.85882354, g: 0.64705884, b: 0.15686275, a: 1}
-    m_DisabledColor: {r: 0.6226415, g: 0.5879571, b: 0.5315949, a: 1}
+    m_NormalColor: {r: 1, g: 0.87078243, b: 0.15566039, a: 1}
+    m_HighlightedColor: {r: 0.9433962, g: 0.58058846, b: 0, a: 1}
+    m_PressedColor: {r: 0.8301887, g: 0.42924532, b: 0, a: 1}
+    m_SelectedColor: {r: 0.83137256, g: 0.42745098, b: 0, a: 1}
+    m_DisabledColor: {r: 0.8018868, g: 0.7412026, b: 0.6468049, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -302,36 +300,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &529819563307763673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7924176139908836681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.2509804, g: 0.13333334, b: 0.09411765, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
---- !u!114 &6659522799950311972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7924176139908836681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.2509804, g: 0.13333334, b: 0.09411765, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
 --- !u!114 &546187894799019247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,6 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Volume: 1
+  PrevIndex: 0
   _audioSource: {fileID: 0}
 --- !u!114 &3247718497650143637
 MonoBehaviour:
