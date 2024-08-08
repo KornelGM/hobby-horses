@@ -1,6 +1,5 @@
 using Sirenix.OdinInspector;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,11 +25,12 @@ public class Track : MonoBehaviour
         {
             for (var j = 0; j < _path[i].MaxPoints; j++)
             {
-                var newPosition = CubicCurve(_path[i].Target.position, _path[i].Target.position + _path[i].Offset, _path[i].Target.position + _path[i].Offset,
+                var newPosition = CubicCurve(_path[i].Target.position, _path[i].Target.position + _path[i].Offset, _path[i + 1].Target.position + _path[i].Offset,
                     _path[i + 1].Target.position, (float)j / _path[i].MaxPoints);
                 _allPositions.Add(newPosition);
             }
         }
+        _allPositions.Add(_path[_path.Length - 1].Target.position);
 
         Debug.Log($"{gameObject.name} set new track");
     }
@@ -53,7 +53,7 @@ public class Track : MonoBehaviour
         {
             for (var j = 0; j <= _path[i].MaxPoints; j++)
             {
-                var newPosition = CubicCurve(_path[i].Target.position, _path[i].Target.position + _path[i].Offset, _path[i].Target.position + _path[i].Offset,
+                var newPosition = CubicCurve(_path[i].Target.position, _path[i].Target.position + _path[i].Offset, _path[i + 1].Target.position + _path[i].Offset,
                     _path[i + 1].Target.position, (float)j / _path[i].MaxPoints);
                 Gizmos.DrawSphere(newPosition, _gizmosRadius);
             }

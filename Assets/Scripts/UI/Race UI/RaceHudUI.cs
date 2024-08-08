@@ -20,7 +20,7 @@ public class RaceHudUI : MonoBehaviour, IWindow, IServiceLocatorComponent
     [SerializeField] private GameObject _helpTTPanel;
     [SerializeField] private TextMeshProUGUI _speedValueText;
     [SerializeField] private TextMeshProUGUI _timerText;
-    [SerializeField] private GameObject _startPanel;
+    [SerializeField] private Animator _startPanel;
     [SerializeField] private TextMeshProUGUI _startTimerText;
     [SerializeField] private GameObject _jumpBar;
     [SerializeField] private float _jumpBarVisibilityTreshold;
@@ -39,7 +39,7 @@ public class RaceHudUI : MonoBehaviour, IWindow, IServiceLocatorComponent
 
     public void Initialize()
     {
-        _startPanel.SetActive(false);
+        _startPanel.gameObject.SetActive(false);
         _playerManager.LocalPlayer.TryGetServiceLocatorComponent(out _movement);
         _playerManager.LocalPlayer.TryGetServiceLocatorComponent(out _gravityController);
 
@@ -108,25 +108,32 @@ public class RaceHudUI : MonoBehaviour, IWindow, IServiceLocatorComponent
 
     private IEnumerator StartTimer()
     {
-        _startPanel.SetActive(true);
+        _startPanel.gameObject.SetActive(true);
         _timer = false;
         _time = 0;
         UpdateTimer(_time);
 
         _startTimerText.text = "";
         yield return new WaitForSecondsRealtime(1f);
+        _startPanel.SetTrigger("Start");
         _startTimerText.text = $"3";
+
         yield return new WaitForSecondsRealtime(1f);
+        _startPanel.SetTrigger("Start");
         _startTimerText.text = $"2";
+
         yield return new WaitForSecondsRealtime(1f);
+        _startPanel.SetTrigger("Start");
         _startTimerText.text = $"1";
+
         yield return new WaitForSecondsRealtime(1f);
+        _startPanel.SetTrigger("Start");
         _startTimerText.text = $"GO!";
 
         _timer = true;
 
         yield return new WaitForSecondsRealtime(1f);
         _startTimerText.text = "";
-        _startPanel.SetActive(false);
+        _startPanel.gameObject.SetActive(false);
     }
 }
