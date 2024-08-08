@@ -19,11 +19,13 @@ public class ObstacleManager : MonoBehaviour, IServiceLocatorComponent
 
         foreach (var guide in _guides)
         {
-            guide.gameObject.SetActive(false);
+            guide.InitializeTrackGuide();
+            guide.SetGuidesDeactivated();
         }
 
         _obstacles[0].enabled = true;
-        _guides[0].gameObject.SetActive(true);
+        _guides[0].SetGuidesActive();
+        _guides[1].SetGuidesActive(true);
     }
 
     public void TurnOutline(int index)
@@ -32,18 +34,22 @@ public class ObstacleManager : MonoBehaviour, IServiceLocatorComponent
             return;
 
         _obstacles[index].enabled = false;
-        _guides[index].gameObject.SetActive(false);
+        _guides[index].SetGuidesDeactivated();
         _index = index;
 
         if (index + 1 >= _obstacles.Length)
         {
             _index = -1;
             _obstacles[0].enabled = true;
-            _guides[0].gameObject.SetActive(true);
+            _guides[0].SetGuidesActive();
+            _guides[1].SetGuidesActive(true);
             return;
         }
 
         _obstacles[index + 1].enabled = true;
-        _guides[index + 1].gameObject.SetActive(true);
+        _guides[index + 1].SetGuidesActive();
+
+        if (index + 2 < _obstacles.Length)
+            _guides[index + 2].SetGuidesActive(true);
     }
 }

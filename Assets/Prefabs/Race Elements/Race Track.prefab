@@ -137,4 +137,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _track: {fileID: 4068362143677153434}
-  _guidePrefab: {fileID: 6932208368471738785, guid: 9d4e106713c4c5c48b05313ee37f35c8, type: 3}
+  _guidePrefab: {fileID: 5476957206364314001, guid: 9d4e106713c4c5c48b05313ee37f35c8, type: 3}
