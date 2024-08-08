@@ -175,6 +175,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5347085070627218246}
+  - {fileID: 7822373275603732453}
   m_Father: {fileID: 5617703540863737100}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1513976609573336316
@@ -600,6 +601,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _animeSpeedEffect: {fileID: 2505628255473042314}
+  _speedFOV: 10
   _target: {fileID: 416457773258895089}
   _animator: {fileID: 5137547512785249964}
   _virtualCamera: {fileID: 1513976609573336316}
@@ -779,6 +782,73 @@ Animator:
 Transform:
   m_CorrespondingSourceObject: {fileID: -4589536673217953989, guid: 68b6e448affb54a4a82da5a6a663b802, type: 3}
   m_PrefabInstance: {fileID: 1596149587435920189}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2123186969131026943
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1988173129231171773}
+    m_Modifications:
+    - target: {fileID: 1443262295028292568, guid: f3e056c85462ed54c92cbdf8338deb0e, type: 3}
+      propertyPath: m_Name
+      value: Anime Spikes Effect
+      objectReference: {fileID: 0}
+    - target: {fileID: 8212793583365099034, guid: f3e056c85462ed54c92cbdf8338deb0e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8212793583365099034, guid: f3e056c85462ed54c92cbdf8338deb0e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8212793583365099034, guid: f3e056c85462ed54c92cbdf8338deb0e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8212793583365099034, guid: f3e056c85462ed54c92cbdf8338deb0e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8212793583365099034, guid: f3e056c85462ed54c92cbdf8338deb0e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8212793583365099034, guid: f3e056c85462ed54c92cbdf8338deb0e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8212793583365099034, guid: f3e056c85462ed54c92cbdf8338deb0e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8212793583365099034, guid: f3e056c85462ed54c92cbdf8338deb0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8212793583365099034, guid: f3e056c85462ed54c92cbdf8338deb0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8212793583365099034, guid: f3e056c85462ed54c92cbdf8338deb0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f3e056c85462ed54c92cbdf8338deb0e, type: 3}
+--- !u!198 &2505628255473042314 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4589964976779430517, guid: f3e056c85462ed54c92cbdf8338deb0e, type: 3}
+  m_PrefabInstance: {fileID: 2123186969131026943}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7822373275603732453 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8212793583365099034, guid: f3e056c85462ed54c92cbdf8338deb0e, type: 3}
+  m_PrefabInstance: {fileID: 2123186969131026943}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4410194116396645308
 PrefabInstance:

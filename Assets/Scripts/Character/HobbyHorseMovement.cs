@@ -36,6 +36,9 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
     [SerializeField, FoldoutGroup("Curves")] private AnimationCurve _positionCurve;
     [SerializeField, FoldoutGroup("Curves")] private AnimationCurve _cameraTiltCurve;
 
+    [SerializeField, FoldoutGroup("Speed Effect")] private ParticleSystem _animeSpeedEffect;
+    [SerializeField, FoldoutGroup("Speed Effect")] private float _speedFOV;
+
     [SerializeField, FoldoutGroup("References")] private Transform _target;
     [SerializeField, FoldoutGroup("References")] private Animator _animator;
     [SerializeField, FoldoutGroup("References")] private CinemachineVirtualCamera _virtualCamera;
@@ -46,6 +49,7 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
     private float _setRotateSpeed;
     private Vector3 _oldPosition;
     private bool _isGrounded;
+    private float _normalFOV;
 
     // ---------------------------- Controller
     private CharacterController _characterController;
@@ -61,6 +65,8 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
         _characterController.IsNotNull(this, nameof(_characterController));
         _movementSettings.IsNotNull(this, nameof(_movementSettings));
         _oldPosition = _characterController.transform.position;
+        _animeSpeedEffect.Stop();
+        _normalFOV = _virtualCamera.m_Lens.FieldOfView;
 
         // ----------------------------------------- Animation Controller
         turnIndex = _animator.GetLayerIndex("Turn");
@@ -112,6 +118,7 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
 
         CalculateSpeed(moveInput.z, _isGrounded);
         CalculateRotateSpeed(moveInput.x, _isGrounded);
+        SwitchSpeedEffect();
 
         // ----------------- Influence of turns
         _animator.SetLayerWeight(turnIndex, (Mathf.Abs(_setRotateSpeed)) / 3);
@@ -129,6 +136,20 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
         MoveForward(_setSpeed);   
     }
 
+    private void SwitchSpeedEffect()
+    {
+        if (_animeSpeedEffect.isStopped && _velocity > _maxSpeed - _maxDifferenceValocitySetSpeed)
+        {
+            _animeSpeedEffect.Play();
+            //_virtualCamera.m_Lens.FieldOfView = _normalFOV + _speedFOV;
+        }
+        else if (!_animeSpeedEffect.isStopped && _velocity < _maxSpeed + _maxDifferenceValocitySetSpeed)
+        {
+            _animeSpeedEffect.Stop();
+            //_virtualCamera.m_Lens.FieldOfView = _normalFOV - _speedFOV;
+        }
+    }
+
     public void Rotate()
     {
         RotatePlayer();
@@ -144,19 +165,27 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
             return _setSpeed;
         }
 
-        if (verticalInput == 0)
+        if (verticalInput == 0 || _setSpeed > _maxSpeed)
         {
             _setSpeed -= _drag * Time.deltaTime;
-            _setSpeed = Mathf.Clamp(_setSpeed, 0, _maxSpeed);
+            _setSpeed = Mathf.Clamp(_setSpeed, 0, 100);
         }
-        else if (_setSpeed - _velocity <= _maxDifferenceValocitySetSpeed)
+        else if (_setSpeed - _velocity <= _maxDifferenceValocitySetSpeed && verticalInput > 0)
         {
-            float accelerate = verticalInput > 0 
-                ? verticalInput * _accelerate 
-                : verticalInput * _brakForce;
+            float accelerate = verticalInput * _accelerate;
+
+            if(_setSpeed < _maxSpeed)
+            {
+                _setSpeed += accelerate * Time.deltaTime;
+                _setSpeed = Mathf.Clamp(_setSpeed, _maxBackwardSpeed, 100);
+            }
+        }
+        else if(verticalInput < 0)
+        {
+            float accelerate = verticalInput * _brakForce;
 
             _setSpeed += accelerate * Time.deltaTime;
-            _setSpeed = Mathf.Clamp(_setSpeed, _maxBackwardSpeed, _maxSpeed);
+            _setSpeed = Mathf.Clamp(_setSpeed, _maxBackwardSpeed, 100);
         }
         else
         {
@@ -228,5 +257,15 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
         _target.localPosition = new Vector3(evaluateTargetPosition, _target.localPosition.y, _target.localPosition.z);
 
         _characterController.transform.rotation = targetAngle;
+    }
+
+    public void IncreaseSetSpeed(float value)
+    {
+        _setSpeed += value;
+    }
+
+    public void ReduceSetSpeed(float value)
+    {
+        _setSpeed -= value;
     }
 }

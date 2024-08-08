@@ -153,6 +153,7 @@ Material:
     - _Ambient_Occlusion: 0.9
     - _Anisotropy: 0
     - _BlendMode: 0
+    - _Can_Emission: 1
     - _CoatMask: 0
     - _ColorMask: -15.9
     - _ConservativeDepthOffsetEnable: 0
@@ -264,7 +265,7 @@ Material:
     - _ColorTint: {r: 1, g: 1, b: 1, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
-    - _Emission: {r: 2.5736735, g: 1.676244, b: 0.42489886, a: 0.78431374}
+    - _Emission: {r: 0.1608546, g: 0.10476525, b: 0.026556179, a: 0.39215687}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
