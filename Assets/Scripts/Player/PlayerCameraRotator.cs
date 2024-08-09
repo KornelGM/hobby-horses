@@ -54,17 +54,6 @@ public class PlayerCameraRotator : MonoBehaviour, IServiceLocatorComponent, IAwa
         _camera.localRotation = Quaternion.Euler(angleY, angleX, 0);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            string fail = GetFail();
-
-            _notificationSystem.SendFailNotification(fail, NotificationType.Information);
-            ShakeCamera(10);
-        }
-    }
-
     private void RotateCamera(float MouseY, float MouseX)
     {
         Quaternion rotation = _camera.localRotation * Quaternion.Euler(-MouseY * _movementSettings.RotationSpeed, MouseX * _movementSettings.RotationSpeed, 0);
@@ -109,22 +98,5 @@ public class PlayerCameraRotator : MonoBehaviour, IServiceLocatorComponent, IAwa
     public void BackToCenterPosition()
     {
         SwitchFreeCamera(false);
-    }
-
-    private string GetFail()
-    {
-        int random = Random.Range(0, 3);
-
-        switch (random)
-        {
-            case 0:
-                return "WTF!?";
-            case 1:
-                return "LoL";
-            case 2:
-                return "Bad!";
-        }
-
-        return "";
     }
 }

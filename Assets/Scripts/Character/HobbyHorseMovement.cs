@@ -43,6 +43,7 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
     [SerializeField, FoldoutGroup("References")] private Animator _animator;
     [SerializeField, FoldoutGroup("References")] private CinemachineVirtualCamera _virtualCamera;
     [SerializeField, FoldoutGroup("References")] private CustomHobbyHorse _customHobbyHorse;
+    [SerializeField, FoldoutGroup("References")] private HobbyHorseEffectController _effects;
 
     private float _setSpeed;
     private float _velocity;
@@ -133,7 +134,8 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
         _animator.SetBool("Jump", !_isGrounded);
         _animator.SetFloat("Speed", Mathf.InverseLerp(0, _maxSpeed, _velocity));
 
-        MoveForward(_setSpeed);   
+        MoveForward(_setSpeed);
+        CollisionDetect();
     }
 
     private void SwitchSpeedEffect()
@@ -157,7 +159,7 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
 
     protected float CalculateSpeed(float verticalInput, bool isGrounded)
     {
-        if(!isGrounded)
+        if (!isGrounded)
         {
             _setSpeed -= _dragOnAir * (_gravityController.CurrGravity * 0.5f) * Time.deltaTime;
             _setSpeed = Mathf.Clamp(_setSpeed, _minOnAirSpeed, 100);
@@ -186,10 +188,6 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
 
             _setSpeed += accelerate * Time.deltaTime;
             _setSpeed = Mathf.Clamp(_setSpeed, _maxBackwardSpeed, 100);
-        }
-        else
-        {
-            _setSpeed = _velocity;
         }
 
         OnActualSpeedChange?.Invoke(_setSpeed);
@@ -267,5 +265,18 @@ public class HobbyHorseMovement : MonoBehaviour, IServiceLocatorComponent, IAwak
     public void ReduceSetSpeed(float value)
     {
         _setSpeed -= value;
+    }
+
+    public void CollisionDetect()
+    {
+        float value = _setSpeed - _velocity;
+
+        if (value >= _maxDifferenceValocitySetSpeed)
+        {
+            if (value >= 5 * _maxDifferenceValocitySetSpeed)
+                _effects.FailEffect();
+
+            _setSpeed = _velocity;
+        }
     }
 }

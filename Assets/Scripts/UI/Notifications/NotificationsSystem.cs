@@ -52,29 +52,5 @@ public class NotificationsSystem : MonoBehaviour, IServiceLocatorComponent, IUpd
         SuccessNotificationHandler.CustomUpdate();
         SideNotificationHandler.CustomUpdate();
         FailNotificationHandler.CustomUpdate();
-
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            string succes = GetSucces();
-
-            SendSuccessNotification(succes, NotificationType.Information);
-        }
-    }
-
-    private string GetSucces()
-    {
-        int random = Random.Range(0, 3);
-
-        switch (random)
-        {
-            case 0:
-                return "OMG!";
-            case 1:
-                return "Super!";
-            case 2:
-                return "Essa!";
-        }
-
-        return "";
     }
 }
