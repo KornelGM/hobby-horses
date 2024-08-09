@@ -109,6 +109,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4742473837712756890, guid: 66cbf3b0f301f8e4e91f1027d0b610cb, type: 3}
+      propertyPath: m_AnimateCrossFading
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 66cbf3b0f301f8e4e91f1027d0b610cb, type: 3}
       propertyPath: m_LODs.Array.data[0].fadeTransitionWidth
       value: 0.2
       objectReference: {fileID: 0}

@@ -5,16 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main Menu.unity
     guid: f8ce0938d3171d84398f16cdfe1de9f6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Player Room.unity
     guid: 3d3847183a5e9d94cb97e080b0d9d060
   - enabled: 1
     path: Assets/Scenes/lvl 1 Training Place.unity
     guid: ef72b8779df4a8445b867b05db7d694a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/lvl 2 gym - big.unity
     guid: a48f622f108ad7541a076761923596e0
   m_configObjects:

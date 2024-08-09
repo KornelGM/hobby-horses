@@ -88,6 +88,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: daabb88d3cd95484f92ce3cd0a3ce604, type: 2}
+    - target: {fileID: 4742473837712756890, guid: 5dfec596008249b4f8e742888b21def9, type: 3}
+      propertyPath: m_AnimateCrossFading
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6346097802459091989, guid: 5dfec596008249b4f8e742888b21def9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 18
