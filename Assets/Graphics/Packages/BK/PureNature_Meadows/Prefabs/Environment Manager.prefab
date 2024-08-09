@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 578016793152811965}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &578016793152811962
 MonoBehaviour:
@@ -178,6 +178,6 @@ MonoBehaviour:
   microFrequency: 5
   renderDistance: 50
   Altitude: 800
-  volumeSamples: 50
   volumeSize: 500
+  volumeSamples: 50
   cloudsMaterial: {fileID: 2100000, guid: bde13c0ab346e564c93239bf889713dc, type: 2}
